@@ -4,18 +4,19 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ;=====================================================================
-;                   Metasong's AHK Script
+;                   		Metasong's AHK Script
 ;---------------------------------------------------------------------
 ;Description:
 ;    This Script is wrote by Metasong via AutoHotKey Script. It
 ; Provides an enhancement towards the "Useless Key" CapsLock, and
 ; turns CapsLock into an useful function Key just like Ctrl and Alt
-; by combining CapsLock with almost all other keys in the keyboard.
+; by combining CapsLock with almost other keys in the keyboard.
 ;
-;-----------------------o---------------------------------------------
-;|Use it whatever and wherever you like. Hope it helps!
+;---------------------------------------------------------------------
+; Use it whatever and wherever you like. Hope it helps!
 ;=====================================================================
-; Functions
+; 								Functions
+;---------------------------------------------------------------------
 keyWithCtrlAltShift(key){
 	if GetKeyState("control") = 0 {
 		if GetKeyState("alt") = 0 {
@@ -82,8 +83,10 @@ keyWithCtrlAltShift(key){
 	}
 }
 ;=====================================================================
+;								Function Keys
+;---------------------------------------------------------------------
 SetCapsLockState, AlwaysOff
-;---------------------------------o
+;-----------------------------------o
 CapsLock & `::								;CapsLock + ` | {CapsLock}
 GetKeyState, CapsLockState, CapsLock, T
 if CapsLockState = D
@@ -113,31 +116,7 @@ CapsLock & n::keyWithCtrlAltShift("End") 	;End
 CapsLock & u::keyWithCtrlAltShift("PgUp") 	;PageUp
 ;-----------------------------------o
 CapsLock & o::keyWithCtrlAltShift("PgDn") 	;PageDown
-;---------------------------------------------------------------------
-;						Frequently Used Programs
-;---------------------------------------------------------------------
-CapsLock & c::								;VSCode
-Run "C:\Program Files (x86)\Microsoft VS Code\Code.exe"
-return
 ;-----------------------------------o
-CapsLock & d:: Send, ^+!d 					;Dictionary
-;-----------------------------------o
-CapsLock & e::								;Web Search
-if GetKeyState("alt") = 0 {
-    Run http://www.google.com/
-} else {
-	Run http://global.bing.com/?FORM=HPCNEN&setmkt=en-us&setlang=en-us
-}
-return
-;-----------------------------------o
-CapsLock & r:: Run Powershell				;Shell
-;-----------------------------------o
-CapsLock & s:: Send, ^+!s					;Search With Everything
-;-----------------------------------o
-CapsLock & t::								;Notepad
- 	Run notepad.exe
-return
-;---------------------------------------------------------------------
 CapsLock & `;:: keyWithCtrlAltShift("Del")	;Del
 ;-----------------------------------o
 CapsLock & ':: Send, {AppsKey down}			;Context Menu
@@ -171,3 +150,27 @@ Capslock & =:: keyWithCtrlAltShift("F12")
 *!j::keyWithCtrlAltShift("Left")
 *!l::keyWithCtrlAltShift("Right")
 *!k::keyWithCtrlAltShift("Down")
+;=====================================================================
+;						Frequently Used Programs
+;---------------------------------------------------------------------
+CapsLock & c::								;VSCode
+Run "C:\Program Files (x86)\Microsoft VS Code\Code.exe"
+return
+;-----------------------------------o
+CapsLock & d:: Send, ^+!d 					;Dictionary
+;-----------------------------------o
+CapsLock & e::								;Web Search
+if GetKeyState("alt") = 0 {
+    Run http://www.google.com/
+} else {
+	Run http://global.bing.com/?FORM=HPCNEN&setmkt=en-us&setlang=en-us
+}
+return
+;-----------------------------------o
+CapsLock & r:: Run Powershell				;Shell
+;-----------------------------------o
+CapsLock & s:: Send, ^+!s					;Search With Everything
+;-----------------------------------o
+CapsLock & t::								;Notepad
+ 	Run notepad.exe
+return
