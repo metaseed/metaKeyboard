@@ -5,9 +5,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ;=====================================================================
 ;                   Metasong's AHK Script
-;                      CapsLock Enhancement
-;---------------------------------------------------------------------
-;                    Modified by Colin Tang
 ;---------------------------------------------------------------------
 ;Description:
 ;    This Script is wrote by Metasong via AutoHotKey Script. It
