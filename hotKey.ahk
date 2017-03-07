@@ -164,11 +164,11 @@ CapsLock & t::								;Notepad
  	Run notepad.exe
 return
 ;---------------------------------------------------------------------
-CapsLock & `;:: keyWithCtrlAltShift("Del")
+CapsLock & `;:: keyWithCtrlAltShift("Del")	;Del
 ;-----------------------------------o
-CapsLock & ':: Send, {AppsKey down}
+CapsLock & ':: Send, {AppsKey down}			;Context Menu
 ;-----------------------------------o
-+>!0:: Click Right
+CapsLock & p:: Click Right					;Mouse Right Click
 ;-----------------------------------o
 CapsLock & [:: Send, ^-
 ;-----------------------------------o
@@ -181,7 +181,7 @@ CapsLock & \::								;Uncomment
 Send, ^k
 Send, ^u
 return
-;-----------------------------------o
+;-----------------------------------o		;F1 - F12
 CapsLock & 1:: keyWithCtrlAltShift("F1")
 CapsLock & 2:: keyWithCtrlAltShift("F4")
 CapsLock & 3:: keyWithCtrlAltShift("F4")
@@ -196,13 +196,8 @@ Capslock & -::
 >!-::keyWithCtrlAltShift("F11")
 Capslock & =::
 >!=::keyWithCtrlAltShift("F12")
-
-;>!i::Send, {Up}
-;>!k::Send, {Down}
-;>!j::Send, {Left}
-;>!l::Send, {Right}
-
-;>!e::Send, {Up}
-;>!d::Send, {Down}
-;>!s::Send, {Left}
-;>!f::Send, {Right}
+;-----------------------------------o		;RAlt + Arrow
+>!i::keyWithCtrlAltShift("Up")
+>!j::keyWithCtrlAltShift("Left")
+>!l::keyWithCtrlAltShift("Right")
+>!k::keyWithCtrlAltShift("Down")
