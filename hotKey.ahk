@@ -15,22 +15,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; turns CapsLock into an useful function Key just like Ctrl and Alt
 ; by combining CapsLock with almost all other keys in the keyboard.
 ;
-;Summary:
-;o----------------------o---------------------------------------------
-;|CapsLock;             | {ESC}
-;|CaspLock + `          | {CapsLock}CapsLock Switcher as a Substituent
-;|CapsLock + ikjl       | Cursor Mover
-;|CaspLock + hnuo       | Convenient Home/End PageUp/PageDn
-;|CaspLock + nm,.       | Convenient Delete Controller
-;|CapsLock + zxcvay     | Windows-Style Editor
-;|CapsLock + Direction  | Mouse Move
-;|CapsLock + Enter      | Mouse Click
-;|CaspLock + {F1}~{F6}  | Media Volume Controller
-;|CapsLock + qs         | Windows & Tags Control
-;|CapsLock + ;'[]       | Convenient Key Mapping
-;|CaspLock + dfert      | Frequently Used Programs (Self Defined)
-;|CaspLock + 123456     | Dev-Hotkey for Visual Studio (Self Defined)
-;|CapsLock + 67890-=    | Shifter as Shift
 ;-----------------------o---------------------------------------------
 ;|Use it whatever and wherever you like. Hope it helps!
 ;=====================================================================
@@ -101,16 +85,9 @@ keyWithCtrlAltShift(key){
 	}
 }
 ;=====================================================================
-;                       CapsLock Initializer
-;---------------------------------------------------------------------
 SetCapsLockState, AlwaysOff
-;---------------------------------------------------------------------
-;=====================================================================
-;                       CapsLock Switcher:
-;---------------------------------o-----------------------------------
-;                    CapsLock + ` | {CapsLock}
-;---------------------------------o-----------------------------------
-CapsLock & `::
+;---------------------------------o
+CapsLock & `::								;CapsLock + ` | {CapsLock}
 GetKeyState, CapsLockState, CapsLock, T
 if CapsLockState = D
     SetCapsLockState, AlwaysOff
@@ -121,9 +98,9 @@ return
 ;-----------------------------------o
 ;Capslock & w::AltTab
 ;Capslock & Escape::ShiftAltTab
-;---------------------------------------------------------------------
+;-----------------------------------o
 CapsLock::Send, {ESC}						;ESC
-;---------------------------------------------------------------------
+;-----------------------------------o
 CapsLock & j::keyWithCtrlAltShift("Left")	;Left
 ;-----------------------------------o
 CapsLock & k::keyWithCtrlAltShift("Down")	;Down
@@ -131,16 +108,16 @@ CapsLock & k::keyWithCtrlAltShift("Down")	;Down
 CapsLock & i::keyWithCtrlAltShift("Up")		;Up
 ;-----------------------------------o
 CapsLock & l::keyWithCtrlAltShift("Right")	;Right
-;---------------------------------------------------------------------
+;-----------------------------------o
 CapsLock & h::keyWithCtrlAltShift("Home")	;Home
 ;-----------------------------------o
 CapsLock & n::keyWithCtrlAltShift("End") 	;End
-;---------------------------------------------------------------------
+;-----------------------------------o
 CapsLock & u::keyWithCtrlAltShift("PgUp") 	;PageUp
 ;-----------------------------------o
 CapsLock & o::keyWithCtrlAltShift("PgDn") 	;PageDown
 ;---------------------------------------------------------------------
-
+;						Frequently Used Programs
 ;---------------------------------------------------------------------
 CapsLock & c::								;VSCode
 Run "C:\Program Files (x86)\Microsoft VS Code\Code.exe"
@@ -181,8 +158,8 @@ Send, ^u
 return
 ;-----------------------------------o		;F1 - F12
 CapsLock & 1:: keyWithCtrlAltShift("F1")
-CapsLock & 2:: keyWithCtrlAltShift("F4")
-CapsLock & 3:: keyWithCtrlAltShift("F4")
+CapsLock & 2:: keyWithCtrlAltShift("F2")
+CapsLock & 3:: keyWithCtrlAltShift("F3")
 CapsLock & 4:: keyWithCtrlAltShift("F4")
 CapsLock & 5:: keyWithCtrlAltShift("F5")
 CapsLock & 6:: keyWithCtrlAltShift("F6")
