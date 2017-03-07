@@ -168,7 +168,7 @@ CapsLock & `;:: keyWithCtrlAltShift("Del")	;Del
 ;-----------------------------------o
 CapsLock & ':: Send, {AppsKey down}			;Context Menu
 ;-----------------------------------o
-CapsLock & p:: Click Right					;Mouse Right Click
+CapsLock & p:: Click Right							;Mouse Right Click
 ;-----------------------------------o
 CapsLock & [:: Send, ^-
 ;-----------------------------------o
@@ -197,7 +197,7 @@ Capslock & -::
 Capslock & =::
 >!=::keyWithCtrlAltShift("F12")
 ;-----------------------------------o		;RAlt + Arrow
->!i::keyWithCtrlAltShift("Up")
->!j::keyWithCtrlAltShift("Left")
->!l::keyWithCtrlAltShift("Right")
->!k::keyWithCtrlAltShift("Down")
+!i::keyWithCtrlAltShift("Up")
+!j::keyWithCtrlAltShift("Left")
+!l::keyWithCtrlAltShift("Right")
+!k::keyWithCtrlAltShift("Down")
