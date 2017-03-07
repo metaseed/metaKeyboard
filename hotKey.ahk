@@ -34,28 +34,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;-----------------------o---------------------------------------------
 ;|Use it whatever and wherever you like. Hope it helps!
 ;=====================================================================
-;=====================================================================
-;                       CapsLock Initializer
-;---------------------------------------------------------------------
-SetCapsLockState, AlwaysOff
-;---------------------------------------------------------------------
-;=====================================================================
-;                       CapsLock Switcher:
-;---------------------------------o-----------------------------------
-;                    CapsLock + ` | {CapsLock}
-;---------------------------------o-----------------------------------
-CapsLock & `::
-GetKeyState, CapsLockState, CapsLock, T
-if CapsLockState = D
-    SetCapsLockState, AlwaysOff
-else
-    SetCapsLockState, AlwaysOn
-KeyWait, ``
-return
-
-;Capslock & w::AltTab
-;Capslock & Escape::ShiftAltTab
-
+; Functions
 keyWithCtrlAltShift(key){
 	if GetKeyState("control") = 0 {
 		if GetKeyState("alt") = 0 {
@@ -121,6 +100,28 @@ keyWithCtrlAltShift(key){
 		}
 	}
 }
+;=====================================================================
+;                       CapsLock Initializer
+;---------------------------------------------------------------------
+SetCapsLockState, AlwaysOff
+;---------------------------------------------------------------------
+;=====================================================================
+;                       CapsLock Switcher:
+;---------------------------------o-----------------------------------
+;                    CapsLock + ` | {CapsLock}
+;---------------------------------o-----------------------------------
+CapsLock & `::
+GetKeyState, CapsLockState, CapsLock, T
+if CapsLockState = D
+    SetCapsLockState, AlwaysOff
+else
+    SetCapsLockState, AlwaysOn
+KeyWait, ``
+return
+
+;Capslock & w::AltTab
+;Capslock & Escape::ShiftAltTab
+
 ;---------------------------------------------------------------------
 CapsLock::Send, {ESC}						;ESC
 ;---------------------------------------------------------------------
