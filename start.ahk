@@ -121,17 +121,11 @@ CapsLock & `;:: keyWithCtrlAltShift("Del")	;Del
 ;-----------------------------------o
 CapsLock & ':: Send, {AppsKey down} 		;Context Menu (Click Right)
 ;-----------------------------------o
-CapsLock & /::								;Comment
-Send, ^k
-Send, ^c
-return
+CapsLock & /:: Send ^/						;Toggle Line Comment
 ;-----------------------------------o
-CapsLock & \::								;Uncomment
-Send, ^k
-Send, ^u
-return
-;-----------------------------------o		;F1 - F12
-CapsLock & 1:: keyWithCtrlAltShift("F1")
+CapsLock & \:: Send +!a						;Toggle Block Comment
+;-----------------------------------o
+CapsLock & 1:: keyWithCtrlAltShift("F1")	;F1 - F12
 CapsLock & 2:: keyWithCtrlAltShift("F2")
 CapsLock & 3:: keyWithCtrlAltShift("F3")
 CapsLock & 4:: keyWithCtrlAltShift("F4")
@@ -143,8 +137,8 @@ CapsLock & 9:: keyWithCtrlAltShift("F9")
 CapsLock & 0:: keyWithCtrlAltShift("F10")
 Capslock & -:: keyWithCtrlAltShift("F11")
 Capslock & =:: keyWithCtrlAltShift("F12")
-;-----------------------------------o		;Alt + Arrow
-*!i::keyWithCtrlAltShift("Up")
+;-----------------------------------o
+*!i::keyWithCtrlAltShift("Up")				;Alt + Arrow
 *!j::keyWithCtrlAltShift("Left")
 *!l::keyWithCtrlAltShift("Right")
 *!k::keyWithCtrlAltShift("Down")
