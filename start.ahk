@@ -119,9 +119,7 @@ CapsLock & o::keyWithCtrlAltShift("PgDn") 	;PageDown
 ;-----------------------------------o
 CapsLock & `;:: keyWithCtrlAltShift("Del")	;Del
 ;-----------------------------------o
-CapsLock & ':: Send, {AppsKey down}			;Context Menu
-;-----------------------------------o
-CapsLock & p:: Click Right					;Mouse Right Click
+CapsLock & ':: Send, {AppsKey down} 		;Context Menu (Click Right)
 ;-----------------------------------o
 CapsLock & /::								;Comment
 Send, ^k
@@ -159,7 +157,7 @@ return
 ;-----------------------------------o
 CapsLock & d:: Send, ^+!d 					;Dictionary
 ;-----------------------------------o
-CapsLock & e::								;Web Search
+CapsLock & w::								;Web Search
 if GetKeyState("alt") = 0 {
     Run http://www.google.com/
 } else {
@@ -167,10 +165,14 @@ if GetKeyState("alt") = 0 {
 }
 return
 ;-----------------------------------o
-CapsLock & r:: Run Powershell				;Shell
+CapsLock & r:: Run Powershell				;Run Shell
 ;-----------------------------------o
 CapsLock & s:: Send, ^+!s					;Search With Everything
 ;-----------------------------------o
 CapsLock & t::								;Notepad
  	Run notepad.exe
+return
+;-----------------------------------o
+CapsLock & p::								;Print/Record Screen
+ 	Run SnippingTool.exe
 return
