@@ -53,8 +53,8 @@ else
 KeyWait, ``
 return
 
-Capslock & w::AltTab
-Capslock & Escape::ShiftAltTab
+;Capslock & w::AltTab
+;Capslock & Escape::ShiftAltTab
 
 keyWithCtrlAltShift(key){
 	if GetKeyState("control") = 0 {
@@ -197,7 +197,7 @@ Capslock & -::
 Capslock & =::
 >!=::keyWithCtrlAltShift("F12")
 ;-----------------------------------o		;Alt + Arrow
-!i::keyWithCtrlAltShift("Up")
-!j::keyWithCtrlAltShift("Left")
-!l::keyWithCtrlAltShift("Right")
-!k::keyWithCtrlAltShift("Down")
+*!i::keyWithCtrlAltShift("Up")
+*!j::keyWithCtrlAltShift("Left")
+*!l::keyWithCtrlAltShift("Right")
+*!k::keyWithCtrlAltShift("Down")
