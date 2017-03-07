@@ -118,10 +118,9 @@ else
     SetCapsLockState, AlwaysOn
 KeyWait, ``
 return
-
+;-----------------------------------o
 ;Capslock & w::AltTab
 ;Capslock & Escape::ShiftAltTab
-
 ;---------------------------------------------------------------------
 CapsLock::Send, {ESC}						;ESC
 ;---------------------------------------------------------------------
@@ -169,9 +168,7 @@ CapsLock & `;:: keyWithCtrlAltShift("Del")	;Del
 ;-----------------------------------o
 CapsLock & ':: Send, {AppsKey down}			;Context Menu
 ;-----------------------------------o
-CapsLock & p:: Click Right							;Mouse Right Click
-;-----------------------------------o
-CapsLock & [:: Send, ^-
+CapsLock & p:: Click Right					;Mouse Right Click
 ;-----------------------------------o
 CapsLock & /::								;Comment
 Send, ^k
@@ -193,10 +190,8 @@ CapsLock & 7:: keyWithCtrlAltShift("F7")
 CapsLock & 8:: keyWithCtrlAltShift("F8")
 CapsLock & 9:: keyWithCtrlAltShift("F9")
 CapsLock & 0:: keyWithCtrlAltShift("F10")
-Capslock & -::
->!-::keyWithCtrlAltShift("F11")
-Capslock & =::
->!=::keyWithCtrlAltShift("F12")
+Capslock & -:: keyWithCtrlAltShift("F11")
+Capslock & =:: keyWithCtrlAltShift("F12")
 ;-----------------------------------o		;Alt + Arrow
 *!i::keyWithCtrlAltShift("Up")
 *!j::keyWithCtrlAltShift("Left")
