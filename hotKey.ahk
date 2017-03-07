@@ -72,7 +72,9 @@ keyWithCtrlAltShift(key){
 		} else {
 			if GetKeyState("shift") = 0 {
 				if GetKeyState("LWin") = 0 {
-					Send, !{ %key% }
+					;IfWinExist ahk_class #32771
+					Send, {Alt down}{ %key% }
+					;Send, !{ %key% }
 				}else {
 					Send, !#{ %key% }
 				}
@@ -181,7 +183,7 @@ CapsLock & r:: Run Powershell		;Shell
 CapsLock & t:: Run C:\Program Files (x86)\Notepad++\notepad++.exe
 ;---------------------------------------------------------------------
 CapsLock & `;:: keyWithCtrlAltShift("Del")
-CapsLock & ':: Send, {AppsKey}
+CapsLock & ':: Send, {AppsKey down}
 +>!0:: Click Right
 CapsLock & [:: Send, ^-
 ;-----------------------------------o
@@ -210,12 +212,12 @@ Capslock & -::
 Capslock & =::
 >!=::keyWithCtrlAltShift("F12")
 
->!i::Send, {Up}
->!k::Send, {Down}
->!j::Send, {Left}
->!l::Send, {Right}
+;>!i::Send, {Up}
+;>!k::Send, {Down}
+;>!j::Send, {Left}
+;>!l::Send, {Right}
 
->!e::Send, {Up}
->!d::Send, {Down}
->!s::Send, {Left}
->!f::Send, {Right}
+;>!e::Send, {Up}
+;>!d::Send, {Down}
+;>!s::Send, {Left}
+;>!f::Send, {Right}
