@@ -153,28 +153,22 @@ CapsLock & l::keyWithCtrlAltShift("Right")
 ;                      CapsLock + n |  End
 ;                      Ctrl, Alt Compatible
 ;-----------------------------------o---------------------------------
-CapsLock & h::keyWithCtrlAltShift("Home")
+CapsLock & h::keyWithCtrlAltShift("Home")	;Home
 ;-----------------------------------o
-CapsLock & n::keyWithCtrlAltShift("End")
+CapsLock & n::keyWithCtrlAltShift("End") 	;End
 ;---------------------------------------------------------------------
-;=====================================================================
-;                      CapsLock Page Navigator
-;-----------------------------------o---------------------------------
-;                      CapsLock + u |  PageUp
-;                      CapsLock + o |  PageDown
-;                      Ctrl, Alt Compatible
-;-----------------------------------o---------------------------------
-CapsLock & u::keyWithCtrlAltShift("PgUp")
+CapsLock & u::keyWithCtrlAltShift("PgUp") ;PageUp
 ;-----------------------------------o
-CapsLock & o::keyWithCtrlAltShift("PgDn")
+CapsLock & o::keyWithCtrlAltShift("PgDn") ;PageDown
 ;---------------------------------------------------------------------
 
 ;---------------------------------------------------------------------
 CapsLock & c::						;VSCode
 Run "C:\Program Files (x86)\Microsoft VS Code\Code.exe"
 return
+
 CapsLock & d:: Send, ^+!d 			;Dictionary
-CapsLock & s:: Send, ^+!s			;Everything
+
 CapsLock & e::						;Web Search
 if GetKeyState("alt") = 0 {
     Run http://www.google.com/
@@ -182,7 +176,11 @@ if GetKeyState("alt") = 0 {
 	Run http://global.bing.com/?FORM=HPCNEN&setmkt=en-us&setlang=en-us
 }
 return
+
 CapsLock & r:: Run Powershell		;Shell
+
+CapsLock & s:: Send, ^+!s			;Search With Everything
+
 CapsLock & t:: Run C:\Program Files (x86)\Notepad++\notepad++.exe
 ;---------------------------------------------------------------------
 CapsLock & `;:: keyWithCtrlAltShift("Del")
