@@ -122,78 +122,62 @@ keyWithCtrlAltShift(key){
 	}
 }
 ;---------------------------------------------------------------------
-;=====================================================================
-;                         CapsLock Escaper:
-;----------------------------------o----------------------------------
-;                        CapsLock  |  {ESC}
-;----------------------------------o----------------------------------
-CapsLock::Send, {ESC}
+CapsLock::Send, {ESC}						;ESC
 ;---------------------------------------------------------------------
-;=====================================================================
-;                    CapsLock Direction Navigator
-;-----------------------------------o---------------------------------
-;                      CapsLock + j |  Left
-;                      CapsLock + k |  Down
-;                      CapsLock + i |  Up
-;                      CapsLock + l |  Right
-;                      Ctrl, Alt Compatible
-;-----------------------------------o---------------------------------
-CapsLock & j::keyWithCtrlAltShift("Left")
+CapsLock & j::keyWithCtrlAltShift("Left")	;Left
 ;-----------------------------------o
-CapsLock & k::keyWithCtrlAltShift("Down")
+CapsLock & k::keyWithCtrlAltShift("Down")	;Down
 ;-----------------------------------o
-CapsLock & i::keyWithCtrlAltShift("Up")
+CapsLock & i::keyWithCtrlAltShift("Up")		;Up
 ;-----------------------------------o
-CapsLock & l::keyWithCtrlAltShift("Right")
+CapsLock & l::keyWithCtrlAltShift("Right")	;Right
 ;---------------------------------------------------------------------
-;=====================================================================
-;                     CapsLock Home/End Navigator
-;-----------------------------------o---------------------------------
-;                      CapsLock + h |  Home
-;                      CapsLock + n |  End
-;                      Ctrl, Alt Compatible
-;-----------------------------------o---------------------------------
 CapsLock & h::keyWithCtrlAltShift("Home")	;Home
 ;-----------------------------------o
 CapsLock & n::keyWithCtrlAltShift("End") 	;End
 ;---------------------------------------------------------------------
-CapsLock & u::keyWithCtrlAltShift("PgUp") ;PageUp
+CapsLock & u::keyWithCtrlAltShift("PgUp") 	;PageUp
 ;-----------------------------------o
-CapsLock & o::keyWithCtrlAltShift("PgDn") ;PageDown
+CapsLock & o::keyWithCtrlAltShift("PgDn") 	;PageDown
 ;---------------------------------------------------------------------
 
 ;---------------------------------------------------------------------
-CapsLock & c::						;VSCode
+CapsLock & c::								;VSCode
 Run "C:\Program Files (x86)\Microsoft VS Code\Code.exe"
 return
-
-CapsLock & d:: Send, ^+!d 			;Dictionary
-
-CapsLock & e::						;Web Search
+;-----------------------------------o
+CapsLock & d:: Send, ^+!d 					;Dictionary
+;-----------------------------------o
+CapsLock & e::								;Web Search
 if GetKeyState("alt") = 0 {
     Run http://www.google.com/
 } else {
 	Run http://global.bing.com/?FORM=HPCNEN&setmkt=en-us&setlang=en-us
 }
 return
-
-CapsLock & r:: Run Powershell		;Shell
-
-CapsLock & s:: Send, ^+!s			;Search With Everything
-
-CapsLock & t:: Run C:\Program Files (x86)\Notepad++\notepad++.exe
+;-----------------------------------o
+CapsLock & r:: Run Powershell				;Shell
+;-----------------------------------o
+CapsLock & s:: Send, ^+!s					;Search With Everything
+;-----------------------------------o
+CapsLock & t::								;Notepad
+ 	Run notepad.exe
+return
 ;---------------------------------------------------------------------
 CapsLock & `;:: keyWithCtrlAltShift("Del")
+;-----------------------------------o
 CapsLock & ':: Send, {AppsKey down}
+;-----------------------------------o
 +>!0:: Click Right
+;-----------------------------------o
 CapsLock & [:: Send, ^-
 ;-----------------------------------o
-CapsLock & /::	;Comment
+CapsLock & /::								;Comment
 Send, ^k
 Send, ^c
 return
 ;-----------------------------------o
-CapsLock & \::	;Uncomment
+CapsLock & \::								;Uncomment
 Send, ^k
 Send, ^u
 return
