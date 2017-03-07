@@ -163,7 +163,7 @@ CapsLock & r:: Run Powershell				;Run Shell
 ;-----------------------------------o
 CapsLock & s:: Send, ^+!s					;Search With Everything
 ;-----------------------------------o
-CapsLock & t::								;Notepad
+CapsLock & t::								;Text Process App
  	Run notepad.exe
 return
 ;-----------------------------------o
