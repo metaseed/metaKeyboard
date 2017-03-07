@@ -196,7 +196,7 @@ Capslock & -::
 >!-::keyWithCtrlAltShift("F11")
 Capslock & =::
 >!=::keyWithCtrlAltShift("F12")
-;-----------------------------------o		;RAlt + Arrow
+;-----------------------------------o		;Alt + Arrow
 !i::keyWithCtrlAltShift("Up")
 !j::keyWithCtrlAltShift("Left")
 !l::keyWithCtrlAltShift("Right")
