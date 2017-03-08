@@ -152,14 +152,10 @@ return
 ;Key activation support
 
 CapsLock & Tab::
-; Wait for it to be released because otherwise the hook state ;gets reset
-; while the key is down, which causes the up-event to get suppressed,
-; which in turn prevents toggling of the Tab state/light:
-;KeyWait, Tab
-;GetKeyState, ScrollLockState, Tab, T
-
 If ScrollLockState = 1
 {
+    ToolTip, Enable Mouse Layer
+    SetTimer, RemoveToolTip, 1000
     ScrollLockState = 0
     Hotkey, *h, on
     Hotkey, *a, on
@@ -201,6 +197,8 @@ If ScrollLockState = 1
 }
 else
 {
+    ToolTip, Disable Mouse Layer
+    SetTimer, RemoveToolTip, 1000
     ScrollLockState = 1
     Hotkey, *h, off
     Hotkey, *a, off
