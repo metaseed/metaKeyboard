@@ -145,26 +145,28 @@ Hotkey, !w, ButtonWheelAccelerationSpeedUp
 Hotkey, !x, ButtonWheelAccelerationSpeedDown
 Hotkey, !r, ButtonWheelMaxSpeedUp
 Hotkey, !v, ButtonWheelMaxSpeedDown
-
-Gosub, CapsLock & ~Tab  ; Initialize based on current Tab state.
+ScrollLockState = 0
+Gosub, CapsLock & Tab  ; Initialize based on current Tab state.
 return
 
 ;Key activation support
 
-CapsLock & ~Tab::
-; Wait for it to be released because otherwise the hook state gets reset
+CapsLock & Tab::
+; Wait for it to be released because otherwise the hook state ;gets reset
 ; while the key is down, which causes the up-event to get suppressed,
 ; which in turn prevents toggling of the Tab state/light:
-KeyWait, Tab
-GetKeyState, ScrollLockState, Tab, T
-If ScrollLockState = D
+;KeyWait, Tab
+;GetKeyState, ScrollLockState, Tab, T
+
+If ScrollLockState = 1
 {
+    ScrollLockState = 0
     Hotkey, *h, on
     Hotkey, *a, on
     Hotkey, *`,, on
     Hotkey, *b, on
     Hotkey, *;, on
-    Hotkey, *h, on
+    Hotkey, *g, on
     Hotkey, *p, on
     Hotkey, */, on
 
@@ -199,6 +201,7 @@ If ScrollLockState = D
 }
 else
 {
+    ScrollLockState = 1
     Hotkey, *h, off
     Hotkey, *a, off
     Hotkey, *`,, off
