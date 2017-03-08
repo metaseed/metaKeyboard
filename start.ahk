@@ -1,5 +1,5 @@
 ﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-#Warn  ; Enable warnings to assist with detecting common errors.
+;#Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
@@ -15,6 +15,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;---------------------------------------------------------------------
 ; Use it whatever and wherever you like. Hope it helps!
 ;=====================================================================
+;#Include %A_LineFile%\..\mouse.ahk.
 ; 								Functions
 ;---------------------------------------------------------------------
 keyWithCtrlAltShift(key){
@@ -119,7 +120,9 @@ CapsLock & o::keyWithCtrlAltShift("PgDn") 	;PageDown
 ;-----------------------------------o
 CapsLock & `;:: keyWithCtrlAltShift("Del")	;Del
 ;-----------------------------------o
-CapsLock & ':: Send, {AppsKey down} 		;Context Menu (Click Right)
+CapsLock & ':: Send, { AppsKey } 			;Context Menu
+;-----------------------------------o
+CapsLock & ]:: Send, { Click Right }		;Click Right
 ;-----------------------------------o
 CapsLock & /:: Send ^/						;Toggle Line Comment
 ;-----------------------------------o
@@ -142,6 +145,9 @@ Capslock & =:: keyWithCtrlAltShift("F12")
 *!j::keyWithCtrlAltShift("Left")
 *!l::keyWithCtrlAltShift("Right")
 *!k::keyWithCtrlAltShift("Down")
+;-----------------------------------o
+*!u::keyWithCtrlAltShift("PgUp")
+*!o::keyWithCtrlAltShift("PgDn")
 ;=====================================================================
 ;						Frequently Used Programs
 ;---------------------------------------------------------------------
@@ -169,4 +175,8 @@ return
 ;-----------------------------------o
 CapsLock & p::								;Print/Record Screen
  	Run SnippingTool.exe
+return
+;-----------------------------------o
+CapsLock & m::								;Print/Record Screen
+ 	Run G:\Software\ProcessExplorer\procexp64.exe
 return
