@@ -18,11 +18,11 @@ o------------------------------------------------------------o
 |------------------------------------------------------------|
 | Tab (toggle on)       | Activates numpad mouse mode.       |
 |-----------------------|------------------------------------|
-| ;                     | Left mouse button click.           |
-| /                     | Middle mouse button click.         |
-| '                     | Right mouse button click.          |
-| [/]                   | X1/X2 mouse button click. (Win 2k+)|
-| NumPadSub/NumPadAdd   | Moves up/down the mouse wheel.     |
+| h                     | Left mouse button click.           |
+| ,                     | Middle mouse button click.         |
+| ;                     | Right mouse button click.          |
+| p//                   | X1/X2 mouse button click. (Win 2k+)|
+| y/n                   | Moves up/down the mouse wheel.     |
 |                       |                                    |
 |-----------------------|------------------------------------|
 |-----------------------|------------------------------------|
@@ -38,11 +38,11 @@ o------------------------------------------------------------o
 |                       | button press.                      |
 | r/v                   | Inc./dec. maximum speed per        |
 |                       | button press.                      |
-| ^w/^x                 | Inc./dec. wheel acceleration per   |
+| !w/!x                 | Inc./dec. wheel acceleration per   |
 |                       | button press*.                     |
-| ^e/^c                 | Inc./dec. wheel initial speed per  |
+| !e/!c                 | Inc./dec. wheel initial speed per  |
 |                       | button press*.                     |
-| ^r/^v                 | Inc./dec. wheel maximum speed per  |
+| !r/!v                 | Inc./dec. wheel maximum speed per  |
 |                       | button press*.                     |
 | s/f                   | Inc./dec. rotation angle to        |
 |                       | right in degrees. (i.e. 180° =     |
@@ -82,7 +82,7 @@ MouseRotationAngle = 0
 ;END OF CONFIG SECTION
 
 ;This is needed or key presses would faulty send their natural
-;actions. Like [ would send sometimes "/" to the
+;actions. Like p would send sometimes "/" to the
 ;screen.
 #InstallKeybdHook
 
@@ -108,14 +108,14 @@ MouseWheelCurrentSpeed = %MouseSpeed%
 SetKeyDelay, -1
 SetMouseDelay, -1
 
-Hotkey, *;, ButtonLeftClick
-Hotkey, *g, ButtonLeftClickIns
-Hotkey, */, ButtonMiddleClick
+Hotkey, *h, ButtonLeftClick
+Hotkey, *a, ButtonLeftClickIns
+Hotkey, *`,, ButtonMiddleClick
 Hotkey, *b, ButtonMiddleClickClear
-Hotkey, *', ButtonRightClick
-Hotkey, *h, ButtonRightClickDel
-Hotkey, *[, ButtonX1Click
-Hotkey, *], ButtonX2Click
+Hotkey, *;, ButtonRightClick
+Hotkey, *g, ButtonRightClickDel
+Hotkey, *p, ButtonX1Click
+Hotkey, */, ButtonX2Click
 
 Hotkey, *y, ButtonWheelUp
 Hotkey, *n, ButtonWheelDown
@@ -159,14 +159,14 @@ KeyWait, Tab
 GetKeyState, ScrollLockState, Tab, T
 If ScrollLockState = D
 {
-    Hotkey, *;, on
-    Hotkey, *g, on
-    Hotkey, */, on
-    Hotkey, *b, on
-    Hotkey, *', on
     Hotkey, *h, on
-    Hotkey, *[, on
-    Hotkey, *], on
+    Hotkey, *a, on
+    Hotkey, *`,, on
+    Hotkey, *b, on
+    Hotkey, *;, on
+    Hotkey, *h, on
+    Hotkey, *p, on
+    Hotkey, */, on
 
     Hotkey, *y, on
     Hotkey, *n, on
@@ -199,14 +199,14 @@ If ScrollLockState = D
 }
 else
 {
+    Hotkey, *h, off
+    Hotkey, *a, off
+    Hotkey, *`,, off
+    Hotkey, *b, off
     Hotkey, *;, off
     Hotkey, *g, off
+    Hotkey, *p, off
     Hotkey, */, off
-    Hotkey, *b, off
-    Hotkey, *', off
-    Hotkey, *h, off
-    Hotkey, *[, off
-    Hotkey, *], off
 
     Hotkey, *y, off
     Hotkey, *n, off
@@ -245,14 +245,14 @@ ButtonLeftClick:
 GetKeyState, already_down_state, LButton
 If already_down_state = D
     return
-Button2 = ;
+Button2 = h
 ButtonClick = Left
 Goto ButtonClickStart
 ButtonLeftClickIns:
 GetKeyState, already_down_state, LButton
 If already_down_state = D
     return
-Button2 = NumPadIns
+Button2 = a
 ButtonClick = Left
 Goto ButtonClickStart
 
@@ -260,7 +260,7 @@ ButtonMiddleClick:
 GetKeyState, already_down_state, MButton
 If already_down_state = D
     return
-Button2 = /
+Button2 = `,
 ButtonClick = Middle
 Goto ButtonClickStart
 ButtonMiddleClickClear:
@@ -275,14 +275,14 @@ ButtonRightClick:
 GetKeyState, already_down_state, RButton
 If already_down_state = D
     return
-Button2 = '
+Button2 = ;
 ButtonClick = Right
 Goto ButtonClickStart
 ButtonRightClickDel:
 GetKeyState, already_down_state, RButton
 If already_down_state = D
     return
-Button2 = h
+Button2 = g
 ButtonClick = Right
 Goto ButtonClickStart
 
@@ -290,7 +290,7 @@ ButtonX1Click:
 GetKeyState, already_down_state, XButton1
 If already_down_state = D
     return
-Button2 = [
+Button2 = p
 ButtonClick = X1
 Goto ButtonClickStart
 
@@ -298,7 +298,7 @@ ButtonX2Click:
 GetKeyState, already_down_state, XButton2
 If already_down_state = D
     return
-Button2 = ]
+Button2 = /
 ButtonClick = X2
 Goto ButtonClickStart
 
@@ -719,9 +719,9 @@ If MouseWheelAccelerationSpeed >= 1
     }
 }
 
-If Button = NumPadSub
+If Button = y
     MouseClick, wheelup,,, %MouseWheelCurrentSpeed%, 0, D
-else if Button = NumPadAdd
+else if Button = n
     MouseClick, wheeldown,,, %MouseWheelCurrentSpeed%, 0, D
 
 SetTimer, ButtonWheelAccelerationEnd, 100
