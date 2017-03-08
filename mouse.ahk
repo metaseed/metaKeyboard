@@ -16,7 +16,7 @@ o------------------------------------------------------------o
 |------------------------------------------------------------|
 | Keys                  | Description                        |
 |------------------------------------------------------------|
-| ScrollLock (toggle on)| Activates numpad mouse mode.       |
+| Tab (toggle on)| Activates numpad mouse mode.       |
 |-----------------------|------------------------------------|
 | NumPad0               | Left mouse button click.           |
 | NumPad5               | Middle mouse button click.         |
@@ -148,17 +148,17 @@ Hotkey, !Numpad1, ButtonWheelAccelerationSpeedDown
 Hotkey, !Numpad9, ButtonWheelMaxSpeedUp
 Hotkey, !Numpad3, ButtonWheelMaxSpeedDown
 
-Gosub, ~ScrollLock  ; Initialize based on current ScrollLock state.
+Gosub, CapsLock & ~Tab  ; Initialize based on current Tab state.
 return
 
 ;Key activation support
 
-~ScrollLock::
+CapsLock & ~Tab::
 ; Wait for it to be released because otherwise the hook state gets reset
 ; while the key is down, which causes the up-event to get suppressed,
-; which in turn prevents toggling of the ScrollLock state/light:
-KeyWait, ScrollLock
-GetKeyState, ScrollLockState, ScrollLock, T
+; which in turn prevents toggling of the Tab state/light:
+KeyWait, Tab
+GetKeyState, ScrollLockState, Tab, T
 If ScrollLockState = D
 {
     Hotkey, *NumPad0, on

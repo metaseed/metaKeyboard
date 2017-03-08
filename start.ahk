@@ -15,7 +15,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;---------------------------------------------------------------------
 ; Use it whatever and wherever you like. Hope it helps!
 ;=====================================================================
-;#Include %A_LineFile%\..\mouse.ahk.
+#Include %A_LineFile%\..\mouse.ahk.
 ; 								Functions
 ;---------------------------------------------------------------------
 keyWithCtrlAltShift(key){
