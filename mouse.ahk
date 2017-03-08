@@ -2,7 +2,7 @@
 o------------------------------------------------------------o
 |Using Keyboard Numpad as a Mouse                            |
 (------------------------------------------------------------)
-| By deguix           / A Script file for AutoHotkey 1.0.22+ |
+| By deguix/modified by metasog       for AutoHotkey 1.0.22+ |
 |                    ----------------------------------------|
 |                                                            |
 |    This script is an example of use of AutoHotkey. It uses |
@@ -16,37 +16,35 @@ o------------------------------------------------------------o
 |------------------------------------------------------------|
 | Keys                  | Description                        |
 |------------------------------------------------------------|
-| Tab (toggle on)| Activates numpad mouse mode.       |
+| Tab (toggle on)       | Activates numpad mouse mode.       |
 |-----------------------|------------------------------------|
-| ;               | Left mouse button click.           |
-| /               | Middle mouse button click.         |
-| '             | Right mouse button click.          |
-| [/]  | X1/X2 mouse button click. (Win 2k+)|
+| ;                     | Left mouse button click.           |
+| /                     | Middle mouse button click.         |
+| '                     | Right mouse button click.          |
+| [/]                   | X1/X2 mouse button click. (Win 2k+)|
 | NumPadSub/NumPadAdd   | Moves up/down the mouse wheel.     |
 |                       |                                    |
 |-----------------------|------------------------------------|
-| NumLock (toggled off) | Activates mouse movement mode.     |
 |-----------------------|------------------------------------|
-| m/Down/PgDn/  | Mouse movement.                    |
-| /Left/Right/Home/Up/  |                                    |
-| /PgUp                 |                                    |
+| u/i/o/                | Mouse movement.                    |
+| j/k/l/                |                                    |
+| m/</>                 |                                    |
 |                       |                                    |
 |-----------------------|------------------------------------|
-| NumLock (toggled on)  | Activates mouse speed adj. mode.   |
 |-----------------------|------------------------------------|
-| NumPad7/NumPad1       | Inc./dec. acceleration per         |
+| w/x                   | Inc./dec. acceleration per         |
 |                       | button press.                      |
-| NumPad8/NumPad2       | Inc./dec. initial speed per        |
+| e/c                   | Inc./dec. initial speed per        |
 |                       | button press.                      |
-| NumPad9/NumPad3       | Inc./dec. maximum speed per        |
+| r/v                   | Inc./dec. maximum speed per        |
 |                       | button press.                      |
-| ^NumPad7/^NumPad1     | Inc./dec. wheel acceleration per   |
+| ^w/^x                 | Inc./dec. wheel acceleration per   |
 |                       | button press*.                     |
-| ^NumPad8/^NumPad2     | Inc./dec. wheel initial speed per  |
+| ^e/^c                 | Inc./dec. wheel initial speed per  |
 |                       | button press*.                     |
-| ^NumPad9/^NumPad3     | Inc./dec. wheel maximum speed per  |
+| ^r/^v                 | Inc./dec. wheel maximum speed per  |
 |                       | button press*.                     |
-| NumPad4/NumPad6       | Inc./dec. rotation angle to        |
+| s/f                   | Inc./dec. rotation angle to        |
 |                       | right in degrees. (i.e. 180° =     |
 |                       | = inversed controls).              |
 |------------------------------------------------------------|
