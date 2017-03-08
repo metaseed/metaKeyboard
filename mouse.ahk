@@ -164,6 +164,7 @@ If ScrollLockState = D
     Hotkey, *;, on
     Hotkey, *g, on
     Hotkey, */, on
+    Hotkey, *b, on
     Hotkey, *', on
     Hotkey, *h, on
     Hotkey, *[, on
@@ -203,6 +204,7 @@ else
     Hotkey, *;, off
     Hotkey, *g, off
     Hotkey, */, off
+    Hotkey, *b, off
     Hotkey, *', off
     Hotkey, *h, off
     Hotkey, *[, off
