@@ -10,7 +10,7 @@ o------------------------------------------------------------o
 | into a mouse. Some features are the acceleration which     |
 | enables you to increase the mouse movement when holding    |
 | a key for a long time, and the rotation which makes the    |
-| numpad mouse to "turn". I.e. NumPadDown as NumPadUp        |
+| numpad mouse to "turn". I.e. k as i        |
 | and vice-versa. See the list of keys used below:           |
 |                                                            |
 |------------------------------------------------------------|
@@ -18,16 +18,16 @@ o------------------------------------------------------------o
 |------------------------------------------------------------|
 | Tab (toggle on)| Activates numpad mouse mode.       |
 |-----------------------|------------------------------------|
-| NumPad0               | Left mouse button click.           |
-| NumPad5               | Middle mouse button click.         |
-| NumPadDot             | Right mouse button click.          |
-| NumPadDiv/NumPadMult  | X1/X2 mouse button click. (Win 2k+)|
+| ;               | Left mouse button click.           |
+| /               | Middle mouse button click.         |
+| '             | Right mouse button click.          |
+| [/]  | X1/X2 mouse button click. (Win 2k+)|
 | NumPadSub/NumPadAdd   | Moves up/down the mouse wheel.     |
 |                       |                                    |
 |-----------------------|------------------------------------|
 | NumLock (toggled off) | Activates mouse movement mode.     |
 |-----------------------|------------------------------------|
-| NumPadEnd/Down/PgDn/  | Mouse movement.                    |
+| m/Down/PgDn/  | Mouse movement.                    |
 | /Left/Right/Home/Up/  |                                    |
 | /PgUp                 |                                    |
 |                       |                                    |
@@ -84,7 +84,7 @@ MouseRotationAngle = 0
 ;END OF CONFIG SECTION
 
 ;This is needed or key presses would faulty send their natural
-;actions. Like NumPadDiv would send sometimes "/" to the
+;actions. Like [ would send sometimes "/" to the
 ;screen.
 #InstallKeybdHook
 
@@ -96,7 +96,7 @@ MouseRotationAnglePart = %MouseRotationAngle%
 ;and changing the mouse rotation to a number lesser than 45º
 ;could make strange movements.
 ;
-;For example: 22.5º when pressing NumPadUp:
+;For example: 22.5º when pressing i:
 ;  First it would move upwards until the speed
 ;  to the side reaches 1.
 MouseRotationAnglePart /= 45
@@ -110,43 +110,43 @@ MouseWheelCurrentSpeed = %MouseSpeed%
 SetKeyDelay, -1
 SetMouseDelay, -1
 
-Hotkey, *NumPad0, ButtonLeftClick
-Hotkey, *NumpadIns, ButtonLeftClickIns
-Hotkey, *NumPad5, ButtonMiddleClick
-Hotkey, *NumpadClear, ButtonMiddleClickClear
-Hotkey, *NumPadDot, ButtonRightClick
-Hotkey, *NumPadDel, ButtonRightClickDel
-Hotkey, *NumPadDiv, ButtonX1Click
-Hotkey, *NumPadMult, ButtonX2Click
+Hotkey, *;, ButtonLeftClick
+Hotkey, *g, ButtonLeftClickIns
+Hotkey, */, ButtonMiddleClick
+Hotkey, *b, ButtonMiddleClickClear
+Hotkey, *', ButtonRightClick
+Hotkey, *h, ButtonRightClickDel
+Hotkey, *[, ButtonX1Click
+Hotkey, *], ButtonX2Click
 
-Hotkey, *NumpadSub, ButtonWheelUp
-Hotkey, *NumpadAdd, ButtonWheelDown
+Hotkey, *y, ButtonWheelUp
+Hotkey, *n, ButtonWheelDown
 
-Hotkey, *NumPadUp, ButtonUp
-Hotkey, *NumPadDown, ButtonDown
-Hotkey, *NumPadLeft, ButtonLeft
-Hotkey, *NumPadRight, ButtonRight
-Hotkey, *NumPadHome, ButtonUpLeft
-Hotkey, *NumPadEnd, ButtonUpRight
-Hotkey, *NumPadPgUp, ButtonDownLeft
-Hotkey, *NumPadPgDn, ButtonDownRight
+Hotkey, *i, ButtonUp
+Hotkey, *k, ButtonDown
+Hotkey, *j, ButtonLeft
+Hotkey, *l, ButtonRight
+Hotkey, *u, ButtonUpLeft
+Hotkey, *m, ButtonUpRight
+Hotkey, *o, ButtonDownLeft
+Hotkey, *., ButtonDownRight
 
-Hotkey, Numpad8, ButtonSpeedUp
-Hotkey, Numpad2, ButtonSpeedDown
-Hotkey, Numpad7, ButtonAccelerationSpeedUp
-Hotkey, Numpad1, ButtonAccelerationSpeedDown
-Hotkey, Numpad9, ButtonMaxSpeedUp
-Hotkey, Numpad3, ButtonMaxSpeedDown
+Hotkey, e, ButtonSpeedUp
+Hotkey, c, ButtonSpeedDown
+Hotkey, w, ButtonAccelerationSpeedUp
+Hotkey, x, ButtonAccelerationSpeedDown
+Hotkey, r, ButtonMaxSpeedUp
+Hotkey, v, ButtonMaxSpeedDown
 
-Hotkey, Numpad6, ButtonRotationAngleUp
-Hotkey, Numpad4, ButtonRotationAngleDown
+Hotkey, f, ButtonRotationAngleUp
+Hotkey, s, ButtonRotationAngleDown
 
-Hotkey, !Numpad8, ButtonWheelSpeedUp
-Hotkey, !Numpad2, ButtonWheelSpeedDown
-Hotkey, !Numpad7, ButtonWheelAccelerationSpeedUp
-Hotkey, !Numpad1, ButtonWheelAccelerationSpeedDown
-Hotkey, !Numpad9, ButtonWheelMaxSpeedUp
-Hotkey, !Numpad3, ButtonWheelMaxSpeedDown
+Hotkey, !e, ButtonWheelSpeedUp
+Hotkey, !c, ButtonWheelSpeedDown
+Hotkey, !w, ButtonWheelAccelerationSpeedUp
+Hotkey, !x, ButtonWheelAccelerationSpeedDown
+Hotkey, !r, ButtonWheelMaxSpeedUp
+Hotkey, !v, ButtonWheelMaxSpeedDown
 
 Gosub, CapsLock & ~Tab  ; Initialize based on current Tab state.
 return
@@ -161,81 +161,81 @@ KeyWait, Tab
 GetKeyState, ScrollLockState, Tab, T
 If ScrollLockState = D
 {
-    Hotkey, *NumPad0, on
-    Hotkey, *NumpadIns, on
-    Hotkey, *NumPad5, on
-    Hotkey, *NumPadDot, on
-    Hotkey, *NumPadDel, on
-    Hotkey, *NumPadDiv, on
-    Hotkey, *NumPadMult, on
+    Hotkey, *;, on
+    Hotkey, *g, on
+    Hotkey, */, on
+    Hotkey, *', on
+    Hotkey, *h, on
+    Hotkey, *[, on
+    Hotkey, *], on
 
-    Hotkey, *NumpadSub, on
-    Hotkey, *NumpadAdd, on
+    Hotkey, *y, on
+    Hotkey, *n, on
 
-    Hotkey, *NumPadUp, on
-    Hotkey, *NumPadDown, on
-    Hotkey, *NumPadLeft, on
-    Hotkey, *NumPadRight, on
-    Hotkey, *NumPadHome, on
-    Hotkey, *NumPadEnd, on
-    Hotkey, *NumPadPgUp, on
-    Hotkey, *NumPadPgDn, on
+    Hotkey, *i, on
+    Hotkey, *k, on
+    Hotkey, *j, on
+    Hotkey, *l, on
+    Hotkey, *u, on
+    Hotkey, *m, on
+    Hotkey, *o, on
+    Hotkey, *., on
 
-    Hotkey, Numpad8, on
-    Hotkey, Numpad2, on
-    Hotkey, Numpad7, on
-    Hotkey, Numpad1, on
-    Hotkey, Numpad9, on
-    Hotkey, Numpad3, on
+    Hotkey, e, on
+    Hotkey, c, on
+    Hotkey, w, on
+    Hotkey, x, on
+    Hotkey, r, on
+    Hotkey, v, on
 
-    Hotkey, Numpad6, on
-    Hotkey, Numpad4, on
+    Hotkey, f, on
+    Hotkey, s, on
 
-    Hotkey, !Numpad8, on
-    Hotkey, !Numpad2, on
-    Hotkey, !Numpad7, on
-    Hotkey, !Numpad1, on
-    Hotkey, !Numpad9, on
-    Hotkey, !Numpad3, on
+    Hotkey, !e, on
+    Hotkey, !c, on
+    Hotkey, !w, on
+    Hotkey, !x, on
+    Hotkey, !r, on
+    Hotkey, !v, on
 }
 else
 {
-    Hotkey, *NumPad0, off
-    Hotkey, *NumpadIns, off
-    Hotkey, *NumPad5, off
-    Hotkey, *NumPadDot, off
-    Hotkey, *NumPadDel, off
-    Hotkey, *NumPadDiv, off
-    Hotkey, *NumPadMult, off
+    Hotkey, *;, off
+    Hotkey, *g, off
+    Hotkey, */, off
+    Hotkey, *', off
+    Hotkey, *h, off
+    Hotkey, *[, off
+    Hotkey, *], off
 
-    Hotkey, *NumpadSub, off
-    Hotkey, *NumpadAdd, off
+    Hotkey, *y, off
+    Hotkey, *n, off
 
-    Hotkey, *NumPadUp, off
-    Hotkey, *NumPadDown, off
-    Hotkey, *NumPadLeft, off
-    Hotkey, *NumPadRight, off
-    Hotkey, *NumPadHome, off
-    Hotkey, *NumPadEnd, off
-    Hotkey, *NumPadPgUp, off
-    Hotkey, *NumPadPgDn, off
+    Hotkey, *i, off
+    Hotkey, *k, off
+    Hotkey, *j, off
+    Hotkey, *l, off
+    Hotkey, *u, off
+    Hotkey, *m, off
+    Hotkey, *o, off
+    Hotkey, *., off
 
-    Hotkey, Numpad8, off
-    Hotkey, Numpad2, off
-    Hotkey, Numpad7, off
-    Hotkey, Numpad1, off
-    Hotkey, Numpad9, off
-    Hotkey, Numpad3, off
+    Hotkey, e, off
+    Hotkey, c, off
+    Hotkey, w, off
+    Hotkey, x, off
+    Hotkey, r, off
+    Hotkey, v, off
 
-    Hotkey, Numpad6, off
-    Hotkey, Numpad4, off
+    Hotkey, f, off
+    Hotkey, s, off
 
-    Hotkey, !Numpad8, off
-    Hotkey, !Numpad2, off
-    Hotkey, !Numpad7, off
-    Hotkey, !Numpad1, off
-    Hotkey, !Numpad9, off
-    Hotkey, !Numpad3, off
+    Hotkey, !e, off
+    Hotkey, !c, off
+    Hotkey, !w, off
+    Hotkey, !x, off
+    Hotkey, !r, off
+    Hotkey, !v, off
 }
 return
 
@@ -245,7 +245,7 @@ ButtonLeftClick:
 GetKeyState, already_down_state, LButton
 If already_down_state = D
     return
-Button2 = NumPad0
+Button2 = ;
 ButtonClick = Left
 Goto ButtonClickStart
 ButtonLeftClickIns:
@@ -260,7 +260,7 @@ ButtonMiddleClick:
 GetKeyState, already_down_state, MButton
 If already_down_state = D
     return
-Button2 = NumPad5
+Button2 = /
 ButtonClick = Middle
 Goto ButtonClickStart
 ButtonMiddleClickClear:
@@ -275,14 +275,14 @@ ButtonRightClick:
 GetKeyState, already_down_state, RButton
 If already_down_state = D
     return
-Button2 = NumPadDot
+Button2 = '
 ButtonClick = Right
 Goto ButtonClickStart
 ButtonRightClickDel:
 GetKeyState, already_down_state, RButton
 If already_down_state = D
     return
-Button2 = NumPadDel
+Button2 = h
 ButtonClick = Right
 Goto ButtonClickStart
 
@@ -290,7 +290,7 @@ ButtonX1Click:
 GetKeyState, already_down_state, XButton1
 If already_down_state = D
     return
-Button2 = NumPadDiv
+Button2 = [
 ButtonClick = X1
 Goto ButtonClickStart
 
@@ -298,7 +298,7 @@ ButtonX2Click:
 GetKeyState, already_down_state, XButton2
 If already_down_state = D
     return
-Button2 = NumPadMult
+Button2 = ]
 ButtonClick = X2
 Goto ButtonClickStart
 
@@ -514,7 +514,7 @@ MouseCurrentSpeedToSide *= %MouseCurrentSpeed%
 Temp = %MouseRotationAnglePart%
 Transform, Temp, Mod, %Temp%, 2
 
-If Button = NumPadUp
+If Button = i
 {
     if Temp = 1
     {
@@ -525,7 +525,7 @@ If Button = NumPadUp
     MouseCurrentSpeedToDirection *= -1
     MouseMove, %MouseCurrentSpeedToSide%, %MouseCurrentSpeedToDirection%, 0, R
 }
-else if Button = NumPadDown
+else if Button = k
 {
     if Temp = 1
     {
@@ -536,7 +536,7 @@ else if Button = NumPadDown
     MouseCurrentSpeedToSide *= -1
     MouseMove, %MouseCurrentSpeedToSide%, %MouseCurrentSpeedToDirection%, 0, R
 }
-else if Button = NumPadLeft
+else if Button = j
 {
     if Temp = 1
     {
@@ -549,7 +549,7 @@ else if Button = NumPadLeft
 
     MouseMove, %MouseCurrentSpeedToDirection%, %MouseCurrentSpeedToSide%, 0, R
 }
-else if Button = NumPadRight
+else if Button = l
 {
     if Temp = 1
     {
@@ -559,7 +559,7 @@ else if Button = NumPadRight
 
     MouseMove, %MouseCurrentSpeedToDirection%, %MouseCurrentSpeedToSide%, 0, R
 }
-else if Button = NumPadHome
+else if Button = u
 {
     Temp = %MouseCurrentSpeedToDirection%
     Temp -= %MouseCurrentSpeedToSide%
@@ -569,7 +569,7 @@ else if Button = NumPadHome
     Temp2 *= -1
     MouseMove, %Temp%, %Temp2%, 0, R
 }
-else if Button = NumPadPgUp
+else if Button = o
 {
     Temp = %MouseCurrentSpeedToDirection%
     Temp += %MouseCurrentSpeedToSide%
@@ -578,7 +578,7 @@ else if Button = NumPadPgUp
     Temp2 *= -1
     MouseMove, %Temp%, %Temp2%, 0, R
 }
-else if Button = NumPadEnd
+else if Button = m
 {
     Temp = %MouseCurrentSpeedToDirection%
     Temp += %MouseCurrentSpeedToSide%
@@ -587,7 +587,7 @@ else if Button = NumPadEnd
     Temp2 -= %MouseCurrentSpeedToSide%
     MouseMove, %Temp%, %Temp2%, 0, R
 }
-else if Button = NumPadPgDn
+else if Button = .
 {
     Temp = %MouseCurrentSpeedToDirection%
     Temp -= %MouseCurrentSpeedToSide%
