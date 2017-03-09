@@ -15,74 +15,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;---------------------------------------------------------------------
 ; Use it whatever and wherever you like. Hope it helps!
 ;=====================================================================
+#Include %A_LineFile%\..\lib\index.ahk.
 #Include %A_LineFile%\..\mouse.ahk.
 ; 								Functions
 ;---------------------------------------------------------------------
-keyWithCtrlAltShift(key){
-	if GetKeyState("control") = 0 {
-		if GetKeyState("alt") = 0 {
-			if GetKeyState("shift") = 0 {
-				if GetKeyState("LWin") = 0 {
-					Send, { %key% }
-				}else {
-					Send, #{ %key% }
-				}
-			} else {
-				if GetKeyState("LWin") = 0 {
-					Send, +{ %key% }
-				}else {
-					Send, +#{ %key% }
-				}
-			}
-		} else {
-			if GetKeyState("shift") = 0 {
-				if GetKeyState("LWin") = 0 {
-					;IfWinExist ahk_class #32771
-					Send, {Alt down}{ %key% }
-					;Send, !{ %key% }
-				}else {
-					Send, !#{ %key% }
-				}
-			} else {
-				if GetKeyState("LWin") = 0 {
-					Send, !+{ %key% }
-				}else {
-					Send, !+#{ %key% }
-				}
-			}
-		}
-	} else {
-		if GetKeyState("alt") = 0 {
-			if GetKeyState("shift") = 0 {
-				if GetKeyState("LWin") = 0 {
-					Send, ^{ %key% }
-				}else {
-					Send, ^#{ %key% }
-				}
-			} else {
-				if GetKeyState("LWin") = 0 {
-					Send, ^+{ %key% }
-				}else {
-					Send, ^+#{ %key% }
-				}
-			}
-		} else {
-		if GetKeyState("shift") = 0 {
-				if GetKeyState("LWin") = 0 {
-					Send, ^!{ %key% }
-				}else {
-					Send, ^!#{ %key% }
-				}
-			} else {
-				if GetKeyState("LWin") = 0 {
-					Send, ^!+{ %key% }
-				}else {
-					Send, ^!+#{ %key% }
-				}
-			}
-		}
-	}
-}
 ;=====================================================================
 ;								Function Keys
 ;---------------------------------------------------------------------
@@ -95,6 +31,13 @@ if CapsLockState = D
 else
     SetCapsLockState, AlwaysOn
 KeyWait, ``
+return
+;-----------------------------------o
+; After Alt-Tab, move mouse to center of newly activated window.
+~!Tab::
+KeyWait, Alt
+KeyWait, Tab
+moveMouseToWindowCenter()
 return
 ;-----------------------------------o
 ;Capslock & w::AltTab
@@ -118,9 +61,9 @@ CapsLock & u::keyWithCtrlAltShift("PgUp") 	;PageUp
 ;-----------------------------------o
 CapsLock & o::keyWithCtrlAltShift("PgDn") 	;PageDown
 ;-----------------------------------o
-CapsLock & `;:: keyWithCtrlAltShift("Del")	;Del
+CapsLock & ':: keyWithCtrlAltShift("Del")	;Del
 ;-----------------------------------o
-CapsLock & ':: Send, { AppsKey } 			;Context Menu
+CapsLock & `;:: Send, { AppsKey } 			;Context Menu
 ;-----------------------------------o
 CapsLock & ]:: Send, { Click Right }		;Click Right
 ;-----------------------------------o

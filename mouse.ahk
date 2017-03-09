@@ -154,6 +154,7 @@ return
 CapsLock & Tab::
 If ScrollLockState = 1
 {
+    moveMouseToWindowCenter()
     ToolTip, Enable Mouse Layer
     SetTimer, RemoveToolTip, 1000
     ScrollLockState = 0
