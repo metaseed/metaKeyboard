@@ -2,7 +2,7 @@ Windows Useful Shortcut
 =========
 Alt+Tab to switch between open apps, and using ikjl to select active app.
 
-Ctrl+Z Undo.
+Ctrl+Z/Y Undo/Redo.
 
 Alt+F4(Alt+Caps+4) Close active app.
 
@@ -29,6 +29,7 @@ Alt+Left Arrow Go back.
 Alt+D Move the focus to the address bar, and select the current path. 
 
 Alt+P   Preview panel
+Ctrl + arrow key (to move to an item) + Spacebar(select)	Select multiple individual items in window
 
 Alt+Spacebar Show shortcut menu of the active window.
 
@@ -38,9 +39,13 @@ F5(Caps+5) Refresh.
 
 Alt+Enter Show properties of the selected file. 
 
-Shift+F10(Caps+') Open the shortcut menu for the current selection (which is the same as a right-click). 
+Shift+F10(Shift+Caps+0)(Caps+;) Open the shortcut menu for the current selection (which is the same as a right-click). 
 
-Ctrl+F/F3(Caps+3G) go to search box, then press Tab go to navigation pane, then press Tab go to file list.
+Shift+arrow(Caps+ikjl)	Select more than one item in a window or on the desktop, or select text in a document
+
+Ctrl+Shift+1/2/.../8    View modes
+
+Ctrl+F/F3(Caps+3) go to search box, then press Tab go to navigation pane, then press Tab go to file list.
 
 Win+I   Settings
 

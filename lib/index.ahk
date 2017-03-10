@@ -1,3 +1,8 @@
+RemoveToolTip(){
+	SetTimer, RemoveToolTip, Off
+	ToolTip
+}
+
 moveMouseToWindowCenter() {
     WinGetPos,x,y,width,height,A
     While (x < 0 Or y < 0)
@@ -7,6 +12,8 @@ moveMouseToWindowCenter() {
         IfGreater,A_Index,2,Break
     }
     MouseMove,width/2,height/2
+	Tooltip, Smile every day!
+	SetTimer, RemoveToolTip, 2000
 }
 
 keyWithCtrlAltShift(key)

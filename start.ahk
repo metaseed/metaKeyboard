@@ -3,6 +3,16 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+#SingleInstance force
+#MaxHotkeysPerInterval 500
+
+; Using the keyboard hook to implement the Numpad hotkeys prevents
+; them from interfering with the generation of ANSI characters such
+; as à.  This is because AutoHotkey generates such characters
+; by holding down ALT and sending a series of Numpad keystrokes.
+; Hook hotkeys are smart enough to ignore such keystrokes.
+#UseHook
+
 ;=====================================================================
 ;                   		Metasong's AHK Script
 ;---------------------------------------------------------------------

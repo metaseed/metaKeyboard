@@ -56,19 +56,9 @@ o------------------------------------------------------------o
 
 ;START OF CONFIG SECTION
 
-#SingleInstance force
-#MaxHotkeysPerInterval 500
-
-; Using the keyboard hook to implement the Numpad hotkeys prevents
-; them from interfering with the generation of ANSI characters such
-; as à.  This is because AutoHotkey generates such characters
-; by holding down ALT and sending a series of Numpad keystrokes.
-; Hook hotkeys are smart enough to ignore such keystrokes.
-#UseHook
-
-MouseSpeed = 3
-MouseAccelerationSpeed = 8
-MouseMaxSpeed = 30
+MouseSpeed = 4
+MouseAccelerationSpeed = 7
+MouseMaxSpeed = 28
 
 ;Mouse wheel speed is also set on Control Panel. As that
 ;will affect the normal mouse behavior, the real speed of
@@ -154,8 +144,9 @@ return
 CapsLock & Tab::
 If ScrollLockState = 1
 {
+    ;autohotkey.com/board/topic/32608-changing-the-system-cursor/
     moveMouseToWindowCenter()
-    ToolTip, Enable Mouse Layer
+    ToolTip, ENABLE Mouse Layer
     SetTimer, RemoveToolTip, 1000
     ScrollLockState = 0
     Hotkey, *h, on
@@ -198,7 +189,7 @@ If ScrollLockState = 1
 }
 else
 {
-    ToolTip, Disable Mouse Layer
+    ToolTip, DISABLE Mouse Layer
     SetTimer, RemoveToolTip, 1000
     ScrollLockState = 1
     Hotkey, *h, off
@@ -737,9 +728,4 @@ if kstate = D
 MouseWheelCurrentAccelerationSpeed = 0
 MouseWheelCurrentSpeed = %MouseWheelSpeed%
 Button = 0
-return
-
-RemoveToolTip:
-SetTimer, RemoveToolTip, Off
-ToolTip
 return
