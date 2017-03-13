@@ -5,8 +5,7 @@ o------------------------------------------------------------o
 | By deguix/modified by metasog       for AutoHotkey 1.0.22+ |
 |                    ----------------------------------------|
 |                                                            |
-|    This script is an example of use of AutoHotkey. It uses |
-| the remapping of numpad keys of a keyboard to transform it |
+| remapping of numpad keys of a keyboard to transform it     |
 | into a mouse. Some features are the acceleration which     |
 | enables you to increase the mouse movement when holding    |
 | a key for a long time, and the rotation which makes the    |
@@ -53,7 +52,7 @@ o------------------------------------------------------------o
 | wheel, the default is 3 +/- lines per option button press. |
 o------------------------------------------------------------o
 */
-
+;=============================================================
 ;START OF CONFIG SECTION
 
 MouseSpeed = 4
@@ -70,6 +69,7 @@ MouseWheelMaxSpeed = 5
 MouseRotationAngle = 0
 
 ;END OF CONFIG SECTION
+;=============================================================
 
 ;This is needed or key presses would faulty send their natural
 ;actions. Like p would send sometimes "/" to the

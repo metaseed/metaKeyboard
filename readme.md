@@ -1,6 +1,7 @@
 Windows Useful Shortcut
 =========
 Alt+Tab to switch between open apps, and using ikjl to select active app.
+Ctrl+Ctrl+Tab show opened apps
 
 Ctrl+Z/Y Undo/Redo.
 
