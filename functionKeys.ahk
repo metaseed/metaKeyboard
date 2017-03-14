@@ -32,7 +32,13 @@ return
 ;-----------------------------------o
 CapsLock & r:: Run Powershell				;Run Shell
 ;-----------------------------------o
-CapsLock & s:: Send, ^+!s					;Search With Everything
+CapsLock & s::
+if GetKeyState("shift") = 0 {   ;Search
+	Send, !+s 					;Toggle Everything
+} else {
+	Send, ^+!s					;New Everything Window
+}
+return
 ;-----------------------------------o
 CapsLock & t::								;Text Process App
 IfWinExist Untitled - Notepad 

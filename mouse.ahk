@@ -136,19 +136,12 @@ Hotkey, !x, ButtonWheelAccelerationSpeedDown
 Hotkey, !r, ButtonWheelMaxSpeedUp
 Hotkey, !v, ButtonWheelMaxSpeedDown
 ScrollLockState = 0
-Gosub, CapsLock & Tab  ; Initialize based on current Tab state.
+disableMouseLayer() ; Initialize based on current Tab state.
 return
 
 ;Key activation support
 
-CapsLock & Tab::
-If ScrollLockState = 1
-{
-    ;autohotkey.com/board/topic/32608-changing-the-system-cursor/
-    moveMouseToWindowCenter()
-    ToolTip, ENABLE Mouse Layer
-    SetTimer, RemoveToolTip, 1000
-    ScrollLockState = 0
+enableMouseLayer() {
     Hotkey, *h, on
     Hotkey, *a, on
     Hotkey, *`,, on
@@ -187,12 +180,9 @@ If ScrollLockState = 1
     Hotkey, !r, on
     Hotkey, !v, on
 }
-else
-{
-    ToolTip, DISABLE Mouse Layer
-    SetTimer, RemoveToolTip, 1000
-    ScrollLockState = 1
-    Hotkey, *h, off
+
+disableMouseLayer() {
+        Hotkey, *h, off
     Hotkey, *a, off
     Hotkey, *`,, off
     Hotkey, *b, off
@@ -229,6 +219,27 @@ else
     Hotkey, !x, off
     Hotkey, !r, off
     Hotkey, !v, off
+}
+CapsLock & Tab::
+If ScrollLockState = 1
+{
+    ;autohotkey.com/boalllrd/topic/32608-changing-the-system-cursor/
+    moveMouseToWindowCenter()
+    TrayTip, Mouse Layer, ENABLE, 1
+    SetTimer, RemoveTrayTip, 1000
+    ToolTip, ENABLE Mouse Layer
+    SetTimer, RemoveToolTip, 1000
+    ScrollLockState = 0
+    enableMouseLayer()
+    }
+else
+{
+    TrayTip, Mouse Layer, DISABLE,1
+    SetTimer, RemoveTrayTip, 1000
+    ToolTip, DISABLE Mouse Layer
+    SetTimer, RemoveToolTip, 1000
+    ScrollLockState = 1
+    disableMouseLayer()
 }
 return
 

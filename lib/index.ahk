@@ -3,6 +3,11 @@ RemoveToolTip(){
 	ToolTip
 }
 
+RemoveTrayTip(){
+	SetTimer, RemoveTrayTip, Off
+	TrayTip
+}
+
 moveMouseToWindowCenter() {
     WinGetPos,x,y,width,height,A
     While (x < 0 Or y < 0)
