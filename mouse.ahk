@@ -182,7 +182,7 @@ enableMouseLayer() {
 }
 
 disableMouseLayer() {
-        Hotkey, *h, off
+    Hotkey, *h, off
     Hotkey, *a, off
     Hotkey, *`,, off
     Hotkey, *b, off

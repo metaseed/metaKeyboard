@@ -1,3 +1,5 @@
+;VimLikeArrows = 0
+
 SetCapsLockState, AlwaysOff
 ;-----------------------------------o
 CapsLock & `::								;CapsLock + ` | {CapsLock}
@@ -11,21 +13,30 @@ return
 ;-----------------------------------o
 CapsLock::Send, {ESC}						;ESC
 ;-----------------------------------o
+
+;CapsLock & h::keyWithCtrlAltShift("Left")	;Left
+;-----------------------------------o
+;CapsLock & j::keyWithCtrlAltShift("Down")	;Down
+;-----------------------------------o
+;CapsLock & k::keyWithCtrlAltShift("Up")	;Up
+;-----------------------------------o
+;CapsLock & l::keyWithCtrlAltShift("Right")	;Right
+
 CapsLock & j::keyWithCtrlAltShift("Left")	;Left
 ;-----------------------------------o
 CapsLock & k::keyWithCtrlAltShift("Down")	;Down
 ;-----------------------------------o
-CapsLock & i::keyWithCtrlAltShift("Up")		;Up
+CapsLock & i::keyWithCtrlAltShift("Up")	    ;Up
 ;-----------------------------------o
 CapsLock & l::keyWithCtrlAltShift("Right")	;Right
 ;-----------------------------------o
-CapsLock & h::keyWithCtrlAltShift("Home")	;Home
+CapsLock & ,::keyWithCtrlAltShift("Home")	;Home
 ;-----------------------------------o
-CapsLock & n::keyWithCtrlAltShift("End") 	;End
+CapsLock & .::keyWithCtrlAltShift("End") 	;End
 ;-----------------------------------o
 CapsLock & u::keyWithCtrlAltShift("PgUp") 	;PageUp
 ;-----------------------------------o
-CapsLock & o::keyWithCtrlAltShift("PgDn") 	;PageDown
+CapsLock & n::keyWithCtrlAltShift("PgDn") 	;PageDown
 ;-----------------------------------o
 CapsLock & ':: keyWithCtrlAltShift("Del")	;Del
 ;-----------------------------------o
@@ -52,8 +63,13 @@ Capslock & =:: keyWithCtrlAltShift("F12")
 *!j::keyWithCtrlAltShift("Left")
 *!l::keyWithCtrlAltShift("Right")
 *!k::keyWithCtrlAltShift("Down")
+
+;*!k::keyWithCtrlAltShift("Up")				;Alt + Arrow
+;*!h::keyWithCtrlAltShift("Left")
+;*!l::keyWithCtrlAltShift("Right")
+;*!j::keyWithCtrlAltShift("Down")
 ;-----------------------------------o
 *!u::keyWithCtrlAltShift("PgUp")
-*!o::keyWithCtrlAltShift("PgDn")
-*!h::keyWithCtrlAltShift("Home")
-*!e::keyWithCtrlAltShift("End")
+*!n::keyWithCtrlAltShift("PgDn")
+*!,::keyWithCtrlAltShift("Home")
+*!.::keyWithCtrlAltShift("End")

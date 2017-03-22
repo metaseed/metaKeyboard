@@ -51,9 +51,14 @@ else
 return
 ;-----------------------------------o
 CapsLock & p::								;Print/Record Screen
- 	Run SnippingTool.exe
+ 	
+if GetKeyState("alt") = 0 {   ;Search
+	Run SnippingTool.exe 					;Sniping
+} else {
+	Run "M:\Software\_SoftwareGreen\ScreenToGif\ScreenToGif.exe"
+} 
 return
 ;-----------------------------------o
 CapsLock & m::								;Print/Record Screen
- 	Run G:\Software\ProcessExplorer\procexp64.exe
+ 	Run m:\Software\ProcessExplorer\procexp64.exe
 return
