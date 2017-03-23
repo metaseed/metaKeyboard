@@ -2,11 +2,11 @@
 ;								Function Keys
 ;---------------------------------------------------------------------
 ; After Alt-Tab, move mouse to center of newly activated window.
-~!Tab::
-KeyWait, Alt
-KeyWait, Tab
-moveMouseToWindowCenter()
-return
+;~!Tab::
+;KeyWait, Alt
+;KeyWait, Tab
+;moveMouseToWindowCenter()
+;return
 ;-----------------------------------o
 CapsLock & /:: Send ^/						;Toggle Line Comment
 ;-----------------------------------o
@@ -22,7 +22,25 @@ return
 ;-----------------------------------o
 CapsLock & d:: Send, ^+!d 					;Dictionary
 ;-----------------------------------o
-CapsLock & w::								;Web Search
+LWin & v::
+Run "C:\Users\jsong12\Desktop\Hyper-V Manager.lnk"
+return
+;-----------------------------------o	Goto files pane
+LWin & f::
+Send, ^f
+;Sleep, 500
+Send, `t
+;Sleep, 500
+Send, `t
+return
+;-----------------------------------o	Goto Navigation pane
+LWin & n::
+Send, ^f
+;Sleep, 500
+Send, `t
+return
+;-----------------------------------o	Web Search
+CapsLock & w::
 if GetKeyState("alt") = 0 {
     Run http://www.google.com/
 } else {

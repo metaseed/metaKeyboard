@@ -49,6 +49,8 @@ Ctrl+Shift+1/2/.../8    View modes
 Ctrl+F/F3(Caps+3) go to search box, then press Tab go to navigation pane, then press Tab go to file list.
 
 Win+I   Settings
+Win+B   Show hiden icons
+Win+Number Start the program pinned to the taskbar.
 
 F11(Caps+-) Toggle full-screen mode. 
 ## Virtual desktops

@@ -27,7 +27,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;=====================================================================
 #include %A_LineFile%\..\config.ahk.
 #Include %A_LineFile%\..\lib\index.ahk.
-#Include %A_LineFile%\..\mouse.ahk.
+;#Include %A_LineFile%\..\mouse.ahk.
 #include %A_LineFile%\..\keyboard.ahk.
 #include %A_LineFile%\..\functionKeys.ahk.
 ;---------------------------------------------------------------------
