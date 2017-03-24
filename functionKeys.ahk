@@ -21,24 +21,6 @@ Run "C:\Program Files (x86)\Microsoft VS Code\Code.exe"
 return
 ;-----------------------------------o
 CapsLock & d:: Send, ^+!d 					;Dictionary
-;-----------------------------------o
-LWin & v::
-Run "C:\Users\jsong12\Desktop\Hyper-V Manager.lnk"
-return
-;-----------------------------------o	Goto files pane
-LWin & f::
-Send, ^f
-;Sleep, 500
-Send, `t
-;Sleep, 500
-Send, `t
-return
-;-----------------------------------o	Goto Navigation pane
-LWin & n::
-Send, ^f
-;Sleep, 500
-Send, `t
-return
 ;-----------------------------------o	Web Search
 CapsLock & w::
 if GetKeyState("alt") = 0 {
@@ -79,4 +61,26 @@ return
 ;-----------------------------------o
 CapsLock & m::								;Print/Record Screen
  	Run m:\Software\ProcessExplorer\procexp64.exe
+return
+;-----------------------------------o
+
+;=====================Win Function Key======================
+;-----------------------------------o	Virtual machine
+LWin & v::
+Run "C:\Users\jsong12\Desktop\Hyper-V Manager.lnk"
+return
+;-----------------------------------o	Goto files pane
+LWin & f::
+Send, ^f
+Send, `t
+Send, `t
+return
+;-----------------------------------o	Goto Navigation pane
+LWin & n::
+Send, ^f
+Send, `t
+return
+;-----------------------------------o	Goto Navigation pane
+LWin & d::
+Run, "C:\Users\jsong12\Desktop"
 return
