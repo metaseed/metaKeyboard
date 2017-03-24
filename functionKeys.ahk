@@ -59,28 +59,28 @@ if GetKeyState("alt") = 0 {   ;Search
 } 
 return
 ;-----------------------------------o
-CapsLock & m::								;Print/Record Screen
- 	Run m:\Software\ProcessExplorer\procexp64.exe
-return
-;-----------------------------------o
 
 ;=====================Win Function Key======================
 ;-----------------------------------o	Virtual machine
-LWin & v::
+#v::
 Run "C:\Users\jsong12\Desktop\Hyper-V Manager.lnk"
 return
+;-----------------------------------o	Task Manager
+#t::
+Run m:\Software\ProcessExplorer\procexp64.exe
+return
 ;-----------------------------------o	Goto files pane
-LWin & f::
+#f::
 Send, ^f
 Send, `t
 Send, `t
 return
 ;-----------------------------------o	Goto Navigation pane
-LWin & n::
+#n::
 Send, ^f
 Send, `t
 return
 ;-----------------------------------o	Goto Navigation pane
-LWin & d::
+#d::
 Run, "C:\Users\jsong12\Desktop"
 return
