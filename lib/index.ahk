@@ -42,8 +42,8 @@ keyWithCtrlAltShift(key)
             if GetKeyState("shift") = 0 {
                 if GetKeyState("LWin") = 0 {
                     ;IfWinExist ahk_class #32771
-                    Send, {Alt down}{ %key% }
                     ;Send, !{ %key% }
+                    Send, {Alt down}{ %key% }
                 }else {
                     Send, !#{ %key% }
                 }
