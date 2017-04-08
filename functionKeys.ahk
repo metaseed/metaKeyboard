@@ -63,7 +63,7 @@ return
 ;=====================Win Function Key======================
 ;-----------------------------------o       Virtual machine
 #v::
-Run "C:\Users\jsong12\Desktop\Hyper-V Manager.lnk"
+Run "C:\Users\jsong12\Desktop\RarelyUsed\Hyper-V Manager.lnk"
 return
 ;-----------------------------------o       Task Manager
 #t::
