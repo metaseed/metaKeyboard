@@ -20,7 +20,7 @@ CapsLock & c::                                ;VSCode
 Run "C:\Program Files (x86)\Microsoft VS Code\Code.exe"
 return
 ;-----------------------------------o
-CapsLock & d:: Send, ^+!d                     ;Dictionary
+CapsLock & d:: Send, +!d                      ;Dictionary
 ;-----------------------------------o    Web Search
 CapsLock & w::
 if GetKeyState("alt") = 0 {
@@ -34,7 +34,7 @@ CapsLock & r:: Run Powershell                ;Run Shell
 ;-----------------------------------o
 CapsLock & s::
 if GetKeyState("shift") = 0 {   ;Search
-    Send, !+s                               ;Toggle Everything
+    Send, +!s                               ;Toggle Everything
 } else {
     Send, ^+!s                              ;New Everything Window
 }

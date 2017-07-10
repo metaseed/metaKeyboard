@@ -11,7 +11,7 @@ else
 KeyWait, ``
 return
 ;-----------------------------------o
-CapsLock::Send, {ESC}            ;ESC
+;CapsLock::sendKey("ESC")           ;ESC
 ;-----------------------------------o
 
 CapsLock & h::keyWithCtrlAltShift("Left")       ;Left
@@ -44,7 +44,7 @@ CapsLock & n::keyWithCtrlAltShift("PgDn")       ;PageDown
 ;-----------------------------------o
 CapsLock & ':: keyWithCtrlAltShift("Del")       ;Del
 ;-----------------------------------o
-CapsLock & `;:: Send, { AppsKey }               ;Context Menu
+CapsLock & `;:: Send, { AppsKey }    ;Context Menu
 ;-----------------------------------o
 CapsLock & ]:: Send, { Click Right }            ;Click Right
 ;-----------------------------------o

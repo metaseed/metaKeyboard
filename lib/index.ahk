@@ -21,6 +21,19 @@ moveMouseToWindowCenter() {
     SetTimer, RemoveToolTip, 2000
 }
 
+isRemoteDesktopFullScreen() {
+    If WinActive("ahk_class TscShellContainerClass") {
+        WinGet, maxOrMin, MinMax, ahk_class TscShellContainerClass
+        if (maxOrMin = 0) {
+            WinGetPos, PosX, PosY, WinWidth, WinHeight, ahk_class TscShellContainerClass
+            if (PosY = 0) {  ; it is fully maximized
+                return true
+            }
+        }
+    }
+    return false
+}
+
 keyWithCtrlAltShift(key)
 {
     if GetKeyState("control") = 0 {
