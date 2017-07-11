@@ -1,6 +1,9 @@
 ;VimLikeArrows = 0
 
+; diable the NumLock so as to only use the number pad for numbers
+SetNumlockState, AlwaysOn
 SetCapsLockState, AlwaysOff
+
 ;-----------------------------------o
 CapsLock & `::                                  ;CapsLock + ` | {CapsLock}
 GetKeyState, CapsLockState, CapsLock, T

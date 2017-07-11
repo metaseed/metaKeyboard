@@ -32,13 +32,7 @@ return
 ;-----------------------------------o
 CapsLock & r:: Run Powershell                ;Run Shell
 ;-----------------------------------o
-CapsLock & s::
-if GetKeyState("shift") = 0 {   ;Search
-    Send, +!s                               ;Toggle Everything
-} else {
-    Send, ^+!s                              ;New Everything Window
-}
-return
+#include %A_LineFile%\..\lib\search-with-everything.ahk.
 ;-----------------------------------o
 CapsLock & t::                              ;Text Process App
 IfWinExist Untitled - Notepad 
@@ -55,7 +49,7 @@ CapsLock & p::                              ;Print/Record Screen
 if GetKeyState("alt") = 0 {   ;Search
     Run SnippingTool.exe                    ;Sniping
 } else {
-    Run "M:\Software\_SoftwareGreen\ScreenToGif\ScreenToGif.exe"
+    Run "c:\software\ScreenToGif.exe"
 } 
 return
 ;-----------------------------------o
@@ -63,11 +57,11 @@ return
 ;=====================Win Function Key======================
 ;-----------------------------------o       Virtual machine
 #v::
-Run "C:\Users\jsong12\Desktop\RarelyUsed\Hyper-V Manager.lnk"
+Run "C:\software\Hyper-V Manager.lnk"
 return
 ;-----------------------------------o       Task Manager
 #t::
-Run m:\Software\ProcessExplorer\procexp64.exe
+Run "c:\software\procexp64.exe
 return
 ;-----------------------------------o       Goto files pane
 #f::
@@ -84,3 +78,11 @@ return
 #d::
 Run, "C:\Users\jsong12\Desktop"
 return
+;----------------------------------o        Copy and search with google
+^+c::
+{
+ Send, ^c
+ Sleep 50
+ Run, http://www.google.com/search?q=%clipboard%
+ Return
+}

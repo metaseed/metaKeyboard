@@ -13,6 +13,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Hook hotkeys are smart enough to ignore such keystrokes.
 #UseHook
 
+; solve problem: ahk not work in win10 in some applications
+; https://stackoverflow.com/questions/31839062/autohotkey-in-windows-10-hotkeys-not-working-in-some-applications
+if not A_IsAdmin
+{
+   Run *RunAs "%A_ScriptFullPath%"  ; Requires v1.0.92.01+
+   ExitApp
+}
 ;=====================================================================
 ;                   		Metasong's AHK Script
 ;---------------------------------------------------------------------
