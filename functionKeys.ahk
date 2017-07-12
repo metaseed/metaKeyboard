@@ -24,9 +24,9 @@ CapsLock & d:: Send, +!d                      ;Dictionary
 ;-----------------------------------o    Web Search
 CapsLock & w::
 if GetKeyState("alt") = 0 {
-    Run http://www.google.com/
+    Run "%searchEngine%"
 } else {
-    Run http://global.bing.com/?FORM=HPCNEN&setmkt=en-us&setlang=en-us
+    Run "%searchEngineAlt%"
 }
 return
 ;-----------------------------------o
@@ -49,7 +49,7 @@ CapsLock & p::                              ;Print/Record Screen
 if GetKeyState("alt") = 0 {   ;Search
     Run SnippingTool.exe                    ;Sniping
 } else {
-    Run "c:\software\ScreenToGif.exe"
+    Run "%gifTool%"
 } 
 return
 ;-----------------------------------o
@@ -57,11 +57,11 @@ return
 ;=====================Win Function Key======================
 ;-----------------------------------o       Virtual machine
 #v::
-Run "C:\software\Hyper-V Manager.lnk"
+Run "%virtualMachineManager%"
 return
 ;-----------------------------------o       Task Manager
 #t::
-Run "c:\software\procexp64.exe
+Run "%processExplorer%"
 return
 ;-----------------------------------o       Goto files pane
 #f::
@@ -76,13 +76,13 @@ Send, `t
 return
 ;-----------------------------------o       Goto Navigation pane
 #d::
-Run, "C:\Users\jsong12\Desktop"
+Run, "%desktopFolder%"
 return
 ;----------------------------------o        Copy and search with google
 ^+c::
 {
  Send, ^c
  Sleep 50
- Run, http://www.google.com/search?q=%clipboard%
+ Run, "%searchEngine%/search?q=%clipboard%"
  Return
 }
