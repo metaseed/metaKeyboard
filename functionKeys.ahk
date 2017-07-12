@@ -16,8 +16,11 @@ CapsLock & \:: Send +!a                       ;Toggle Block Comment
 ;=====================================================================
 ;                        Frequently Used Programs
 ;---------------------------------------------------------------------
-CapsLock & c::                                ;VSCode
-Run "%codeEditor%"
+CapsLock & e::                                ;VSCode
+Run "%editor%"
+return
+CapsLock & c::                                ;cmd
+Run "%cmd%"
 return
 ;-----------------------------------o
 CapsLock & d:: Send, +!d                      ;Dictionary
