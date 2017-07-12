@@ -1,9 +1,9 @@
-; specify the configuration here
-everythingPath :=  ".\software\Everything.exe" ;set alt+shift+f as toggle window hotkey, ctrl+alt+shift+f as new window hotkey
-virtualMachineManager := ".\software\Hyper-V Manager.lnk"
-processExplorer := ".\software\procexp64.exe"
-desktopFolder := "C:\Users\jsong12\Desktop"
-gifTool := ".\software\ScreenToGif 2.1.exe"
-searchEngine :="https://www.google.com"
-searchEngineAlt := "https://global.bing.com/?FORM=HPCNEN&setmkt=en-us&setlang=en-us"
-codeEditor :="C:\Program Files (x86)\Microsoft VS Code\Code.exe"
+; specify the configuration here 
+IniRead, everythingPath, .\config.ini, tools, everythingPath
+IniRead, virtualMachineManager, .\config.ini, tools, virtualMachineManager
+IniRead, processExplorer, .\config.ini, tools, processExplorer
+IniRead, desktopFolder, .\config.ini, tools, desktopFolder
+IniRead, gifTool, .\config.ini, tools, gifTool
+IniRead, searchEngine, .\config.ini, tools, searchEngine
+IniRead, searchEngineAlt, .\config.ini, tools, searchEngineAlt
+IniRead, codeEditor, .\config.ini, tools, codeEditor
