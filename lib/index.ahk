@@ -58,13 +58,17 @@ GetFolder()
     }
 }
 
-keyWithCtrlAltShift(key)
+keyWithCtrlAltShift(key, originalKey)
 {
     if GetKeyState("control") = 0 {
-        if GetKeyState("alt") = 0 {
+        if GetKeyState("LAlt") = 0 {
             if GetKeyState("shift") = 0 {
                 if GetKeyState("LWin") = 0 {
-                    Send, { %key% }
+                    if GetKeyState("RAlt") = 0 {
+                        Send, { %key% }
+                    } else {
+                        Send, !{ %originalKey%}
+                    }
                 }else {
                     Send, #{ %key% }
                 }
@@ -87,13 +91,13 @@ keyWithCtrlAltShift(key)
             } else {
                 if GetKeyState("LWin") = 0 {
                     Send, !+{ %key% }
-                }else {
+                } else {
                     Send, !+#{ %key% }
                 }
             }
         }
     } else {
-        if GetKeyState("alt") = 0 {
+        if GetKeyState("LAlt") = 0 {
             if GetKeyState("shift") = 0 {
                 if GetKeyState("LWin") = 0 {
                     Send, ^{ %key% }
