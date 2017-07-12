@@ -1,1 +1,1 @@
-ahk2exe.exe /in "start.ahk" /icon "metago.ico" /out "./metago/metago.exe"
+ahk2exe.exe /in "start.ahk" /icon "metaKeyboard.ico" /out "./metaKeyboard/metaKeyboard.exe"
