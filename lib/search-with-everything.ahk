@@ -4,15 +4,15 @@ CapsLock & f::
     if WinActive("ahk_class CabinetWClass") {
         folder := GetFolder()
         if GetKeyState("shift") = 0 { 
-            run, %comspec% /k ""%everythingPath%" -path "%folder%""
+            run, "%everythingPath%" -path "%folder%"
         } else {
-            run, %comspec% /k ""%everythingPath%" -path "%folder%" -newwindow"
+            run, "%everythingPath%" -path "%folder%" -newwindow
         }
     } else {
         if GetKeyState("shift") = 0 {   ;Search
-            Send, +!s                               ;Toggle Everything
+            Send, +!f                               ;Toggle Everything
         } else {
-            Send, ^+!s                              ;New Everything Window
+            Send, ^+!f                              ;New Everything Window
         }
     }
 }

@@ -17,7 +17,7 @@ CapsLock & \:: Send +!a                       ;Toggle Block Comment
 ;                        Frequently Used Programs
 ;---------------------------------------------------------------------
 CapsLock & c::                                ;VSCode
-Run "C:\Program Files (x86)\Microsoft VS Code\Code.exe"
+Run "%codeEditor%"
 return
 ;-----------------------------------o
 CapsLock & d:: Send, +!d                      ;Dictionary
