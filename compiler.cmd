@@ -1,0 +1,1 @@
+ahk2exe.exe /in "start.ahk" /icon "metago.ico" /out "./metago/metago.exe"

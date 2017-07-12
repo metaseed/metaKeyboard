@@ -219,3 +219,4 @@ gitk
 git git rebase -i head~5
 git rebase -i head~5
 git push
+ahk2exe.exe /in "start.ahk" /icon "metago.ico" /out "./output/metago.exe"
