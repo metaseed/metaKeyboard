@@ -4,9 +4,9 @@ CapsLock & f::
     if WinActive("ahk_class CabinetWClass") {
         folder := GetFolder()
         if GetKeyState("shift") = 0 { 
-            run, "%everythingPath%" -path "%folder%"
+            run "%everythingPath%" -path "%folder%"
         } else {
-            run, "%everythingPath%" -path "%folder%" -newwindow
+            run "%everythingPath%" -path "%folder%" -newwindow
         }
     } else {
         if GetKeyState("shift") = 0 {   ;Search
