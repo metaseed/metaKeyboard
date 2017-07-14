@@ -220,3 +220,64 @@ git git rebase -i head~5
 git rebase -i head~5
 git push
 ahk2exe.exe /in "start.ahk" /icon "metago.ico" /out "./output/metago.exe"
+ahk2exe.exe /in "start.ahk" /icon "metago.ico" /out "./output/metago.exe"
+%homepath%
+cd "%homepath%
+echo %homepath%
+c:
+cd %homepath%
+dot config list
+powershell -f \\srv004bgc\ia_temp\Prism\dot\Install\install.ps1
+dot
+dot
+c:
+cd %homepath%
+dot 
+dot
+dot
+path
+dot
+cd %homepath%
+dot 
+dot
+dot
+ath
+path
+dot
+ath
+cd d:
+d:
+path
+dot
+path
+dot
+path
+echo %path%
+path
+dot
+path
+dot
+path
+path
+path
+dot
+path
+path
+dot
+cd..
+cd.
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force -Scope CurrentUser
+powershell
+powershell
+path
+path
+path
+path
+path
+path
+path
+mklink
+mklink /J ./metaKeyboard/software
+mklink /J .\metaKeyboard\software
+mklink /J software .\metaKeyboard\software
+mklink /H config.ini .\metaKeyboard\config.ini

@@ -12,7 +12,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; by holding down ALT and sending a series of Numpad keystrokes.
 ; Hook hotkeys are smart enough to ignore such keystrokes.
 #UseHook
-
+TrayTip, AutoHotKey, Started, 1
+SoundBeep, 300, 150
 ; solve problem: ahk not work in win10 in some applications
 ; https://stackoverflow.com/questions/31839062/autohotkey-in-windows-10-hotkeys-not-working-in-some-applications
 if not A_IsAdmin

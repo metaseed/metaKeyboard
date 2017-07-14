@@ -1,2 +1,11 @@
 /editor/
 metaKeyboard/software/everything/Everything.db
+
+# hard link to folder and file in metaKeyboard
+/software/ 
+config.ini
+# hard link end
+
+metaKeyboard/software/everything/Everything.ini
+metaKeyboard/software/everything/Run History.csv
+metaKeyboard/software/cmder/config/.history
