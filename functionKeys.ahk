@@ -82,7 +82,7 @@ return
 Run, "%desktopFolder%"
 return
 ;----------------------------------o        Copy and search with google
-^+c::
+^!c::
 {
  Send, ^c
  Sleep 50
