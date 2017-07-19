@@ -95,3 +95,5 @@ Send, ^s ; To save a changed script
 Sleep, 300 ; give it time to save the script
 Reload
 Return
+
+#!^c::ExitApp
