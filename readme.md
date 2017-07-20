@@ -60,3 +60,7 @@ Win+Ctrl+F4(Caps+4) Close desktop
 
 Win+Ctrl+Right/Left(Caps+l/j)  Switch to right/left one
 
+
+## Dialog box
+Ctrl+Tab (Ctrl+Shift+Tab) to switch tabs
+spacebar to toggle checkbox

@@ -10,9 +10,11 @@ CapsLock & f::
         }
     } else {
         if GetKeyState("shift") = 0 {   ;Search
-            Send, +!f                               ;Toggle Everything
+            run "%everythingPath%" -toggle-window
+            ; Send, +!f                               ;Toggle Everything
         } else {
-            Send, ^+!f                              ;New Everything Window
+            run "%everythingPath%" -newwindow
+            ; Send, ^+!f                              ;New Everything Window
         }
     }
 }
