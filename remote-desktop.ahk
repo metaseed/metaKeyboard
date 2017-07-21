@@ -4,7 +4,7 @@
 ; this line should be put on top (auto-exec) section of ahk script
 SetTimer, SuspendOnRDPMaximized, 500
 
-Hotkey, *CapsLock, MyLabel, On
+;Hotkey, *CapsLock, capsHotKeyAction, On
 return
 ; this actual code label and the fn can be put anywhere in the script file
 SuspendOnRDPMaximized:
@@ -13,11 +13,11 @@ If WinActive("ahk_class TscShellContainerClass") {
     if (maxOrMin = 0) {
         WinGetPos, PosX, PosY, WinWidth, WinHeight, ahk_class TscShellContainerClass
         if (PosY <= 0) {  ; it is fully maximized
-            Hotkey, *CapsLock, Off
+            ;Hotkey, *CapsLock, Off
             Suspend, On
             WinWaitNotActive, ahk_class TscShellContainerClass
             Suspend, Off
-            Hotkey, *CapsLock, On
+            ;Hotkey, *CapsLock, On
         }
        ; MsgBox, PosY: %PosY%, PosX: %PosX%
     }
@@ -26,7 +26,7 @@ return
 
 
 
-MyLabel:
-Send, { ESC }
-;MsgBox You pressed %A_ThisHotkey%.
-return
+; capsHotKeyAction:
+; Send, { ESC }
+; ;MsgBox You pressed %A_ThisHotkey%.
+; return

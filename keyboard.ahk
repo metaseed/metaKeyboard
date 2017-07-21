@@ -1,8 +1,9 @@
 ;VimLikeArrows = 0
 
+SetCapsLockState, AlwaysOff
+#include %A_LineFile%\..\remote-desktop.ahk.
 ; diable the NumLock so as to only use the number pad for numbers
 SetNumlockState, AlwaysOn
-SetCapsLockState, AlwaysOff
 
 ;-----------------------------------o
 CapsLock & `::                                  ;CapsLock + ` | {CapsLock}
@@ -14,7 +15,7 @@ else
 KeyWait, ``
 return
 ;-----------------------------------o
-;CapsLock::sendKey("ESC")           ;ESC
+CapsLock:: Send, { ESC }           ;ESC
 ;-----------------------------------o
 
 CapsLock & h::keyWithCtrlAltShift("Left","h")       ;Left
