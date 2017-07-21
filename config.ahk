@@ -7,4 +7,4 @@ IniRead, gifTool, .\config.ini, tools, gifTool
 IniRead, searchEngine, .\config.ini, tools, searchEngine
 IniRead, searchEngineAlt, .\config.ini, tools, searchEngineAlt
 IniRead, editor, .\config.ini, tools, editor
-IniRead, cmd, .\config.ini, tools, cmd
+IniRead, cmd, .\config.ini, tools, 

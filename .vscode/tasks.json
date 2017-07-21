@@ -4,6 +4,11 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "taskName": "run",
+            "command": ".\\start.ahk",
+            "type": "shell"
+        },
+        {
             "taskName": "build",
             "command": ".\\compiler.cmd",
             "type": "shell"

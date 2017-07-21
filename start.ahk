@@ -13,16 +13,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Hook hotkeys are smart enough to ignore such keystrokes.
 #UseHook
 
-; solve problem: ahk not work in win10 in some applications
-; https://stackoverflow.com/questions/31839062/autohotkey-in-windows-10-hotkeys-not-working-in-some-applications
-if not A_IsAdmin
-{
-   Run *RunAs "%A_ScriptFullPath%"  ; Requires v1.0.92.01+
-   ExitApp
-}
 
-TrayTip, AutoHotKey, Started, 1
-SoundBeep, 300, 150
 ;=====================================================================
 ;                   		Metasong's AHK Script
 ;---------------------------------------------------------------------
@@ -36,9 +27,11 @@ SoundBeep, 300, 150
 ; Use it whatever and wherever you like. Hope it helps!
 ;=====================================================================
 #include %A_LineFile%\..\config.ahk.
+#Include %A_LineFile%\..\init.ahk.
 #Include %A_LineFile%\..\lib\index.ahk.
-;#Include %A_LineFile%\..\mouse.ahk.
 #include %A_LineFile%\..\keyboard.ahk.
 #include %A_LineFile%\..\functionKeys.ahk.
+#Include %A_LineFile%\..\tray.ahk.
+;#Include %A_LineFile%\..\mouse.ahk.
 #include %A_LineFile%\..\create-new-file.ahk.
 ;---------------------------------------------------------------------
