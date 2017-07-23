@@ -19,9 +19,26 @@ CapsLock & \:: Send +!a                       ;Toggle Block Comment
 CapsLock & e::                                ;VSCode
 Run "%editor%"
 return
+
 CapsLock & c::                                ;cmd
-Run "%cmd%"
-return
+{
+    if WinActive("ahk_class CabinetWClass") {
+        folder := GetFolder()
+        if GetKeyState("shift") != 0 { 
+            run "%cmd%" /single %folder% -cur_console:d:%folder%
+        } else {
+            run "%cmd%" /start "%folder%"
+        }
+    } else {
+        if GetKeyState("shift") != 0 {   ;Search
+            run "%cmd%" /single %userProfile%
+        } else {
+           run "%cmd%" /start %userProfile%
+        }
+    }
+    return
+}
+; Run "%cmd%"
 ;-----------------------------------o
 CapsLock & d:: Send, +!d                      ;Dictionary
 ;-----------------------------------o    Web Search
