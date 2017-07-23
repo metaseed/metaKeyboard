@@ -1,0 +1,394 @@
+﻿;Swedish translation for Clipjump
+;TranslatorName=Åke Engelbrektson
+;TranslatorContact=eson57@gmail.com
+;TranslatorURL=https://svenskasprakfiler.se
+;LastUpdated=1 Jul 2014
+
+;======
+;v9.9.0.1
+;======
+
+TIP_text = Text
+TIP_file_folder = Fil/Mapp
+TIP_copied = Överförd till
+TIP_empty1 = Klipp 0 av 0
+TIP_empty2 = är tom
+TIP_error = [Förhandsgranskning/sökväg kan inte läsas in]
+TIP_more = [Mer]
+TIP_pasting = Klistrar in...
+TIP_deleted = Borttagen
+TIP_alldeleted = All data borttagen
+TIP_cancelled = Avbruten
+TIP_fixed = [FIXED]
+TIP_noformatting = INGEN FORMATERING
+TIP_filepath = Sökväg(ar) kopierad(e) till
+TIP_folderpath = Aktiv mappsökväg kopierad till
+TIP_activated = AKTIVERAD
+TIP_deactivated = INAKTIVERAD
+TIP_cancelm = Avbryt inklistringsprocess
+TIP_delm = Ta bort aktuell
+TIP_delallm = Ta bort alla
+TIP_modem = Släpp Ctrl för att bekräfta
+          = Tryck X för att växla läge
+
+ABT__name = Om
+ABT_reset = Återställ &Clipjump
+ABT_resetM = Vill du verkligen återställa Clipjump genom att ta bort alla klipp och inställningar?
+ABT_removeStart = En autostartpost för Clipjump hittades. Vill du ta bort den också?
+ABT_resetfinal = kommer att stängas nu.
+ABT_noupdate = Inga uppdateringar tillgängliga
+
+HST__name = Urklippshistorik
+HST_preview = &Förhandsgranskning
+HST_del = &Ta bort objekt
+HST_clear = Rensa &historik
+HST_search = Sök&filter
+HST_partial = Pa&rtiell
+HST_clip = Klipp
+HST_date = Datum
+HST_size = Storlek(B)
+HST_dconsump = Diskanvändning
+HST_viewimage = [Dubbelklick för att visa bild]
+HST_m_prev = &Förhandsgranskning
+HST_m_copy = &Kopiera 			(Ctrl+C)
+HST_m_insta = &Snabbinklistring 	(Space)
+HST_m_export = &Exportera klipp 	(Ctrl+E)
+HST_m_ref = &Uppdatera
+HST_m_del = &Ta bort
+
+PRV__name = Förhandsgranska
+PRV_copy = Kopiera till Urklipp
+PRV_find = S&ök
+
+SET__name = Inställningar
+SET_main = Allmänt
+SET_limitmaxclips = &Begränsa det maximala antalet aktiva urklippskanaler
+SET_maxclips = &Minsta antalet aktiva urklippskanaler
+SET_threshold = &Tröskelvärde
+SET_quality = &Kvallitet på förhandsgranskningminiatyrer
+SET_copybeep = &Pip efter kopiering
+SET_ismessage = &Visa verifieringsruta vid kopiering
+SET_keepsession = &Bevara data i Urklipp när programmet startas om
+SET_formatting = Starta med 'Ingen formatering' aktiverad
+SET_cb = Urklippshistorik
+SET_daystostore = Antal dagar att bevara objekt i &historiken
+SET_images = Lagra &bilder i historiken
+SET_shortcuts = Genvägar
+SET_pst = Inklistringsläge (Ctrl + ..)
+SET_actmd = Åtgärdsläge
+SET_chnl = Välj kanal
+SET_channels = Kanaler
+SET_ischannelmin = Använd minimalistiskt utseende
+SET_advanced = Avancerat
+SET_manageignore = Hantera undantagna fönster
+SET_cancel = &Avbryt
+SET_apply = &Verkställ
+
+SET_advanced_error = kan inte hitta inställningsfilen (settings.ini) eller Notepad.exe? Tillse att båda finns på sina respektive platser.
+                   =
+                   = Försök kontakta utvecklaren om problemen kvarstår.
+SET_T_limitmaxclips = Kommer Clipjumps urklippskanaler att vara begränsade
+                    = Ibockad = Ja
+SET_T_maxclips = Det är det minimala antalet urklippskanaler som du vill skall vara aktiva samtidigt.
+               = Om du vill ha 20, ANGE 20.
+SET_T_threshold = Tröskelvärdet är det antal extra urklippskanaler som du vill aktivera utöver minimigränsen..
+                = Högsta rekommenderade värde är 10.
+                =
+                = [TIPS] - Tröskelvärde = 1 gör så att Clipjump lagrar ett exakt maxantal urklippskanaler.
+SET_T_quality = Kvaliteten du vill ha på förhandsgranskningsminiatyrerna.
+              = Rekommenderat värde är 90
+              = Kan vara mellan 1 och 100
+SET_T_copybeep = Aktivera för att höra ett anpassningsbart pip när urklippsdata läggs till i Clipjump.
+               =
+               = Du kan ändra pipets frekvens under [Advanced] i Settings.ini
+SET_T_keepsession = Skall Clipjump fortsätta med alla sparade urklippskanaler efter en omstart
+SET_T_ismessage = Detta värde avgör om bekräftelsemeddelande skall visas eller ej, vid kopierings-/urklippsåtgärder.
+SET_T_formatting = Vill du att Clipjump skall starta med 'Ingen formatering' aktiverad?
+                 = Bocka i för 'Ja'.
+SET_T_daystostore = Antal dagar som urklippsinnehållet skall lagras
+SET_T_images = Skall urklippta bilder lagras i historiken?
+SET_T_chnl = Genväg för att visa dialogen 'Välj kanal'.
+           = Ange genvägen som 'Inget' för att inaktivera tangentkombinationen
+SET_T_cfilep = Genväg för att kopiera sökvägen till markerad fil.
+             = Ange genvägen som 'Inget' för att inaktivera tangentkombinationen
+SET_T_cfolderp = Genväg för att kopiera sökvägen till markerad mapp.
+               = Ange genvägen som 'Inget' för att inaktivera tangentkombinationen
+SET_T_cfiled = Genväg för att kopiera markerat filinnehåll till Clipjump.
+             = Ange genvägen som 'Inget' för att inaktivera tangentkombinationen
+SET_T_ot = Välj genväg för 'Engångsstopp'.
+         = 'Engångsstopp' gör så att Clipjump hoppar över nästa dataöverföring till Urklipp, räknat från den tidpunkt då funktionen aktiveras.
+         = Ange genvägen som 'Inget' för att frigöra tangentkombinationen
+SET_T_pitswp = Genväg för att aktivera 'PitSwap'. (tillgänglig även från Åtgärdsläge)
+             = För mer information om funktionen, hänvisas till hjälpfilen.
+SET_T_ischannelmin = Gör 'Kanaldialogen' mindre detaljerad och mer produktiv.
+                   = Minimalistiskt utseende innehåller inga knappar, utan du använder [Enter] för att bekräfta ändringar.
+
+CNL__name = Kanaler
+CNL_choose = &Välj Urklippskanal
+CNL_channelname = Kanal&namn
+CNL_advice1 = Kanal 0 (Standard) är huvudkanalen och bör användas normalt.
+CNL_advice2 = Kanalnamnändringar sparas automatiskt.
+CNL_advice3 = Nästa kanal är tillgängliga endast om den föregående har aktiverats (används).
+CNL_use = &Använd kanal
+CNL_cancel = Avbr&yt
+CNL_statusbar = Klipp i kanalen
+
+TRY_incognito = &Inkognitoläge
+TRY_disable = &Inaktivera
+TRY_startup = Starta vid systemstart
+TRY_updates = Sök efter &uppdateringar
+TRY_help = Hjälp
+TRY_restart = &Starta om Clipjump
+TRY_exit = &Avsluta
+
+ACT__name = ÅTGÄRDSLÄGE
+ACT_enable = Aktivera
+ACT_disable = Inaktivera
+ACT_exit = Stäng detta fönster
+
+IGN__name = Hantera undantagna fönster
+IGN_add = &Lägg till fönsterklass
+IGN_delete = &Ta bort klass
+
+LNG_error = Engelsk språkfil kan inte hittas i ./languages/english.txt . Vänligen, lägg tillbaka den om du tagit bort den medvetet.
+
+_cfilep = Kopiera sökväg(ar)
+_cfolderp = Kopiera aktiv mappsökväg
+_cfiled = Kopiera fildata
+_ot = Engångsstopp
+_pitswp = PitSwap
+_exportedto = exporterad till
+
+
+;============
+;9.9.0.2
+;============
+
+IGN_Restartmsg = Du måste starta om Clipjump för ändringarna skall få effekt. Vill du starta om nu?
+IGN_tip = Tryck Mellanslag för att lägga till en klass.
+        = Tryck Esc för att avsluta klassinhämtningsverktyget.
+
+;===========
+;9.9.1
+;===========
+
+TRY_options = &Alternativ
+TRY_tools = &Verktyg
+HST_delall_msg = Vill du verkligen rensa Clipjumps historik permanent?
+; the following key was modified in v9.9.1 and so you see its entry here
+SET_T_actmd = Genväg för att öppna Clipjump Åtgärdsläge.
+            = Åtgärdsläget tillhandahåller ett grafiskt gränssnitt för nästan alla funktioner i Clipjump.
+            = Vill du ha genvägar på systemnivå för dessa funktioner, hittar du dem här i 'Inställningar'.
+
+;==========
+;9.9.1.9
+;==========
+
+CNL_delete = &Ta bort kanal
+CNL_delmsg = Vill du verkligen ta bort den här kanalen? Notera att åtgärden inte kan ångras och du kommer att förlora alla klipp som är lagrade i den.
+CNL_del_default = Standardkanalen (#0) får inte tas bort.
+TIP_empty3 = Släpp Ctrl för att avsluta.
+UPD_restart = Clipjump kommer nu att starta om för att verkställa uppdateringarna.
+UPD_automsg = Tryck Ja för att uppdatera Clipjump automatiskt, eller Nej för att gå till webbsidan.
+
+;=========
+;10
+;=========
+
+SET_T_pst = Enkel teckenkombination att använda tillsammans med Ctrl för att aktivera [INKLISTRINGSLÄGE]
+          = Notera att bokstäverna E C X Z S är reserverade.
+          = 
+          = Läs också "Copy bypassing Clipjump" i hjälpfilen
+CHC_name = Välj kanal
+TIP_done = Klar
+TIP_copycutfailed = Kopiera/Flytta, misslyckades
+TIP_copy = Kopiera aktuellt klipp
+TIP_move = Flytta aktuellt klipp
+
+;========
+;10.5 beta
+;========
+
+TIP_delallprompt = VARNING!
+                 = Vill du verkligen ta bort alla klipp i den aktuella kanalen?
+                 = Tryck Y för att bekräfta.
+                 = Tryck N för att avbryta.
+
+;=======
+;10.6
+;=======
+
+TIP_confirmcopy = Du måste bekräfta eftersom detta är en skyddad kanal.
+                = Godkänner du denna kopiering till kanalen?
+                = Tryck Y för Ja
+                = Tryck N för Nej
+ABT_seehelp = Vill du se Clipjump-hjälpen?
+ABT_runadmin = Clipjump körs inte som Administratör
+             = Detta kan orsaka felaktiga funktioner i programmet.
+             = 
+             = [Detta meddelande visas endast en gång]
+ABT_cjready = Hej!
+            = Clipjump är nu aktiverat.
+            = Prova att göra ett par snabba kopiera/klistra in...
+TIP_editing = Redigerar....
+            = Tryck Esc för att avbryta
+TIP_editdone = Klippet har redigerats
+TIP_editnotdone = Klippet har INTE redigerats!
+
+;======
+;10.7
+;======
+
+HST_m_edit = Redigera klipp 		(Ctrl+H)
+
+;======
+;10.7.2.6b
+;======
+
+_name = Namn
+_tags = Taggar
+_author = Upphovsman
+_run = Kör
+_properties = Egenskaper
+PLG_properties = Egenskaper (Alt+Enter)
+PLG__name = Tilläggshanterare
+PLG_fetchparam = parameter för tillägget
+PLG_delmsg = Vill du verkligen ta bort följande tillägg?
+PLG_restartmsg = Du har tagit bort tillägg.
+               = Notera att tillägg, undantaget de från (external.) class, kräver omstart av programmet.
+               = Vill du fortsätta?
+API_extplugMiss = Följande externa tilläggsfil saknas.
+API_plugCorrupt = Följande tillägg är korrupt eller saknas.
+
+;=====
+;10.7.5
+;=====
+
+PLG_Sb_running = Kör tillägg
+PLG_Sb_exit = Tillägg raderat
+PLG_Sb_deleted = Tillägg borttaget
+SET_T_pst = Enkeltecken att kombinera med Ctrl för att aktivera [PASTE MODE]
+          = Notera att bokstäverna  E,C,X,Z,S,A,F och H är reserverade.
+          =
+          = Läs också "Copy bypassing Clipjump" i hjälpfilen.
+SET_pformat = Standard inklistringsformat
+SET_T_pformat = Det inklistringsformat du vill aktivera vid Clipjumps uppstart. '-original' är standard Clipjump inklistringsteknik.
+SET_t_plugM = Genväg för att öppna tilläggshanteringen.
+PLG_edit = Redigera (F2)
+CUS_error = Fel i rutinen för ClipjumpCustom.ini?
+
+;=====
+;10.7.8
+;=====
+
+TRY_pstmdshorts = Genvägar för inklistringsläget
+
+;=====
+;10.9
+;=====
+
+TIP_holdclip = Tryck Ctrl+V för att klistra in
+             = Tryck Insert to add clip to channel
+             = Tryck Esc för att avsluta
+SET_holdclip = Frys klippfunktion
+SET_T_holdclip = Kopierar markerad text eller objekt till en buffert, och förhindrar att den fångas upp av Clipjump.
+               = Du kan sedan klistra in klippet, flytta det till en kanal eller avvisa det.
+SET_keepactivepos = Bevara aktuell klipposition
+SET_T_keepactivepos = Vill du att Clipjump skall komma ihåg det senast aktiva klippet i inklistringsläget?
+                    = Unticking it will make Clipjump Paste Mode always start from Clip 1.
+
+;=====
+;11
+;=====
+
+HST_viewimage = [IMAGE]
+ORG__name = Clipjump kanalhanterare
+ORG_m_inc = Flytta upp    (Alt+Up)
+ORG_m_dec = Flytta ner   (Alt+Down)
+ORG_error = Stöd saknas
+ORG_countStatus = Listade objekt
+SET_org = Kanalhanterare
+ORG_delCnlMsgTitle = Välj kanalåtgärd
+ORG_delCnlMsg = Vad vill du göra med den valda kanalen?
+      = Ta bort kanalen permanent = Ja
+      = Rensa kanalen = Nej
+      = Gör ingenting = Avbryt
+_rename = Byt namn
+ORG_renameAsk = Ange nytt namn för kanal nummer
+TIP_initMsg = Startar Clipjump
+
+;======
+;11.2
+;======
+
+TIP_tagPrompt = Skriv taggar, separerade med mellanslag, för det här klippet.
+SET_startSearch = Starta inklistringsläget med sökläget aktiverat.
+SET_T_startSearch = Låt Ctrl+V öppna inklistringsläget, med sökläget aktiverat.
+                  = Detta är till hjälp om du inte vill hålla ner Ctrl för att navigera genom klippen. Läs också "Search in Paste Mode" i Hjälpfilen.
+_editing = Redigerar
+
+; Note to Translator > please make sure the out in Ctrl+v+F1 is aligned properly in TIP_help
+TIP_help =
+= Release Ctrl - Klistra in
+= V            - Flytta fram ett klipp
+= C            - Flytta bak ett klipp
+= X            - Avbryt, Flytta klipp, Ta bort klipp, Kopiera klipp
+= Z            - Byt inklistringsformat
+= Space        - FIX
+= S            - Skicka aktuellt klipp till Windows Urklipp
+= E            - Exportera
+= Up/Down      - Byt kanal +1/-1
+= A            - Flytta kanalens första klipp
+= 1..9         - Hoppa till det angivna klippet efter det aktiva klippet
+= F            - Sök
+= H            - Redigera
+= Enter        - Starta multipel inklistringssession
+= T            - Tagg
+= F1           - Hjälp
+=
+= Tryck V för att stänga det här fönstret
+
+;=======
+; 11.2.3
+;=======
+_more_options = Fler alternativ
+ORG_m_openpst = Öppna i inklistringsläge (Ctrl+O)
+_!x = Alt+X
+_!c = Alt+C
+ORG_m_insta = Snabbinklistring (Space)
+
+;=======
+; 11.3
+;=======
+_destChannel = Målkanal
+_maintenance = Underhåll
+_new = New
+ORG_createnew = Skapa nytt klipp i aktuell kanal
+ORG_createnewpr = Nytt klipp skapas i följande kanal
+ORG_newchname = Nytt kanalnamn
+
+;========
+; 11.4 - Added tooltips for Channel Organizer (hoppfrosch)
+;=======
+ORG_search = Sök klipp
+ORG_up = Flytta upp markerat objekt, en position
+ORG_down = Flytta ner markerat objekt, en position
+ORG_edit = Redigera markerat objekt
+ORG_openPastemode = Öppna inklistringsvyn med markerat klipp, aktivt.
+ORG_props = Redigera markerat klipps egenskaper (taggar, fasta attribut)
+ORG_cut = Klipp ut markerat klipp och infoga i annan kanal
+ORG_copy = Kopiera markerat klipp och duplicera i annan kanal
+ORG_delete = Ta bort markerat objekt
+; ----
+
+SET_revFormat2Def = Starta alltid inklistringsläget med standardformatering
+SET_T_revFormat2Def = Aktivering av det här alternativet startar alltid inklistringsläget i standardformatering (vilket är 'original'/'inget' som standard).
+ORG_clpdelmsg = Markerat klipp borttaget
+ORG_copyingclp = Kopierar markerade klipp
+ORG_movingclp = Flyttar markerade klipp
+ORG_Editprops = Redigera klippegenskaper
+ORG_oEditMsg = Tryck 'Spara' när du är klar.
+ABT_info = Clipjump är en urklippshanterare för Windows, skapad i AutoHotkey.
+        = Den inspirerades av Skrommels applikation, ClipStep.
+_Save = Spara
+SET_T_keepsession = Skall Clipjump fortsätta med alla sparade urklipp (endast från standardkanal 0) efter omstart av programmet?

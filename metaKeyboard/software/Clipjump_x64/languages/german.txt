@@ -1,0 +1,423 @@
+﻿;Deutsche übersetzung für Clipjump
+;erstellt von fump2000 / hoppfrosch
+
+; NOTES
+; Comments should only be at the start of the line
+; Add new keys in the future versions at the bottom for easy & consistent development
+; Add version no in comment when adding a new key in the translation file.
+; Most keys have format XXX_ where XXX is the component name
+; Dont translate 'Clipjump'
+; & in &Preview is to create shortcut Alt+P when the window is active. When translating into a non-english language, omit '&' and when in a english type language, use '&'
+; only when you are sure you are right.
+; Words inside %..% are variables. Take them as constants and translate them accordingly.
+
+;======
+;v9.9.0.1
+;======
+
+TIP_text = Text
+TIP_file_folder = Datei/Ordner
+TIP_empty1 = Clip 0 von 0
+TIP_error = [Die Vorschau/Pfad konnte nicht geladen werden]
+TIP_more = [Mehr]
+TIP_pasting = Einfügen...
+TIP_deleted = Gelöscht
+TIP_alldeleted = Alle Daten gelöscht
+TIP_cancelled = Abgebrochen
+TIP_fixed = [FIXIERT]
+TIP_filepath = Dateipfad(e) gesendet an
+TIP_folderpath = Aktiver Ordnerpfad gesendet an
+TIP_activated = AKTIVIERT
+TIP_deactivated = DEAKTIVIERT
+TIP_cancelm = Einfügen abgebrochen
+TIP_delm = Lösche den ausgewählten Clip
+TIP_delallm = Alle Clips löschen?
+TIP_modem = Zum bestätigen STRG loslassen
+          = Drücke X um den Modus zu wechseln
+
+ABT__name = Über
+ABT_reset = &Clipjump zurücksetzen
+ABT_resetM = Sind Sie sicher, dass Sie Clipjump zurücksetzen wollen? Es gehen alle Clips und Einstellungen verloren!
+ABT_removeStart = Clipjump wurde im Autostart gefunden. Möchten Sie dies entfernen?
+ABT_resetfinal = wird nun geschlossen.
+ABT_noupdate = keine Updates verfügbar.
+
+HST__name = Clip Historie
+HST_preview = &Vorschau
+HST_del = Clip &Löschen
+HST_clear = Hist. L&eeren
+HST_search = &Suchfilter
+HST_partial = &Partiell
+HST_clip = Clip
+HST_date = Datum
+HST_size = Größe(B)
+HST_dconsump = Speicherverbrauch
+HST_m_prev = &Vorschau
+HST_m_copy = &Kopieren		(Ctrl+C)
+HST_m_insta = &Instant-Einfügen		(Space)
+HST_m_export = &Exportieren		(Ctrl+E)
+HST_m_ref = &Aktualisieren
+HST_m_del = &Löschen
+
+PRV__name = Vorschau
+PRV_copy = Senden an Clipjump
+PRV_find = &Suche
+
+SET__name = Einstellungen
+SET_main = Allgemein
+SET_limitmaxclips = &Clipjump Zwischenablagen limitieren
+SET_maxclips = Mindestanzahl der aktiven &Clips
+SET_threshold = &Threshold
+SET_quality = &Qualität der Vorschaubilder
+SET_copybeep = &Beep beim Kopieren
+SET_ismessage = &Info ToolTip beim kopieren
+SET_keepsession = &Clips auch nach Neustart beibehalten
+SET_cb = Clip Historie
+SET_daystostore = A&nzahl der Speichertage
+SET_images = Bilder in der &Historie speichern
+SET_shortcuts = Hotkeys
+SET_pst = Einfügen (Ctrl + ..)
+SET_actmd = Actionmenü
+SET_channels = Channels
+SET_advanced = Zeige erweiterte Einstellungen
+SET_manageignore = Verwalte ignorierte Fenster
+SET_cancel = &Abbruch
+SET_apply = &Speichern
+
+SET_advanced_error = ist nicht in der Lage die Einstellungsdatei (settings.ini) oder den Editor (notepad.exe) zu finden. Stellen Sie sicher, dass die Dateien in ihren jeweiligen Ordnern existieren.
+                   =
+                   = Wenden Sie sich an den Author falls das Problem weiterhin besteht.
+SET_T_limitmaxclips = Limmitiert Clipjump's Clipanzahl
+                    = Markiert = Limitierung aktiv
+SET_T_maxclips = Die minimale Anzahl der Zwischenablagen, die Sie zur Nutzung aktivieren wollen.
+               = Wenn 20 gewünscht werden, geben Sie 20 an.
+SET_T_threshold = Threshold bietet eine zusätzliche Anzahl an Zwischenablagen.
+                = Empfohlene Menge = 10.
+                =
+                = [TIPP] - Threshold = 1 und Clipjump speichert exakt die gewünschte minimale Anzahl an Clips.
+SET_T_quality = Die Qualität der Bilder in der Bildvorschau.
+              = Range 1 - 100
+              = Empfohlen = 90
+SET_T_copybeep = Aktivieren Sie diese Option und Sie hören fortan einen Ton wenn Clipjump Daten aufnimmt.
+               =
+               = Sie können die Ton Frequenz in der [Advanced] Sektion der Settings.ini verändern.
+SET_T_ismessage = Möchten Sie beim Kopieren oder Ausschneiden per ToolTip informiert werden?
+SET_T_daystostore = Anzahl der Tage für die Clips in der Historie gespeichert werden sollen.
+SET_T_images = Sollen auch Bilder in der Historie gespeichert werden?
+SET_T_chnl = Hotkey um das Channel Wählen Fenster zu öffnen.
+           = Geben Sie keinen Buchstaben an wird der Hotkey deaktiviert.
+SET_T_cfilep = Hotkey um den Pfad der ausgewählten Datei zu kopieren.
+             = Geben Sie keinen Buchstaben an wird der Hotkey deaktiviert.
+SET_T_cfolderp = Hotkey um den Pfad des ausgewählten Ordners zu kopieren.
+               = Geben Sie keinen Buchstaben an wird der Hotkey deaktiviert.
+SET_T_cfiled = Hotkey um den Dateiinhalt der ausgewählten Datei an Clipjump zu senden.
+             = Geben Sie keinen Buchstaben an wird der Hotkey deaktiviert.
+SET_T_pitswp = 	Hotkey um direkt in den PitSwap channel zu wechseln. (Funktioniert nur dann wenn es den Channel bereits gibt.)
+             = Für weitere Einzelheiten über die Funktion lesen Sie den Part in der Hilfedatei.
+SET_T_ischannelmin = Beschrängt das Channel Fenster auf das Wesentliche.
+                   = In diesem Menü gibt es keine Buttons, die Auswahl des Channels wird mit Enter bestätigt.
+
+CNL__name = Channels
+CNL_choose = &Wähle Multi-Clipboard Channel
+
+TRY_incognito = Incognito Modus
+TRY_disable = Deaktiviere
+TRY_startup = Mit Windows starten
+TRY_updates = Auf Updates prüfen
+TRY_help = Hilfe
+TRY_restart = Neustarten
+TRY_exit = Beenden
+
+ACT__name = AKTIONSMODUS
+ACT_disable = Deaktiviere
+ACT_exit = Fenster schließen
+
+IGN__name = Ignorierte Fenster
+IGN_add = &Fensterklasse hinzufügen
+IGN_delete = &Fensterklasse löschen
+
+LNG_error = Deutsche Sprachdatei nicht gefunden im Ordner languages/german.txt. Passierte dies absichtlich, füge sie wieder ein
+
+_cfilep = Kopiere Dateipfad(e)
+_cfolderp = Kopiere Aktiven Ordnerpfad
+_cfiled = Kopiere Dateiinhalt
+_ot = One Time Stop
+_pitswp = PitSwap
+_exportedto = Exportiert
+
+
+;============
+;9.9.0.2
+;============
+
+IGN_Restartmsg = Es ist nötig zur Übernahme und Aktivierung der neuen Einstellunegn Clipjump neu zu starten. Wollen Sie jetzt neustarten?
+IGN_tip = Mit der Leertaste die Fenster-Classe hinzufügen.
+        = Mit Escape die Aktion abbrechen.
+
+;===========
+;9.9.1
+;===========
+
+TRY_options = &Optionen
+TRY_tools = &Tools
+HST_delall_msg = Sind Sie sicher, dass Sie alle Einträge der Historie löschen wollen?
+; the following key was modified in v9.9.1 and so you see its entry here
+SET_T_actmd = Hotkey um den Aktionsmodus zu starten.
+            = Der Aktionsmodus, bietet eine Schnittstelle für fast alle funktionen in Clipjump.
+            = Eventuell ist es für Sie angenehmer selten verwendete Hotkeys zu deaktivieren und stattdessen den Aktionsmodus zu nutzen.
+
+;==========
+;9.9.1.9
+;==========
+
+TIP_empty3 = Ctrl Taste loslassen um zu verlassen
+UPD_restart = Clipjump führt einen Neustart aus um die Updates anzuwenden
+UPD_automsg = Drücke Yes um ein Auto-Update für Clipjump durchzuführen oder No um zur Webesite zu gehen.
+
+;=========
+;10
+;=========
+
+CHC_name = Wähle Channel
+TIP_done = Done
+TIP_copycutfailed = Kopieren/Verschieben nicht durchgeführt
+TIP_copy = Kopiere aktuellen Clip
+TIP_move = Verschiebe aktuellen Clip
+
+;========
+;10.5 beta
+;========
+
+TIP_delallprompt = WARNUNG
+                 = Wollen Sie wirklich alle Clips aus diesem Channel löschen?
+                 = Drücke Y zum bestätigen.
+                 = Drücke N zum abbrechen.
+
+;=======
+;10.6
+;=======
+
+ABT_seehelp = Soll die Clipjump Hilfe geöffnet werden?
+ABT_runadmin = Clipjump läuft nicht mit Administratorrechten.
+             = Dies kann zu Fehlfunktionen führen.
+             =
+             = [Dieser Hinweis erscheint nur einmal]
+ABT_cjready = Hi!
+            = Clipjump ist nun aktiv.
+            = Testen Sie ein paar Copy&Paste aktionen...
+TIP_editdone = Clip wurde bearbeitet!
+TIP_editnotdone = Clip wurde NICHT bearbeitet!
+
+;======
+;10.7
+;======
+
+HST_m_edit = Bearbeite Clip 		(Ctrl+H)
+
+;======
+;10.7.2.6b
+;======
+
+_name = Name
+_tags = Tags
+_author = Autor
+_run = Run
+_properties = Eigenschaften
+PLG_properties = Eigenschaften (Alt+Enter)
+PLG__name = Plugin Manager
+PLG_fetchparam = parameter for the plugin
+PLG_delmsg = Wollen Sie mit dem Löschen des folgenden Plugin wirklich fortfahren?
+PLG_restartmsg = Sie haben einige Plugins gelöscht.
+               = Die Änderungen werden erst nach einem Neustart wirksam.
+               = Wollen Sie fortfahren?
+API_extplugMiss = Das folgende externe Plugin fehlt..
+API_plugCorrupt = Das folgende Plugin ist korrupt oder fehlt.
+
+;=====
+;10.7.5
+;=====
+
+PLG_Sb_running = Plugin läuft
+PLG_Sb_exit = Plugin wurde beendet
+PLG_Sb_deleted = Plugin wurde gelöscht
+SET_T_pst = Einzelne Zeichenkombination zusammen mit Ctrl bei der Aktivierung des [PASTE MODE]
+          = Achtung: Die Buchstaben  E C X Z S A F H sind reserviert.
+          =
+          = Beachten Sie den Abschnitt "Copy bypassing Clipjump" in der Hilfe
+SET_pformat = Default Einfügen-Format
+SET_T_pformat = Das Paste-Format, das bei der Aktivierung von Clipjump verwendet werden soll (default: '-original' )
+SET_t_plugM = Shortcut um den Plugin-Manager zu öffnen
+PLG_edit = Bearbeiten (F2)
+CUS_error = Fehler in der ClipjumpCustom.ini Routine?
+
+;=====
+;10.7.8
+;=====
+
+TRY_pstmdshorts = PasteMode Tastaturkürzel
+
+;=====
+;10.9
+;=====
+
+SET_T_holdclip = Kopiert den selektierten Text in einen Buffer und verhindert, dass Clipjump den Text auffängt.
+			   = Sie können dann den Clip entweder einfügen, in einen Channel verschieben oder zurückweisen
+SET_keepactivepos = Bewahre die Position des aktuell aktiven Clips
+SET_T_keepactivepos = Wollen Sie, dass sich Clipjump an den letzten aktiven Clip im PasteMode erinnert?
+                    = Abschalten bedeutet, das der Clipjump PasteMode immer mit Clip 1 startet.
+
+;=====
+;11
+;=====
+
+HST_viewimage = [IMAGE]
+ORG__name = Clipjump Channel Organizer
+ORG_m_inc = Aufwärts bewegen    (Alt+Up)
+ORG_m_dec = Abwärts bewegen   (Alt+Down)
+ORG_error = Nicht unterstützt
+ORG_countStatus = aufgelistete Items
+SET_org = Channel Organizer
+ORG_delCnlMsgTitle = Wählen Sie die Channel Operation
+ORG_delCnlMsg = Was wollen Sie mit dem ausgewählten Channel machen?
+      = Channel permanent löschen = Yes
+      = Channel leeren = No
+      = Nichts = Cancel
+_rename = Umbenennen
+ORG_renameAsk = Neuer Name fur Channel Nummer
+TIP_initMsg = Initialisiere Clipjump
+
+;======
+;11.2
+;======
+
+TIP_tagPrompt = Mit Leerzeichen getrennte Tags für diesen Clip
+SET_startSearch = Starte PasteMode mit aktivierter Suche
+SET_T_startSearch = Stelle Strg+V so um, dass PasteMode mit aktivierter Suche gestartet wird
+                  = Dies ermöglicht, dass man nicht die Ctrl Taste gedrückt halten muss um durch die Clips zu navigieren. Siehe auch "Search in PasteMode" in der Hilfe.
+_editing = Bearbeiten
+
+;=======
+; 11.2.3
+;=======
+_more_options = Weitere Optionen
+ORG_m_openpst = Öffne im PasteMode (Strg+O)
+_!x = Alt+X
+_!c = Alt+C
+ORG_m_insta = Insta-Paste (Space)
+
+;=======
+; 11.3
+;=======
+_destChannel = Ziel-Channel
+_maintenance = Wartung
+_new = Neu
+ORG_createnewpr = Neuer Clip wird in folgendem Channel erzeugt
+ORG_newchname = Name des neuen Channels
+
+;========
+; 11.4 - Added tooltips for Channel Organizer (hoppfrosch)
+;=======
+ORG_search = Suche Clip
+ORG_up = Wechsle zum vorigen Clip
+ORG_down = Wechsle zum nächsten Clip
+ORG_edit = Bearbeite selektierten Clip
+ORG_props = Bearbeite Eigenschaften des selektierten Clip
+ORG_cut = Schneidet den selektierten Clip aus und fügt ihm einem anderen Channel hinzu
+ORG_copy = Kopiert den selektierten Clip aus und fügt Kopie einem anderen Channel hinzu
+ORG_delete = Löscht den selektierten Clip
+; ----
+
+SET_revFormat2Def = Starte PasteMode immer mit der Default-Formatierung
+SET_T_revFormat2Def = Option, damit der PasteMode immer mit der Default-Formatierung gestartet wird (Defaultwert: 'original'/'none' ).
+ORG_copyingclp = Kopiere selektierte(n) Clip(s)
+ORG_movingclp = Bewege selectierte(n) Clip(s)
+ORG_Editprops = Bearbeite Clip Eigenschaften
+ORG_oEditMsg = Drücke Save um zu beenden
+ABT_info = Clipjump ist ein reiner Windows Clipboard Manager, erstellt in AutoHotkey.
+        = Inspiriert wurde Clipjump durch Skrommel's Anwendung ClipStep.
+_Save = Speichern
+SET_T_keepsession = Soll Clipjump nach einem Restart mit allen gespeicherten Clips (betrifft nur Default Channel 0) fortfahren?
+
+;========
+; 11.5
+;========
+_ClipjumpError = Clipjump Fehler
+TIP_genErrMsg = Bitte Programmautor kontaktieren, falls weiterhin Probleme bestehen.
+TRY_reloadcustom = Neuladen von ClipjumpCustom.ini
+
+;=======
+_language = Sprache
+_disabled = Abgeschaltet
+PLG_delfilefolder = Lösche [File/Folder]
+ABT_chmErr = Ein Problem ist aufgetreten.
+   = Bitte überprüfen Sie, ob Clipjump.chm im Basisverzeichnis existiert.
+
+;=======
+; 11.6
+;=======
+ORG_createnew = Erzeuge neuen Clip
+ORG_chooseCh = Aktiver Channel
+ABT_errorFontIcon = Die Datei %GHICON_path% fehlt. Dies kann zu Schwierigkeiten in der Anzeige in einigen Benutzerschnittstellen führen. Bitte Datei ersetzen.
+CNL_chngMsg = Channel %cv1% aktiv
+CNL_chNtExst = Channel %cv1% existiert nicht !
+SET_holdclip = Halte Clip
+ORG_openPastemode = Öffnet PasteMode Interface mit dem selektierten Clip als aktivem Clip.
+TIP_confirmcopy = Diese Bestätigung wird angezeigt, weil dies ein geschützter Channel ist.
+                = Soll das Kopieren trotzdem durchgeführt werden?
+                = Drücke Y für Ja
+                = Drücke N für Nein
+                = Drücke Insert um den Clip in Channel 0 zu kopieren (Default Channel)
+_processing = In Arbeit
+TIP_protectedMoved = Clip in Channel 0 übertragen!
+TIP_holdclip = Drücke Ctrl+V um einzufügen
+             = Drücke Insert um den Clip zum Channel hinzuzufügen
+             = Drücke F2 um den Clip in der Common Formats GUI zu öffnen
+             = Drücke Esc zum beenden
+_output = Ausgabe
+TIP_copied_2 = Übertragen an %PROGNAME%
+TIP_empty2_2 = %PROGNAME% ist leer
+
+;====
+; 11.6.1
+;====
+
+SET_T_histshort = Shortcut für das Clipboard History Tool
+PLG_sync_cb = Sync Clipjump Clipboard
+
+;====
+; 12
+;====
+
+ORG_NewClip = Neuer Clip
+ORG_clpdelmsg = Ausgewählte Clip(s) gelöscht
+TIP_syscb = System Clipboard beinhaltet clip %realclipno%
+TIP_editing = Editieren ....
+            = Drücke Esc zum Abbrechen.
+            = Nach dem Editieren: Speichere (Ctrl+S) Datei und schliesse den Editor.
+
+;=====
+; 12.3
+;=====
+
+; Note to Translator > please make sure the out in Ctrl+v+F1 is aligned properly in TIP_help
+TIP_help =
+= Release Ctrl - Einfügen
+= V            - Verschiebe einen Clip vorwärts
+= C            - Verschiebe einen Clip rückwärts
+= X            - Beende Modus, Bewege Clip, Lösche Clip, Kopiere Clip
+= Z            - Wechsle das Einfüge-Format
+= Space        - FIX
+= S            - Übernehme aktuellen Clip auf das System-Clipboard
+= E            - Export
+= Up/Down      - Wechsle Channel +1/-1
+= A            - Bewege zum ersten Clip im Channel
+= 1..9         - Springe zum n-ten Clip relativ zum aktiven Clip
+= F            - Suche
+= H            - Edit
+= Q            - Bewege Clip an die erste Position
+= Enter        - Starte Session zum mehrfachen Einfügen
+= T            - Tag
+= Hold Shift   - Lösche Clip nach dem Einfügen
+= F1           - Hilfe
+=
+= Drücke V um dieses Fenster zu verlassen

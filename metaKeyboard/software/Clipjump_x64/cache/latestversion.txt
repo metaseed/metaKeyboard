@@ -1,0 +1,6 @@
+12.5
+Fixed crashing issues in v12.3 by using TooltipEx
+Now using SQlite database for History
+Ignore quick (<200ms) clipboard changes to prevent crashes
+[New] Option to use Win-C and Win-X for copying to Clipjump
+[New] Option to disable automatic clipboard monitoring
