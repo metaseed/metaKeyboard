@@ -84,16 +84,28 @@ return
 Run "%processExplorer%"
 return
 ;-----------------------------------o       Goto files pane
-#f::
-Send, ^f
-Send, `t
-Send, `t
-return
+;#f::
+;Send, ^f
+;Send, `t
+;Send, `t
+;return
+#IfWinActive ahk_class CabinetWClass ; Windows Explorer
+    #f::
+        ControlFocus, DirectUIHWND3, A
+        SendInput, {Space}
+        return
+#IfWinActive
 ;-----------------------------------o       Goto Navigation pane
-#n::
-Send, ^f
-Send, `t
-return
+;#n::
+;Send, ^f
+;Send, `t
+;return
+#IfWinActive ahk_class CabinetWClass ; Windows Explorer
+    #n::
+        ControlFocus, SysTreeView321, A
+        SendInput, {Space}
+        return
+#IfWinActive
 ;-----------------------------------o       Goto Navigation pane
 #d::
 Run, "%desktopFolder%"
