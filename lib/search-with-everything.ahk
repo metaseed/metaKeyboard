@@ -20,4 +20,15 @@ CapsLock & f::
 }
 return
 
-
+#IfWinActive ahk_class CabinetWClass ; Windows Explorer
+    *^f::
+    *f3::
+    CapsLock & 3::
+        folder := GetFolder()
+        if GetKeyState("shift") = 0 { 
+            run "%everythingPath%" -path "%folder%"
+        } else {
+            run "%everythingPath%" -path "%folder%" -newwindow
+        }
+        return
+#IfWinActive
