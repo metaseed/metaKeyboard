@@ -8,9 +8,9 @@
 ;moveMouseToWindowCenter()
 ;return
 ;-----------------------------------o
-CapsLock & /:: Send ^/                        ;Toggle Line Comment
+;CapsLock & /:: Send ^/                        ;Toggle Line Comment
 ;-----------------------------------o
-CapsLock & \:: Send +!a                       ;Toggle Block Comment
+;CapsLock & \:: Send +!a                       ;Toggle Block Comment
 ;-----------------------------------o
 
 ;=====================================================================
