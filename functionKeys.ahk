@@ -52,7 +52,7 @@ return
 ;-----------------------------------o
 CapsLock & r:: Run Powershell                ;Run Shell
 ;-----------------------------------o
-#include %A_LineFile%\..\lib\search-with-everything.ahk.
+#include %A_LineFile%\..\search-with-everything.ahk.
 ;-----------------------------------o
 CapsLock & t::                              ;Text Process App
 IfWinExist Untitled - Notepad 
