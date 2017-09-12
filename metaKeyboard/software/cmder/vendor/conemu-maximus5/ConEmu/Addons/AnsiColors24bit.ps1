@@ -11,8 +11,12 @@ Write-Host (([char]27)+"[9999S")
 cls
 
 # Ensure that we are in the bottom of the buffer
-[Console]::SetWindowPosition(0,$y)
-[Console]::SetCursorPosition(0,$y)
+try{
+  [Console]::SetWindowPosition(0,$y)
+  [Console]::SetCursorPosition(0,$y)
+}catch{
+  Write-Host (([char]27)+"[9999;1H")
+}
 
 # Header
 $title = " Printing 24bit gradient with ANSI sequences using powershell"
@@ -32,7 +36,7 @@ while ($l -lt $h) {
     Write-Host -NoNewLine (([char]27)+"[48;2;"+$r+";255;"+$b+"m ")
     $c++
   }
-  Write-Host -NoNewLine (([char]27)+"[m ")
+  Write-Host (([char]27)+"[m ")
   $l++
 }
 

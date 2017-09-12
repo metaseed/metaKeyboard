@@ -20,6 +20,224 @@ https://conemu.github.io/en/Whats_New.html
 -------------------------------------------
 
 
+2017.8.19
+* gh-1164, gh-1216, gh-1219: Workaround for Window 10 conhost bug when content is erased on resize.
+* gh-1212: After ‘Unfasten’, unfastened console loses arrow key capability.
+
+
+2017.8.14
+* gh-1224: Process dead chars AltGr+~ and AltGr+` in XTerm emulation.
+* Settings\Debug: Show XTerm keyboard and mouse sequences in ‘Input’ mode.
+
+
+2017.8.7
+* Switch `-fork` was not working (e.g. `ConEmuC -fork -c powershell`).
+* gh-1220: Fix AltGr+Key sent with XTerm keyboard emulation (e.g. tilde and square brackets on german keyboard).
+* gh-740: Flexible config allowing or disallowing POSIX paths conversion.
+  * If mount prefix is disabled with `-new_console:p:-` switch than autoconversion is disabled.
+  * GuiMacro `Paste` doesn't do autoconversion with exception of mode `Paste(8)` which does.
+  * Checkboxes ‘Allow Windows to POSIX path conversion’ on ‘Paste’ and ‘App distinct’ setting pages.
+* Add `-settings` switch to ConEmu.exe.
+* Escape special symbols in POSIX path autoconversion on paste (e.g. `/c/Program\ Files \(x86\)/Adobe/`).
+* Add wiki link to each settings page.
+
+
+2017.8.5
+* gh-1211: Pressing `Enter` in nano editor didn't insert new line.
+* Fix missed icon for `{Bash::bash}` task.
+* gh-1209: Node and `undefined` in the `process.env.foobar`.
+* Show proper terminal modes in Settings/Info dialog page.
+* Conversion from POSIX to native paths improved.
+  * Proper prefix is used (autodetected or specified via `-new_console:p:/mnt` switch).
+  * Paths `~` and subpaths are ignored for now, we can't even map `~` from WSL to native.
+* XTerm mouse wheel emulation changes.
+  * VIM emulation `\e[62~` .. `[65~` is removed.
+  * If console application has not requested mouse events, ConEmu
+    sends Wheel events as Up/Down arrow key presses, and Shift+Wheel
+    events as PgUp/PgDn key presses.
+* In come cases when using Connector ANSI sequences were not processed by ConEmu.
+* gh-999: Fix ‘RuntimeError: Failed to beep’ when running Python in ConEmu.
+
+
+2017.7.30
+* Unchecked option ‘Use credentials for network resources only’ was ignored (f9805dccf regression).
+  Entered credentials were used only for network resources regardless of the option value.
+* gh-811, gh-1199: Fix race while starting applications requesting XTerm emulation (WSL, cygwin, msys).
+* gh-1194: Button ‘Clone’ in Settings/Tasks.
+* Use conemu-cyg-64.exe with wslbridge.exe to run WSL bash.
+  This concerns to {Bash::bash} task created by default,
+  if cygwin's wslbridge files exist in `%ConEmuBaseDir%/wsl`.
+  Connector version 1.2 is required. wslbridge added to ConEmu distro.
+* gh-648, gh-1117: Support xterm mouse emulation (mc, WSL, etc.) Connector is required!
+* Try to find all installations of cygwin (32bit and 64bit) to create default tasks.
+* Find MSYS2 installations to create default tasks {Bash::Msys2-32} and {Bash::Msys2-64}.
+
+
+2017.7.23
+* gh-1198, gh-1136, gh-1009: XTerm keyboard emulation for Ctrl+key.
+* gh-1200: 'Sync dir' feature was broken for bash.
+
+
+2017.7.9
+* gh-1175: Take into account modifier keys (Ctrl,Alt,Shift) pressed in the hotkey settings field.
+* New environment variable `ConEmuBaseDirShort` contains short path like `C:\PROGRA~1\ConEmu\ConEmu`.
+* gh-1082: New environment variable `ConEmuCfgDir` contains directory where xml file was loaded from.
+* gh-1178: Use short path to connector for launching from git-cmd. Recreate defult tasks to obtain changes
+  or edit task command manually (change `%ConEmuBaseDir%` to `%ConEmuBaseDirShort%`).
+
+
+2017.7.5
+* Cygwin/Msys connector is updated to version 1.0 (https://conemu.github.io/en/CygwinMsysConnector.html).
+  Hooks are not injected into cygwin/msys applications if they were runned from connector.
+  As a result some speed up execution and elimination of any BLODA conditions is expected.
+  If one needs ConEmuHk to be loaded into some process, e.g. while starting
+  non-cygwin application like cmd.exe from cygwin shell, they may use ConEmuC.exe
+  as loader. For example, run "ConEmuC.exe -c cmd.exe" instead of "cmd.exe".
+* Use connector in new default cygwin/msys/git-for-windows tasks.
+* gh-1008: Add hotkey `Apps+Alt+G` to group input for selected panes.
+  So one may add or remove console to input group by activating it
+  and pressing the `Apps+Alt+G` (configurable). Consoles may belong
+  to different splits/tabs.
+* Far Macro: ConEmu.CtrlNumber.lua to switch panel modes by `Ctrl+Shift+Numbers`.
+* Use `Shift+LClick` or `Alt+LClick` to mark the end of selection.
+  User may start selection (by `Shift+LClick`, `Shift+Arrow` or any other way)
+  and after that extend it by `Shift+LClick` to clicked postion.
+  To create block selection use `Alt+LClick` to mark one selection corner
+  and second `Alt+LClick` to mark opposite corner.
+  Inspired by https://superuser.com/q/1218047/139371
+* Option ‘Use credentials for network resources only’ in ‘Create new console’ dialog (from Peter.Maksimov).
+  Switch `-new_console:e` is available in Tasks and command lines.
+* Create/restart console dialog redesign.
+
+
+2017.6.22
+* gh-136: Swap nearest panes with `Apps+Alt+X`, swap in direction with `Apps+Alt+Arrow`.
+* Let `Apps+Shift+G` group input for all consoles (instead of only visible panes like `Apps+G` does).
+* Use by default `LCtrl+Numbers` to switch consoles (instead of `Win+Numbers`).
+* Use by default `Win+Shift+Q` for ‘Switch next console’ by default. Leave hotkey `Win+Q` to Windows.
+  The `Win+Shift+Q` may be useful to switch Tabs when ChildGui is active.
+
+
+2017.6.5
+* gh-1149: Fix crash in wide consoles, when the cursor goes over 200 col (f8907a1 regression).
+
+
+2017.5.17
+* gh-1039: Use `Win+Shift+G` as default hotkey for ‘Attach to...’ action.
+* Add option ‘Leave opened’ in the ‘Attach to...’ dialog (Win+Shift+G).
+  Would be useful to examine output of some long running script after it finishes.
+* gh-1098: Add ‘Rename tab’ option for ‘Double click on tab’.
+* Use ‘Rename tab’ as default option for ‘Double click on tab’.
+* gh-1097: Don't count ‘System’ process as running process (close confirmation).
+* Cross-click closing confirmation was not shown if ‘Confirm tab’=Off and ‘Confirm window’=On.
+* Detach improvements:
+  * GuiMacro: Detach(3) for seamless updating from Chocolatey
+  * Try to set the console font to same size as ConEmu uses
+  * No debug assertions
+* GuiMacro: Close(2) is asynchronous now.
+  This is because of GuiServer thread waiting for synchronous macro completion,
+  but this thread is required to be terminated when ConEmu window is closing...
+* Use Win7 TaskDialog for ‘Add default tasks’ confirmation.
+* DefTerm: Take into account xml file specified by -loadcfgfile switch.
+  Default Terminal options have to be saved by ‘Apply’ button on the settings page.
+* gh-661: When ConEmu started with ‘-Detached’ switch (implied by DefTerm in some cases) option ‘Close ConEmu with last tab’ was unchecked.
+  If old behavior is required, the switch ‘-NoAutoClose’ may be used.
+* Admin shield was not shown on TabBar if ConEmu was started under Admin.
+* Real console font size dialog: show hint if created font height differs.
+* gh-1012, gh-1121: Dirty workaround for AVDefender/Bitdefender bug raising a crash in the RegQueryValueEx.
+  Warning! ConEmu physically can't fix 3rd-paty bugs!
+  This commit just skips process bitness detection if we already may be sure about it.
+  But the bug/crash may appear in some other situations,
+  so it's better to report the problem to the authors.
+* gh-156, gh-805: Detach powershell console during Chocolatey's update ConEmu package.
+* gh-1135, gh-1021: Create default tasks for Visual Studio 2017 and x64 targets.
+* gh-1051, gh-1111, gh-1138: Workaround for Windows 10 bug with cursor position after CJK glyphs (Also: gh-1083, gh-1096).
+* gh-1051, gh-1111, gh-1138: More Win10 bug workarounds (cursor position after CJK).
+
+
+2017.4.2
+* gh-1085, gh-1087: Git 1.9.5 had failed to rebase (regression: 597d81f; ref: gh-688, gh-1063).
+
+
+2017.3.26
+* Move window to active monitor by ‘Minimize/Restore’ hotkey if ‘Restore to active monitor’ is checked (ref gh-255).
+* Don't force ConEmu window to ‘active monitor’ unless `-monitor XXX` switch or ‘Restore to active monitor’ are specified.
+* Minor fix in startup pos/size adjustment (Win10, FixWindowRect).
+* Run as ‘System’ failed when session was opened via RDP.
+
+
+2017.3.16
+* gh-787: Improve scroll by prompts by skipping empty lines above prompts.
+* gh-1058: Apply button was not auto-enabled on entering negative X coord in the Settings dialog.
+* gh-1061: Fix GUI crash if Far panels has no column titles.
+* Make magnetic snap to edges friendly for Windows Aero Snap feature.
+* gh-1047: Display ampersands (&) in tab titles.
+* gh-688, gh-1063: Fix ‘Long console output’ in Far 1.x and 2.x.
+* gh-1067: Log errors in GetConsoleScreenBufferInfo.
+
+
+2017.3.5
+* Microsoft/BashOnWindows#1668: Fix wrong ANSI processing from Vim started in tmux.
+* gh-1055: Fix ‘Delete word lefward to the cursor’ at the bottom of the screen.
+* gh-787: Keyboard shortcut to scroll by prompts.
+  Ctrl+Alt+PgUp/PgDn will jump between commands entered in the shell prompt.
+  Take into account that prompt must pass to ConEmu the code
+  `ESC]9;12ESC\` (ConEmu default) or `ESC[?7711h` (mintty implementation).
+
+
+2017.2.27
+* gh-284, gh-472, gh-1000: Fix gaps in Windows 10 on snapping. Halt window size changing on show/hide the frame.
+* gh-945: Temporary fix for doubled CJK on non-CJK Win10 14959+.
+* Due to invisible part of the frame in Windows 10 (ref broken coordinate system)
+  the ‘physical’ coordinates do not match ‘visual’ ones anymore.
+  Let show ‘virtual’ 0x0 coordinate in the settings, if the window
+  is docked to the upper-left corner of the screen without gaps.
+* Improve default pos/size if the window exceeds monitor's working area on startup.
+* gh-988: Alternative font unicode range was not parsed properly without 'prefix: '.
+* gh-988: Hints for alternative font's controls were updated.
+* Update AnsiColors24bit.ps1 for powershell in WSL
+  Powershell is available for linux and also woks in Bash on Windows (WSL), see https://github.com/PowerShell/PowerShell
+  [Console]::SetWindowPosition(0,$y) and [Console]::SetCursorPosition(0,$y) do not work there, so an escape sequence is used instead.
+* Fix crash on exporting some manually edited configurations.
+  ref: https://groups.google.com/d/msg/conemu_ml/yDzPaCnd_5U/2AgUZEazCAAJ
+* gh-1044: Don't move the cursor by click above the line with prompt.
+* Prompt click position fix for multiline prompts.
+* gh-1000: Retain client size during changing window border on mouse hover.
+* Try to install injects in Wine without LdrGetDllHandleByName.
+  ref: https://groups.google.com/d/msg/conemu_ml/owVNAuQzC_s/xWnKfyysCwAJ
+* gh-318: Snap to desktop edges now works with magnetic effect.
+
+
+2017.1.18
+* Pasted paths to WSL bash were not converted to Unix style (/mnt/...).
+* connector#10: Unicode \u23CE ⏎ character preceding every prompt in ConEmu.
+  Ref: gh-586, Maximus5/connector#10, fish-shell/fish-shell#789
+  Check: Maximus5/connector#19
+* ConEmu's `echo` and `type` commands were cropped sometimes.
+  If RealConsole (conhost window) was created larger than expected by ConEmu GUI,
+  than `echo` and `type` printed text using this larger size and after shrinking
+  conhost window (up to Windows 8.1) part of data was cropped.
+* gh-451: Support multi-line (wrapped) hyperlinks (URLs) for Ctrl+Click.
+* gh-986: Don't change prompt text cursor position by LClick *above* the prompt.
+* gh-1007: Add more logging to mouse wheel processing.
+* Moving some prompt features to GUI (Click & CtrlBS).
+  Ref: gh-986, gh-317, gh-845
+  Now ‘Change prompt text cursor position with Left Click’
+  and ‘Ctrl+Backspace - delete word leftward to the text cursor’
+  are process by ConEmu GUI without posting command to ConEmuHk.
+  The feature requires properly reported by the shell prompt start pos.
+  For bare cmd.exe it's done automatically by ConEmuHk.
+  All other shells must report the start of the prompt with ANSI.
+  * https://conemu.github.io/en/AnsiEscapeCodes.html#ConEmu_specific_OSC
+  * https://conemu.github.io/en/CygwinMsysConnector.html
+  For example, while using bash and connector you may add to the end
+  of your `PS1` the following sequence: `\[\033]9;12\007\]`.
+* Improve hyperlink detector on 'git diff' outputs.
+* gh-1007: Disable ENABLE_QUICK_EDIT_MODE by default.
+* Add logging of console mode changes.
+* Improve hyperlink detector on #include-s with absolute paths.
+
+
 2016.12.6
 * gh-970: Pasting windows path in cygwin produces truncated result (77eb4e6 regression).
 * Allow to pass empty string via -cur_console:m:"" (set no mount prefix for Unix path conversion).

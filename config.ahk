@@ -7,5 +7,6 @@ IniRead, gifTool, .\config.ini, tools, gifTool
 IniRead, searchEngine, .\config.ini, tools, searchEngine
 IniRead, searchEngineAlt, .\config.ini, tools, searchEngineAlt
 IniRead, editor, .\config.ini, tools, editor
+IniRead, code, .\config.ini, tools, code
 IniRead, cmd, .\config.ini, tools, cmd
 IniRead, ruler, .\config.ini, tools, ruler

@@ -16,11 +16,15 @@
 ;=====================================================================
 ;                        Frequently Used Programs
 ;---------------------------------------------------------------------
-CapsLock & e::                                ;VSCode
+CapsLock & c::                                ;VSCode
+Run "%code%"
+return
+
+CapsLock & e::                                ;Editor
 Run "%editor%"
 return
 
-CapsLock & c::                                ;cmd
+CapsLock & t::                                ; terminal
 {
     if WinActive("ahk_class CabinetWClass") {
         folder := GetFolder()
@@ -54,7 +58,7 @@ CapsLock & r:: Run Powershell                ;Run Shell
 ;-----------------------------------o
 #include %A_LineFile%\..\search-with-everything.ahk.
 ;-----------------------------------o
-CapsLock & t::                              ;Text Process App
+CapsLock & q::                              ; quick note
 IfWinExist Untitled - Notepad 
     IfWinActive Untitled - Notepad
         WinMinimize
