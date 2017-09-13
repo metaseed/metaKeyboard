@@ -17,8 +17,15 @@
 ;                        Frequently Used Programs
 ;---------------------------------------------------------------------
 CapsLock & c::                                ;VSCode
-Run "%code%"
-return
+{
+    if WinActive("ahk_class CabinetWClass") {
+        folder := GetFolder()
+        Run "%code%" "%folder%"
+    } else {
+        Run "%code%"
+    }
+    return
+}
 
 CapsLock & e::                                ;Editor
 Run "%editor%"
@@ -29,15 +36,15 @@ CapsLock & t::                                ; terminal
     if WinActive("ahk_class CabinetWClass") {
         folder := GetFolder()
         if GetKeyState("shift") != 0 { 
-            run "%cmd%" /single %folder% -cur_console:d:%folder%
-        } else {
             run "%cmd%" /start "%folder%"
+        } else {
+            run "%cmd%" /single %folder% -cur_console:d:%folder%
         }
     } else {
         if GetKeyState("shift") != 0 {   ;Search
-            run "%cmd%" /single %userProfile%
-        } else {
            run "%cmd%" /start %userProfile%
+        } else {
+            run "%cmd%" /single %userProfile%
         }
     }
     return
