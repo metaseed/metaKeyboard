@@ -10,3 +10,4 @@ IniRead, editor, .\config.ini, tools, editor
 IniRead, code, .\config.ini, tools, code
 IniRead, cmd, .\config.ini, tools, cmd
 IniRead, ruler, .\config.ini, tools, ruler
+IniRead, visualStudio, .\config.ini, tools, visualStudio

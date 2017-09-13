@@ -74,16 +74,6 @@ IfWinExist Untitled - Notepad
 else 
     Run Notepad
 return
-;-----------------------------------o
-CapsLock & p::                              ;Print/Record Screen
-     
-if GetKeyState("alt") = 0 {   ;Search
-    Run SnippingTool.exe                    ;Sniping
-} else {
-    Run "%gifTool%"
-} 
-return
-;-----------------------------------o
 ;=====================Win Function Key======================
 ;-----------------------------------o       Virtual machine
 #v::
