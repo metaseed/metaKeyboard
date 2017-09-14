@@ -20,9 +20,9 @@ CapsLock & c::                                ;VSCode
 {
     if WinActive("ahk_class CabinetWClass") {
         folder := GetFolder()
-        Run "%code%" "%folder%"
+        ShellRun(code,folder,A_WorkingDir)
     } else {
-        Run "%code%"
+        ShellRun(code,,A_WorkingDir)
     }
     return
 }
@@ -44,7 +44,7 @@ CapsLock & t::                                ; terminal
         if GetKeyState("shift") != 0 {   ;Search
            run "%cmd%" /start %userProfile%
         } else {
-            run "%cmd%" /single %userProfile%
+           run "%cmd%" /single %userProfile%
         }
     }
     return
@@ -54,10 +54,10 @@ CapsLock & t::                                ; terminal
 CapsLock & d:: Send, +!d                      ;Dictionary
 ;-----------------------------------o    Web Search
 CapsLock & w::
-if GetKeyState("alt") = 0 {
-    Run "%searchEngine%"
+if GetKeyState("alt") != 0 {
+    ShellRun(searchEngineAlt)
 } else {
-    Run "%searchEngineAlt%"
+    ShellRun(searchEngine)
 }
 return
 ;-----------------------------------o

@@ -128,3 +128,4 @@ keyWithCtrlAltShift(key, originalKey)
         }
     }
 }
+#Include %A_LineFile%\..\shellRun.ahk.

@@ -1,3 +1,4 @@
+![keyboard](./keyboard.gif)
 Windows Useful Shortcut
 =========
 Alt+Tab to switch between open apps, and using ikjl to select active app.
