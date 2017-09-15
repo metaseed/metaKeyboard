@@ -12,7 +12,36 @@
 ;-----------------------------------o
 ;CapsLock & \:: Send +!a                       ;Toggle Block Comment
 ;-----------------------------------o
-
+;-----------------------------------o       Goto files pane
+;#f::
+;Send, ^f
+;Send, `t
+;Send, `t
+;return
+#IfWinActive ahk_class CabinetWClass ; Windows Explorer
+    #f::
+        ControlFocus, DirectUIHWND3, A
+        SendInput, {Space}
+        return
+#IfWinActive
+;-----------------------------------o       Goto Navigation pane
+;#n::
+;Send, ^f
+;Send, `t
+;return
+#IfWinActive ahk_class CabinetWClass ; Windows Explorer
+    #n::
+        ControlFocus, SysTreeView321, A
+        SendInput, {Space}
+        return
+#IfWinActive
+;-----------------------------------o copy file full path to clipboard
+Capslock & \::
+#IfWinActive ahk_class CabinetWClass
+SendInput, ^c
+Sleep 100
+Clipboard := Clipboard
+Return
 ;=====================================================================
 ;                        Frequently Used Programs
 ;---------------------------------------------------------------------
@@ -83,30 +112,9 @@ return
 #t::
 Run "%processExplorer%"
 return
-;-----------------------------------o       Goto files pane
-;#f::
-;Send, ^f
-;Send, `t
-;Send, `t
-;return
-#IfWinActive ahk_class CabinetWClass ; Windows Explorer
-    #f::
-        ControlFocus, DirectUIHWND3, A
-        SendInput, {Space}
-        return
-#IfWinActive
-;-----------------------------------o       Goto Navigation pane
-;#n::
-;Send, ^f
-;Send, `t
-;return
-#IfWinActive ahk_class CabinetWClass ; Windows Explorer
-    #n::
-        ControlFocus, SysTreeView321, A
-        SendInput, {Space}
-        return
-#IfWinActive
-;-----------------------------------o       Goto Navigation pane
+
+
+;-----------------------------------o       open desktop folder
 #d::
 Run, "%desktopFolder%"
 return
@@ -118,6 +126,7 @@ return
  Run, "%searchEngine%/search?q=%clipboard%"
  Return
 }
+;==================Debug Helper==============================
 ;---------------------------------o
 ^#!l::
 Send, ^s ; To save a changed script

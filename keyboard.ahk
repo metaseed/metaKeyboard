@@ -81,3 +81,4 @@ Capslock & =:: keyWithCtrlAltShift("F12","=")
 *!n::keyWithCtrlAltShift("PgDn","n")
 *!i::keyWithCtrlAltShift("Home","i")
 *!o::keyWithCtrlAltShift("End","o")
+
