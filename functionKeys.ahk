@@ -57,7 +57,9 @@ CapsLock & c::                                ;VSCode
 }
 
 CapsLock & e::                                ;Editor
-Run "%editor%"
+selectedFilePath := Explorer_GetSelection()
+;MsgBox "%selectedFilePath%"
+Run "%editor%" "%selectedFilePath%"
 return
 
 CapsLock & t::                                ; terminal
@@ -114,7 +116,7 @@ Run "%processExplorer%"
 return
 
 
-;-----------------------------------o       open desktop folder
+;-----------------------------------o       Goto Navigation pane
 #d::
 Run, "%desktopFolder%"
 return
@@ -126,7 +128,6 @@ return
  Run, "%searchEngine%/search?q=%clipboard%"
  Return
 }
-;==================Debug Helper==============================
 ;---------------------------------o
 ^#!l::
 Send, ^s ; To save a changed script

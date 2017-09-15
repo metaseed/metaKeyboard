@@ -129,3 +129,4 @@ keyWithCtrlAltShift(key, originalKey)
     }
 }
 #Include %A_LineFile%\..\shellRun.ahk.
+#Include, %A_LineFile%\..\fileExplorer.ahk.
