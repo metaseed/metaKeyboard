@@ -38,12 +38,16 @@ Key|Map|Note
 ---|---|---
 Win+f|go to FileExplorer's files pane| move focus to files pane of FileExplorer to manage files
 Win+n|go to FileExplorers navigation pane| move focus to navigation pane of FileExplorer to manage files
-CL+\\|copy file full path| when in FileExplorer
+CL+\\ |copy file full path| when in FileExplorer
 
 ## Frequently Used Programs
 Key|Map|Note
 ---|---|---
-
+CL+e|open selected file with configed editor
+CL+m s|open screen capture tool
+CL+m Alt+s| open screen recorder
+CL+m r|open screen ruler
+CL+m 
 
 Windows Useful Shortcut
 =========

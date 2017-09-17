@@ -9,6 +9,7 @@ CapsLock & f::
             run "%everythingPath%" -path "%folder%" -newwindow
         }
     } else {
+        ;MsgBox "%everythingPath%"
         if GetKeyState("shift") = 0 {   ;Search
             run "%everythingPath%" -toggle-window
             ; Send, +!f                               ;Toggle Everything
@@ -17,8 +18,8 @@ CapsLock & f::
             ; Send, ^+!f                              ;New Everything Window
         }
     }
+    return
 }
-return
 
 #IfWinActive ahk_class CabinetWClass ; Windows Explorer
     *^f::
