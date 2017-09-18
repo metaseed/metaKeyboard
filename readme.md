@@ -12,8 +12,8 @@ If you hold it and press other key, it acts like another Ctrl key for you.
 
 > we use 'CL' to stands for the redefined CapsLock key
 
-# Keyboard Map Table
-> arrow keys are defined as Vim
+# Keyboard Map
+> arrow keys are defined same as Vim
 
 ## Direction Keys Map Table
 Key|Map|Note
@@ -43,21 +43,28 @@ F1..F12|CL+1..=|F1 -> CL+1 ... F10 -> CL+0, F11 -> CL+ -, F12 -> CL+=
 `CL+p`|PrintScreen
 `CL+[`|mouse left button click
 `CL+]`|mouse right button click
-## Frequently Used Functions
+
+# Function and Software
+
+## Frequently Used Function
 
 Key|Map|Note
 ---|---|---
 `Win+f`|go to FileExplorer's files pane| move focus to files pane of FileExplorer to manage files
 `Win+n`|go to FileExplorers navigation pane| move focus to navigation pane of FileExplorer to manage files
 `CL+\` |copy file full path| when in FileExplorer
-`Ctrl+Alt+c`|copy and search with search engine(configed)
+`Ctrl+Alt+c`|copy and search with search engine| default is configured as `Google`
 `Ctrl+Alt+n`|create new file in the folder
 `Win+v`|opne virtual machine manager|configurable, default is Hyper-V
- |`MetaKB related`|
+
+### `MetaKB related
+
+ Key|Function
+ ---|---
 `Ctrl+Win+Alt+l`|reload the metaKB software
 `Ctrl+Win+Alt+c`|close the metaKB software
 
-## Frequently Used Softwares
+## Frequently Used Software
 
 Key|Map|Note
 ---|---|---
@@ -82,10 +89,13 @@ Key|Map|Note
 
 2.  
 
-# Other Useful Programs
+# Other Useful Programs and configuration
 
-1. VSCode, 
-
+1. [VSCode](https://github.com/Microsoft/vscode) with plugins: Settings Sync, vim, metaGo....; configuration file is: 
+GITHUB GIST: https://gist.github.com/metasong/b227db6a892b4c3ec1bb4900bc54977b
+1. VisualStudio: the shortcut keys are reconfigured, configuratin is VSCode.vsk in the ./software/VisualStudioShortcut foler.
+1. [ClipJump](https://github.com/aviaryan/Clipjump)
+1.  
 Appendix: Windows Useful Shortcuts
 =========
 
