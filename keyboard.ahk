@@ -18,6 +18,7 @@ return
 CapsLock:: Send, { ESC }           ;ESC
 ;-----------------------------------o
 
+;========== Directional Keys==============
 CapsLock & h::keyWithCtrlAltShift("Left","h")       ;Left
 ;-----------------------------------o
 CapsLock & j::keyWithCtrlAltShift("Down","j")       ;Down
@@ -46,7 +47,26 @@ CapsLock & u::keyWithCtrlAltShift("PgUp","u")       ;PageUp
 ;-----------------------------------o
 CapsLock & n::keyWithCtrlAltShift("PgDn","n")       ;PageDown
 ;-----------------------------------o
-CapsLock & ':: keyWithCtrlAltShift("Del","'")       ;Del
+;*!i::keyWithCtrlAltShift("Up")                 ;Alt + Arrow
+;*!j::keyWithCtrlAltShift("Left")
+;*!l::keyWithCtrlAltShift("Right")
+;*!k::keyWithCtrlAltShift("Down")
+
+*!k::keyWithCtrlAltShift("Up","k")                  ;Alt + Arrow
+*!h::keyWithCtrlAltShift("Left","h")
+*!l::keyWithCtrlAltShift("Right","l")
+*!j::keyWithCtrlAltShift("Down","j")
+;-----------------------------------o
+*!u::keyWithCtrlAltShift("PgUp","u")
+*!n::keyWithCtrlAltShift("PgDn","n")
+*!i::keyWithCtrlAltShift("Home","i")
+*!o::keyWithCtrlAltShift("End","o")
+
+;========== Function Keys=================
+;-----------------------------------o
+CapsLock & BackSpace:: keyWithCtrlAltShift("Del","BackSpace")       ;Del
+Capslock & p:: keyWithCtrlAltShift("PrintScreen","p")           ;PrintScreen
+CapsLock & b:: keyWithCtrlAltShift("Pause","b")             ;Pause/Break
 ;-----------------------------------o
 CapsLock & `;:: Send, { AppsKey }    ;Context Menu
 ;-----------------------------------o
@@ -66,19 +86,3 @@ CapsLock & 9:: keyWithCtrlAltShift("F9","9")
 CapsLock & 0:: keyWithCtrlAltShift("F10","0")
 Capslock & -:: keyWithCtrlAltShift("F11","-")
 Capslock & =:: keyWithCtrlAltShift("F12","=")
-;-----------------------------------o
-;*!i::keyWithCtrlAltShift("Up")                 ;Alt + Arrow
-;*!j::keyWithCtrlAltShift("Left")
-;*!l::keyWithCtrlAltShift("Right")
-;*!k::keyWithCtrlAltShift("Down")
-
-*!k::keyWithCtrlAltShift("Up","k")                  ;Alt + Arrow
-*!h::keyWithCtrlAltShift("Left","h")
-*!l::keyWithCtrlAltShift("Right","l")
-*!j::keyWithCtrlAltShift("Down","j")
-;-----------------------------------o
-*!u::keyWithCtrlAltShift("PgUp","u")
-*!n::keyWithCtrlAltShift("PgDn","n")
-*!i::keyWithCtrlAltShift("Home","i")
-*!o::keyWithCtrlAltShift("End","o")
-

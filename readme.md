@@ -1,7 +1,7 @@
 If you are like me fun of prefer using keyboard to operate your Windows system, then here is the right place for you.
 
 The `goal` of MetaKB is described by the below gif:
-
+ 
 ![keyboard](./keyboard.gif)
 MetaKB redefined the CapsLock key as a function key:
 If you press it, it act like the ESC key;
@@ -18,37 +18,49 @@ If you hold it and press other key, it acts like another Ctrl key for you.
 ## Direction Keys Map Table
 Key|Map|Note
 ---|---|---
-Left|CL+h
-Down|CL+j
-Up|CL+k
-Right|CL+l
-Home|CL+i
-End|CL+o
-PageUp|CL+u
-PageDown|CL+n
-F1..F12|CL+1..=|F1 -> CL+1 ... F10 -> CL+0, F11 -> CL+ -, F12 -> CL+=
+`Left`|CL+h
+`Down`|CL+j
+`Up`|CL+k
+`Right`|CL+l
+`Home`|CL+i
+`End`|CL+o
+`PageUp`|CL+u
+`PageDown`|CL+n
 
 > The `LAlt(left Alt)` key combined with the direction keys gives you a shortcut:
 > i.e. if you want to press `Alt+Up` you could just press `LAlt+k`, no need to press `Alt+CL+k` together.
 
 > the `RAlt` still act as normal `Alt` key.
 
+## Other Remapped Keys
+
+Key|Map|Note
+---|---|---
+F1..F12|CL+1..=|F1 -> CL+1 ... F10 -> CL+0, F11 -> CL+ -, F12 -> CL+=
+`CL+Backspace`|Delete
+`CL+;`|Context Menu| show context menu, like mouse right click
+`CL+b`|pause/Break
+`CL+p`|PrintScreen
+`CL+[`|mouse left button click
+`CL+]`|mouse right button click
 ## Frequently Used Functions
 
 Key|Map|Note
 ---|---|---
-Win+f|go to FileExplorer's files pane| move focus to files pane of FileExplorer to manage files
-Win+n|go to FileExplorers navigation pane| move focus to navigation pane of FileExplorer to manage files
-CL+\\ |copy file full path| when in FileExplorer
+`Win+f`|go to FileExplorer's files pane| move focus to files pane of FileExplorer to manage files
+`Win+n`|go to FileExplorers navigation pane| move focus to navigation pane of FileExplorer to manage files
+`CL+\` |copy file full path| when in FileExplorer
+`Ctrl+Alt+c`|copy and search with search engine(configed)
 
 ## Frequently Used Programs
+
 Key|Map|Note
 ---|---|---
-CL+e|edit file| open selected file with configed editor
-CL+m s|screen capture tool
-CL+m Alt+s|screen recorder
-CL+m r|screen ruler
-CL+m v|visual studio|open all *.sln files in the folder with visualStudio(version configed)
+`CL+e`|edit file| open selected file with configed editor
+`CL+m s`|screen capture tool
+`CL+m Alt+s`|screen recorder
+`CL+m r`|screen ruler
+`CL+m v`|visual studio|open all *.sln files in the folder with visualStudio(version configed)
 
 Windows Useful Shortcuts
 =========
