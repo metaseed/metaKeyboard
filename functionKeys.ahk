@@ -76,8 +76,8 @@ return
 CapsLock & d:: Send, +!d                      ;Dictionary
 ;-----------------------------------o    Web Search
 CapsLock & w::
-if GetKeyState("alt") != 0 {
-    ShellRun(searchEngineAlt)
+if GetKeyState("shift") != 0 {
+    ShellRun(searchEngineSecondary)
 } else {
     ShellRun(searchEngine)
 }
@@ -109,7 +109,7 @@ return
 
 ;-----------------------------------o       Goto Navigation pane
 #d::
-Run, "%desktopFolder%"
+Run, %A_Desktop%
 return
 ;----------------------------------o        Copy and search with google
 ^!c::

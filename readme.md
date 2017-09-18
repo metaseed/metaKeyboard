@@ -56,12 +56,20 @@ Key|Map|Note
 
 Key|Map|Note
 ---|---|---
-`CL+e`|edit file| open selected file with configed editor
-`CL+m s`|screen capture tool
-`CL+m Alt+s`|screen recorder
-`CL+m r`|screen ruler
-`CL+m v`|visual studio|open all *.sln files in the folder with visualStudio(version configed)
+`CL+c`|open the folder with *code* editor|configuralbe, default is `VSCode`
+`CL+d`|show/hide your word dictionary software| in your  favorite `dictionary` software config the hotkey `shift+alt+d` to toggle the software
+`CL+e`|edit file with configured editor |configurable, default is `gvim`
+`CL+f`|search in folder| configurable, default is `everything` in the *software* folder
+`CL+t`|open terminal| configurable, default is `Cmder` in the *software* folder
+`CL+w`|open web explorer and navigate to your *searchEngine*| configurable, default is `Google`
+`CL+Alt+w`|open web explorer and navigate to your *searchEngineSecondary*| configurable, default is `Bing`
 
+`CL+m s`|screen capture tool
+`CL+m Alt+s`|screen git recorder|configurable, default is `ScreenToGif` in the *software* folder
+`CL+m r`|screen ruler|configurable, default is `aruler` in the *software* folder
+`CL+m v`|open all *.sln files in the folder with visualStudion| configurable, default is `VS2015`
+
+> configurable means could be configured in config.ini file
 Windows Useful Shortcuts
 =========
 
@@ -78,7 +86,7 @@ Key|Note
 ## File Explorer
 Key|Note
 ---|---
-`F2(Caps+2)`| Rename.
+`F2(CL+2)`| Rename.
 `Ctrl+Shift+E` |Expand navigation pane to the current folder.
 `Ctrl+N`| Open a new window of the same folder.
 
@@ -135,3 +143,7 @@ spacebar to toggle checkbox
 1. in file explorer, find the frequently used button on the Ribbon, and right click, select `Add to quick access toolbar`, base on the order, you can press `Alt+1..`to trigger this command. for example, I usually add the checkbox `Navigation pane` to the quick access bar and bind `Alt+1` to it.
 
 2.  
+
+# Other Useful Programs
+
+1. VSCode, 
