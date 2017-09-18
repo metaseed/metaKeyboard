@@ -65,10 +65,10 @@ CapsLock & n::keyWithCtrlAltShift("PgDn","n")       ;PageDown
 ;========== Function Keys=================
 ;-----------------------------------o
 CapsLock & BackSpace:: keyWithCtrlAltShift("Del","BackSpace")       ;Del
-Capslock & p:: keyWithCtrlAltShift("PrintScreen","p")           ;PrintScreen
-CapsLock & b:: keyWithCtrlAltShift("Pause","b")             ;Pause/Break
+Capslock & p:: keyWithCtrlAltShift("PrintScreen","p")               ;PrintScreen
+CapsLock & b:: keyWithCtrlAltShift("Pause","b")                     ;Pause/Break
 ;-----------------------------------o
-CapsLock & `;:: Send, { AppsKey }    ;Context Menu
+CapsLock & `;:: Send, { AppsKey }               ;Context Menu
 ;-----------------------------------o
 CapsLock & ]:: Send, { Click Right }            ;Click Right
 ;-----------------------------------o
