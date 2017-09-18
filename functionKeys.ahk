@@ -12,36 +12,29 @@
 ;-----------------------------------o
 ;CapsLock & \:: Send +!a                       ;Toggle Block Comment
 ;-----------------------------------o
+
 ;-----------------------------------o       Goto files pane
-;#f::
-;Send, ^f
-;Send, `t
-;Send, `t
-;return
-#IfWinActive ahk_class CabinetWClass ; Windows Explorer
-    #f::
-        ControlFocus, DirectUIHWND3, A
-        SendInput, {Space}
-        return
-#IfWinActive
+#f::
+if WinActive("ahk_class CabinetWClass") { ; Windows Explorer
+    ControlFocus, DirectUIHWND3, A
+    SendInput, {Space}
+    return
+}
 ;-----------------------------------o       Goto Navigation pane
-;#n::
-;Send, ^f
-;Send, `t
-;return
-#IfWinActive ahk_class CabinetWClass ; Windows Explorer
-    #n::
-        ControlFocus, SysTreeView321, A
-        SendInput, {Space}
-        return
-#IfWinActive
+#n::
+if WinActive("ahk_class CabinetWClass") { ; Windows Explorer
+    ControlFocus, SysTreeView321, A
+    SendInput, {Space}
+    return
+}
 ;-----------------------------------o copy file full path to clipboard
 Capslock & \::
-#IfWinActive ahk_class CabinetWClass
-SendInput, ^c
-Sleep 100
-Clipboard := Clipboard
-Return
+if WinActive("ahk_class CabinetWClass") {
+    SendInput, ^c
+    Sleep 100
+    Clipboard := Clipboard
+    return
+}
 ;=====================================================================
 ;                        Frequently Used Programs
 ;---------------------------------------------------------------------
@@ -50,7 +43,8 @@ CapsLock & c::                                ;VSCode
     if WinActive("ahk_class CabinetWClass") {
         folder := GetFolder()
         ShellRun(code,folder,A_WorkingDir)
-    } else {
+    } 
+    else {
         ShellRun(code,,A_WorkingDir)
     }
     return
@@ -58,28 +52,25 @@ CapsLock & c::                                ;VSCode
 
 CapsLock & e::                                ;Editor
 selectedFilePath := Explorer_GetSelection()
-;MsgBox "%selectedFilePath%"
 Run "%editor%" "%selectedFilePath%"
 return
 
 CapsLock & t::                                ; terminal
-{
-    if WinActive("ahk_class CabinetWClass") {
-        folder := GetFolder()
-        if GetKeyState("shift") != 0 { 
-            run "%cmd%" /start "%folder%"
-        } else {
-            run "%cmd%" /single %folder% -cur_console:d:%folder%
-        }
+if WinActive("ahk_class CabinetWClass") {
+    folder := GetFolder()
+    if GetKeyState("shift") != 0 { 
+        run "%cmd%" /start "%folder%"
     } else {
-        if GetKeyState("shift") != 0 {   ;Search
-           run "%cmd%" /start %userProfile%
-        } else {
-           run "%cmd%" /single %userProfile%
-        }
+        run "%cmd%" /single %folder% -cur_console:d:%folder%
     }
-    return
+} else {
+    if GetKeyState("shift") != 0 {   ;Search
+        run "%cmd%" /start %userProfile%
+    } else {
+        run "%cmd%" /single %userProfile%
+    }
 }
+return
 ; Run "%cmd%"
 ;-----------------------------------o
 CapsLock & d:: Send, +!d                      ;Dictionary
@@ -140,3 +131,4 @@ TrayTip, AutoHotKey, Exited, 1
 Sleep 1000
 ExitApp
 return
+
