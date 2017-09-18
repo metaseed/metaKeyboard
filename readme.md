@@ -51,8 +51,13 @@ Key|Map|Note
 `Win+n`|go to FileExplorers navigation pane| move focus to navigation pane of FileExplorer to manage files
 `CL+\` |copy file full path| when in FileExplorer
 `Ctrl+Alt+c`|copy and search with search engine(configed)
+`Ctrl+Alt+n`|create new file in the folder
+`Win+v`|opne virtual machine manager|configurable, default is Hyper-V
+ |`MetaKB related`|
+`Ctrl+Win+Alt+l`|reload the metaKB software
+`Ctrl+Win+Alt+c`|close the metaKB software
 
-## Frequently Used Programs
+## Frequently Used Softwares
 
 Key|Map|Note
 ---|---|---
@@ -62,15 +67,26 @@ Key|Map|Note
 `CL+f`|search in folder| configurable, default is `everything` in the *software* folder
 `CL+t`|open terminal| configurable, default is `Cmder` in the *software* folder
 `CL+w`|open web explorer and navigate to your *searchEngine*| configurable, default is `Google`
-`CL+Alt+w`|open web explorer and navigate to your *searchEngineSecondary*| configurable, default is `Bing`
-
+`CL+shift+w`|open web explorer and navigate to your *searchEngineSecondary*| configurable, default is `Bing`
 `CL+m s`|screen capture tool
+`CL+m t`|open task manager|configurable, default is `ProcessExplorer` in the *software* folder
 `CL+m Alt+s`|screen git recorder|configurable, default is `ScreenToGif` in the *software* folder
 `CL+m r`|screen ruler|configurable, default is `aruler` in the *software* folder
 `CL+m v`|open all *.sln files in the folder with visualStudion| configurable, default is `VS2015`
 
 > configurable means could be configured in config.ini file
-Windows Useful Shortcuts
+
+## Tricks
+
+1. in file explorer, find the frequently used button on the Ribbon, and right click, select `Add to quick access toolbar`, base on the order, you can press `Alt+1..`to trigger this command. for example, I usually add the checkbox `Navigation pane` to the quick access bar and bind `Alt+1` to it.
+
+2.  
+
+# Other Useful Programs
+
+1. VSCode, 
+
+Appendix: Windows Useful Shortcuts
 =========
 
 ## Common
@@ -82,68 +98,46 @@ Key|Note
 `Alt+Space`| show system menu, n(miNimize),r(Restore),x(maXimize),c(Close) window
 `Win+L`| Lock PC.
 `Win+D`| Show desktop.
+`Win+I`|   Settings
+`Win+B`|   Show hiden icons
+`Win+Number`| Start the program pinned to the taskbar.
 
 ## File Explorer
-Key|Note
----|---
+
+Key|Function|Note
+---|---|---
 `F2(CL+2)`| Rename.
 `Ctrl+Shift+E` |Expand navigation pane to the current folder.
 `Ctrl+N`| Open a new window of the same folder.
+`Ctrl+Shift+N`| Create a new subfolder in the current folder.| *use `Ctrl+Alt+n` to creat a new file*
+`Ctrl+W`| Close the current window.
+`Alt+Up`| Arrow Go up one level.
+`Alt+Right`| Arrow Go forward.
+`Alt+Left`| Arrow Go back.
+`Alt+d` |Move the focus to the address bar, and select the current path. (press `Ctrl+c` to copy)
+`Alt+p`|   Preview panel|* `alt+1` to show navigation pane, after add it to quick access bar
+`Ctrl+arrow key` + `Spacebar`| to move to an item and press Spacebar to select/unselect multiple individual items in window
+`Shift+arrow(Caps+ikjl)`|	Select more than one item in a window or on the desktop, or select text in a documentg
+`Alt+Spacebar`| Show shortcut menu of the active window.
+`F4(CL+4)`| Move the insertion point to the address bar, and display the contents of the drop-down list of previous addresses. 
+`F5(CL+5)`| Refresh.
+`Alt+Enter`| Show properties of the selected file.
+`Shift+F10(Shift+CL+0)(CL+;)`| Open the shortcut menu for the current selection (which is the same as a right-click). 
+`Ctrl+Shift+1/2/.../8`|    View modes| `Ctrl+Shift+3`: icons; `Ctrl+Shift+6`: details;
+`Ctrl+F/F3(CL+3)`| go to search box, your could then press Tab go to navigation pane, then press Tab go to file list.| Note: replaced by everything
+`F11(CL+-)`| Toggle full-screen mode. 
 
-Ctrl+Shift+N Create a new subfolder in the current folder. 
-
-Ctrl+W Close the current window. 
-
-Alt+Up Arrow Go up one level. 
-
-Alt+Right Arrow Go forward. 
-
-Alt+Left Arrow Go back. 
-
-`Alt+D` Move the focus to the address bar, and select the current path. (press `Ctrl+c` to copy)
-
-Alt+P   Preview panel
-Ctrl + arrow key (to move to an item) + Spacebar(select)	Select multiple individual items in window
-
-Alt+Spacebar Show shortcut menu of the active window.
-
-F4(Caps+4) Move the insertion point to the address bar, and display the contents of the drop-down list of previous addresses. 
-
-F5(Caps+5) Refresh.
-
-Alt+Enter Show properties of the selected file. 
-
-Shift+F10(Shift+Caps+0)(Caps+;) Open the shortcut menu for the current selection (which is the same as a right-click). 
-
-Shift+arrow(Caps+ikjl)	Select more than one item in a window or on the desktop, or select text in a document
-
-Ctrl+Shift+1/2/.../8    View modes
-
-Ctrl+F/F3(Caps+3) go to search box, then press Tab go to navigation pane, then press Tab go to file list.
-
-Win+I   Settings
-Win+B   Show hiden icons
-Win+Number Start the program pinned to the taskbar.
-
-F11(Caps+-) Toggle full-screen mode. 
 ## Virtual desktops
-Win+Ctrl+D  Add Dessktop
 
-Win+Ctrl+F4(Caps+4) Close desktop
-
-Win+Ctrl+Right/Left(Caps+l/j)  Switch to right/left one
-
+Key|Function|Note
+---|---|---
+`Win+Ctrl+d`|  Add Dessktop
+`Win+Ctrl+F4(CL+4)`| Close desktop
+`Win+Ctrl+Right/Left(CL+l/j)` |Switch to right/left one
 
 ## Dialog box
-Ctrl+Tab (Ctrl+Shift+Tab) to switch tabs
-spacebar to toggle checkbox
-
-## Tricks
-
-1. in file explorer, find the frequently used button on the Ribbon, and right click, select `Add to quick access toolbar`, base on the order, you can press `Alt+1..`to trigger this command. for example, I usually add the checkbox `Navigation pane` to the quick access bar and bind `Alt+1` to it.
-
-2.  
-
-# Other Useful Programs
-
-1. VSCode, 
+Key|Function|Note
+---|---|---
+`Ctrl+Tab` `(Ctrl+Shift+Tab)`| to switch tabs
+`spacebar`| to toggle checkbox
+`Alt+Down`| show dropdown list

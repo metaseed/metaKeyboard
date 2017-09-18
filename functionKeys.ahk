@@ -35,77 +35,11 @@ if WinActive("ahk_class CabinetWClass") {
     Clipboard := Clipboard
     return
 }
-;=====================================================================
-;                        Frequently Used Programs
-;---------------------------------------------------------------------
-CapsLock & c::                                ;VSCode
-{
-    if WinActive("ahk_class CabinetWClass") {
-        folder := GetFolder()
-        ShellRun(code,folder,A_WorkingDir)
-    } 
-    else {
-        ShellRun(code,,A_WorkingDir)
-    }
-    return
-}
 
-CapsLock & e::                                ;Editor
-selectedFilePath := Explorer_GetSelection()
-Run "%editor%" "%selectedFilePath%"
-return
-
-CapsLock & t::                                ; terminal
-if WinActive("ahk_class CabinetWClass") {
-    folder := GetFolder()
-    if GetKeyState("shift") != 0 { 
-        run "%cmd%" /start "%folder%"
-    } else {
-        run "%cmd%" /single %folder% -cur_console:d:%folder%
-    }
-} else {
-    if GetKeyState("shift") != 0 {   ;Search
-        run "%cmd%" /start %userProfile%
-    } else {
-        run "%cmd%" /single %userProfile%
-    }
-}
-return
-; Run "%cmd%"
-;-----------------------------------o
-CapsLock & d:: Send, +!d                      ;Dictionary
-;-----------------------------------o    Web Search
-CapsLock & w::
-if GetKeyState("shift") != 0 {
-    ShellRun(searchEngineSecondary)
-} else {
-    ShellRun(searchEngine)
-}
-return
-;-----------------------------------o
-CapsLock & r:: Run Powershell                ;Run Shell
-;-----------------------------------o
-#include %A_LineFile%\..\search-with-everything.ahk.
-;-----------------------------------o
-CapsLock & q::                              ; quick note
-IfWinExist Untitled - Notepad 
-    IfWinActive Untitled - Notepad
-        WinMinimize
-    else
-        WinActivate
-else 
-    Run Notepad
-return
-;=====================Win Function Key======================
 ;-----------------------------------o       Virtual machine
 #v::
 Run "%virtualMachineManager%"
 return
-;-----------------------------------o       Task Manager
-#t::
-Run "%processExplorer%"
-return
-
 
 ;-----------------------------------o       Goto Navigation pane
 #d::
@@ -132,3 +66,4 @@ Sleep 1000
 ExitApp
 return
 
+#include %A_LineFile%\..\create-new-file.ahk.
