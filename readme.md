@@ -89,6 +89,14 @@ Key|Map|Note
 
 2.  
 
+
+## Debug
+
+run: 
+```
+mklink config.ini .\metaKeyboard\config.ini /H
+mklink software .\metaKeyboard\software /J
+```
 # Other Useful Programs and configuration
 
 1. [VSCode](https://github.com/Microsoft/vscode) with plugins: Settings Sync, vim, metaGo....; configuration file is: 
