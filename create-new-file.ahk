@@ -18,42 +18,30 @@
 
 ; Only run when Windows Explorer or Desktop is active
 ; Ctrl+Alt+N
-#IfWinActive ahk_class CabinetWClass
-^!n::
-#IfWinActive ahk_class ExploreWClass
-^!n::
-#IfWinActive ahk_class Progman
-^!n::
-#IfWinActive ahk_class WorkerW
-^!n::
 
+^!n::
+#IfWinActive, ahk_class ExploreWClass||ahk_class Progman||ahk_class WorkerW ||ahk_class CabinetWclass
+{
     ; Get full path from open Explorer window
     WinGetText, FullPath, A
-
     ; Clean up result
     StringReplace, FullPath, FullPath, `r, , all
     FullPath := RegExReplace(FullPath, "^.*`nAddress: ([^`n]+)`n.*$", "$1")
-
     ; Change working directory
     SetWorkingDir, %FullPath%
-
     ; An error occurred with the SetWorkingDir directive
     If ErrorLevel
         Return
 
     ; Display input box for filename
     InputBox, UserInput, New File (example: foo.txt), , , 400, 100
-
     ; User pressed cancel
     If ErrorLevel
         Return
 
     ; Create file
     FileAppend, , %UserInput%
-
     ; Open the file in the appropriate editor
     ;Run %UserInput%
-
     Return
-
-#IfWinActive
+}
