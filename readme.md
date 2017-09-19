@@ -110,7 +110,8 @@ Key|Note
 `Win+D`| Show desktop.
 `Win+I`|   Settings
 `Win+B`|   Show hiden icons
-`Win+Number`| Start the program pinned to the taskbar.
+`Win+Number`| Start the program pinned to the Taskbar.
+`Win+Shift+Left/Right`|move window to another screen
 
 ## File Explorer
 
