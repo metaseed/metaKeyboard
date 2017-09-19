@@ -45,3 +45,4 @@
     ;Run %UserInput%
     Return
 }
+#IfWinActive

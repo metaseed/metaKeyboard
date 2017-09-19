@@ -63,18 +63,30 @@ return
 
 CapsLock & m:: 
 Input Key, L1 M
-IfEqual Key, r
+If Key = r
+{
     Run, "%ruler%"                              ;screen ruler
-IfEqual Key, s
+    return
+}
+else if Key= s
+{
     if GetKeyState("alt") = 0
         Run SnippingTool.exe                    ;Sniping
     else
         Run "%gifTool%"                         ;screen to gif
-IfEqual Key, v                                  ;visualStudio
+    return
+}
+else if Key = v                                  ;visualStudio
+{
     if WinActive("ahk_class CabinetWClass")
         folder := GetFolder()
         Loop Files, %folder%\*.sln 
-            Run,"%visualStudio%" %A_LoopFileFullPath%
-IfEqual Key, t
+            Run,"%visualStudio%" %A_LoopFileFullPath%, %folder%
+    return
+}
+else if Key = t
+{
     Run "%processExplorer%"                     ;Task Manager
+    return
+}
 return
