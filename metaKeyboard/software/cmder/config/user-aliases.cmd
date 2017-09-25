@@ -13,3 +13,4 @@ history=cat "%CMDER_ROOT%\config\.history"
 unalias=alias /d $1
 vi=vim $*
 cmderr=cd /d "%CMDER_ROOT%"
+renv="M:\Workspace\metaKeyboard\metaKeyboard\software\cmder\refreshEnv.bat"  

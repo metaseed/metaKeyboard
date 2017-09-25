@@ -61,3 +61,4 @@ GetFolder()
 #include %A_LineFile%\..\key.ahk.
 #Include %A_LineFile%\..\shellRun.ahk.
 #Include, %A_LineFile%\..\fileExplorer.ahk.
+#include, %A_LineFile%\..\system.ahk.

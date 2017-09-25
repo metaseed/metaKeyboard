@@ -1,5 +1,4 @@
 @echo off
-
 :: Init Script for cmd.exe
 :: Created as part of cmder project
 
