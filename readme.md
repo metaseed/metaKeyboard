@@ -134,7 +134,7 @@ Key|Function|Note
 `Alt+Right`| Arrow Go forward.
 `Alt+Left`| Arrow Go back.
 `Alt+d` |Move the focus to the address bar, and select the current path. (press `Ctrl+c` to copy)
-`Alt+p`|   Preview panel|* `alt+1` to show navigation pane, after add it to quick access bar
+`Alt+p`|   Preview panel|* `alt+1` to show navigation pane (should add it to quick access bar)
 `Ctrl+arrow key` + `Spacebar`| to move to an item and press Spacebar to select/unselect multiple individual items in window
 `Shift+arrow(Caps+ikjl)`|	Select more than one item in a window or on the desktop, or select text in a document
 `Alt+Spacebar`| Show shortcut menu of the active window.
