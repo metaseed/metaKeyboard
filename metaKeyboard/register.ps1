@@ -1,3 +1,4 @@
+Import-Module ".\EnvPath.psm1"
 function Parse-IniFile ($file) {
     $ini = @{}
     switch -regex -file $file {
@@ -35,4 +36,12 @@ $ini = Parse-IniFile($PSScriptRoot + "\config.ini")
 [Environment]::SetEnvironmentVariable("r", $env:USERPROFILE + "\Source\Repos", [System.EnvironmentVariableTarget]::User)
 [Environment]::SetEnvironmentVariable("w", $ini["register"]["workDirectory"], [System.EnvironmentVariableTarget]::User)
 
+$metaKB_path = (Get-Item -Path ".\" -Verbose).FullName
+[Environment]::SetEnvironmentVariable("metaKB", $metaKB_path, [System.EnvironmentVariableTarget]::User)
 
+$cmder_path = $metaKB_Path + '\software\cmder'
+# Write-Host $cmder_path
+Add-EnvPath $cmder_path 'User'
+
+$software_path = $metaKB_path + '\software'
+Add-EnvPath $software_path 'User'
