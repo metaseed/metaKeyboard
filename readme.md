@@ -1,21 +1,22 @@
-If you are like me fun of prefer using keyboard to operate your Windows system, then here is the right place for you.
+If you are like me a geek of prefering to use keyboard to operate your Windows system, then here is the right place for you.
 
 The `goal` of MetaKB is described by the below gif:
  
 ![keyboard](./keyboard.gif)
+
 MetaKB redefined the CapsLock key as a function key:
-If you press it, it act like the ESC key;
-If you hold it and press other key, it acts like another Ctrl key for you.
+* If you press it, it act like the ESC key;
+* If you hold it and press another key, it acts like another Ctrl key for you.
 
-> you can press CapsLock+` to toggle between normal CapsLock function and the redefined function key function.
+> you can press CapsLock+` to toggle between normal CapsLock function and the new *function key* function.
 
 
-> we use 'CL' to stands for the redefined CapsLock key
+> below we use 'CL' to stands for the redefined `CapsLock` key
 
 # Keyboard Map
 > arrow keys are defined same as Vim
 
-## Direction Keys Map Table
+## Direction Keys Mapping Table
 Key|Map|Note
 ---|---|---
 `Left`|CL+h
@@ -27,10 +28,10 @@ Key|Map|Note
 `PageUp`|CL+u
 `PageDown`|CL+n
 
-> The `LAlt(left Alt)` key combined with the direction keys gives you a shortcut:
+> The `LAlt(left Alt)` key combined with the keys in this table gives you a shortcut:
 > i.e. if you want to press `Alt+Up` you could just press `LAlt+k`, no need to press `Alt+CL+k` together.
 
-> the `RAlt` still act as normal `Alt` key.
+> Note: the `RAlt` still act as normal `Alt` key.
 
 ## Other Remapped Keys
 
@@ -53,15 +54,15 @@ Key|Map|Note
 `Win+f`|go to FileExplorer's files pane| move focus to files pane of FileExplorer to manage files
 `Win+n`|go to FileExplorers navigation pane| move focus to navigation pane of FileExplorer to manage files
 `CL+\` |copy file full path| when in FileExplorer
-`Ctrl+Alt+c`|copy and search with search engine| default is configured as `Google`
+`Ctrl+Alt+c`|copy and search with search engine| press `ctrl+c` and search with `Google`
 `Ctrl+Alt+n`|create new file in the folder
-`Win+v`|opne virtual machine manager|configurable, default is Hyper-V
+`Win+v`|open virtual machine manager|configurable, default is Hyper-V
 
-### `MetaKB related
+### MetaKB related
 
  Key|Function
  ---|---
-`Ctrl+Win+Alt+l`|reload the metaKB software
+`Ctrl+Win+Alt+l`|reload the metaKB software, environment variables and path would be updated
 `Ctrl+Win+Alt+c`|close the metaKB software
 
 ## Frequently Used Software
@@ -69,15 +70,15 @@ Key|Map|Note
 Key|Map|Note
 ---|---|---
 `CL+c`|open the folder with *code* editor|configuralbe, default is `VSCode`
-`CL+d`|show/hide your word dictionary software| in your  favorite `dictionary` software config the hotkey `shift+alt+d` to toggle the software
+`CL+d`|show/hide your word dictionary software| in your  favorite `dictionary` software config the hotkey `shift+alt+d` to toggle the software, make sure your dictionary software auto start when windows starting.
 `CL+e`|edit file with configured editor |configurable, default is `gvim`
 `CL+f`|search in folder| configurable, default is `everything` in the *software* folder
 `CL+t`|open terminal| configurable, default is `Cmder` in the *software* folder
 `CL+w`|open web explorer and navigate to your *searchEngine*| configurable, default is `Google`
 `CL+shift+w`|open web explorer and navigate to your *searchEngineSecondary*| configurable, default is `Bing`
 `CL+m s`|screen capture tool
+`CL+m Alt+s`|screen gif recorder|configurable, default is `ScreenToGif` in the *software* folder
 `CL+m t`|open task manager|configurable, default is `ProcessExplorer` in the *software* folder
-`CL+m Alt+s`|screen git recorder|configurable, default is `ScreenToGif` in the *software* folder
 `CL+m r`|screen ruler|configurable, default is `aruler` in the *software* folder
 `CL+m v`|open all *.sln files in the folder with visualStudion| configurable, default is `VS2015`
 
@@ -85,14 +86,13 @@ Key|Map|Note
 
 ## Tricks
 
-1. in file explorer, find the frequently used button on the Ribbon, and right click, select `Add to quick access toolbar`, base on the order, you can press `Alt+1..`to trigger this command. for example, I usually add the checkbox `Navigation pane` to the quick access bar and bind `Alt+1` to it.
+1. in file explorer, find the frequently used button on the Ribbon, and right click, select `Add to quick access toolbar`, base on the order, you can press `Alt+1..`to trigger this command. for example, I usually add the checkbox `Navigation pane` to the `quick access bar` so I can press `Alt+1` to show/hide it.
 
-2.  
-
+# Development
 
 ## Debug
 
-run: 
+to run the index.ahk file your need to install [AutoHotkey](https://autohotkey.com/download/), and run the follow command in the repository folder: 
 ```
 mklink config.ini .\metaKeyboard\config.ini /H
 mklink software .\metaKeyboard\software /J
@@ -100,10 +100,10 @@ mklink software .\metaKeyboard\software /J
 # Other Useful Programs and configuration
 
 1. [VSCode](https://github.com/Microsoft/vscode) with plugins: Settings Sync, vim, metaGo....; configuration file is: 
-GITHUB GIST: https://gist.github.com/metasong/b227db6a892b4c3ec1bb4900bc54977b
-1. VisualStudio: the shortcut keys are reconfigured, configuratin is VSCode.vsk in the ./software/VisualStudioShortcut foler.
+GITHUB GIST: https://gist.github.com/metasong/b227db6a892b4c3ec1bb4900bc54977b. after install vscode and install the Settings Sync plugin, and sync settings with the gist file.
+1. VisualStudio: the shortcut keys are reconfigured, configuratin is VSCode.vsk in the ./software/VisualStudioShortcut foler. Copy the VSCode.vsk into the folder: C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE or create a symble link point to to the VSCode.vsk pointing to it. and select the VSCode keyboard mapping scheme in your VS options: Environment/Keyboard config page. VS Extensions used: AceJump, Hide Main Menu Hot Commands for Visual Studio, Hot Keys - Keyboard Shortcuts, MixEdit, Resharper Ultimate,Visual Commander, VsVim
 1. [ClipJump](https://github.com/aviaryan/Clipjump)
-1.  
+1. [Git for Windows](https://git-scm.com/download/win), except git tools, it provides a lot useful tools
 Appendix: Windows Useful Shortcuts
 =========
 
@@ -114,7 +114,7 @@ Key|Note
 `Ctrl+Z/Y`| Undo/Redo.
 `Alt+F4(Alt+CL+4)` |Close active app.
 `Alt+Space`| show system menu, n(miNimize),r(Restore),x(maXimize),c(Close) window
-`Win+L`| Lock PC.
+`Win+L`| Lock Windows.
 `Win+D`| Show desktop.
 `Win+I`|   Settings
 `Win+B`|   Show hiden icons
@@ -128,7 +128,7 @@ Key|Function|Note
 `F2(CL+2)`| Rename.
 `Ctrl+Shift+E` |Expand navigation pane to the current folder.
 `Ctrl+N`| Open a new window of the same folder.
-`Ctrl+Shift+N`| Create a new subfolder in the current folder.| *use `Ctrl+Alt+n` to creat a new file*
+`Ctrl+Shift+N`| Create a new subfolder in the current folder.| *use `Ctrl+Alt+n` to create new file*
 `Ctrl+W`| Close the current window.
 `Alt+Up`| Arrow Go up one level.
 `Alt+Right`| Arrow Go forward.
@@ -136,7 +136,7 @@ Key|Function|Note
 `Alt+d` |Move the focus to the address bar, and select the current path. (press `Ctrl+c` to copy)
 `Alt+p`|   Preview panel|* `alt+1` to show navigation pane, after add it to quick access bar
 `Ctrl+arrow key` + `Spacebar`| to move to an item and press Spacebar to select/unselect multiple individual items in window
-`Shift+arrow(Caps+ikjl)`|	Select more than one item in a window or on the desktop, or select text in a documentg
+`Shift+arrow(Caps+ikjl)`|	Select more than one item in a window or on the desktop, or select text in a document
 `Alt+Spacebar`| Show shortcut menu of the active window.
 `F4(CL+4)`| Move the insertion point to the address bar, and display the contents of the drop-down list of previous addresses. 
 `F5(CL+5)`| Refresh.
