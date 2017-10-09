@@ -6,6 +6,9 @@
 ; *!h::keyWithCtrlAltShift("Left","h")
 ; when user press left Alt, actual generate Alt and Left arrow, but
 ; when user press right Alt, actual generate Alt and 'h'.
+
+; The LAlt(left Alt) key combined with the keys in this table gives you a shortcut: 
+; i.e. if you want to press Alt+Up you could just press LAlt+k, no need to press Alt+CL+k together.
 keyWithCtrlAltShift(key, originalKey)
 {
     if GetKeyState("control") = 0 {
