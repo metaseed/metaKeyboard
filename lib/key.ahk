@@ -31,12 +31,13 @@ keyWithCtrlAltShift(key, originalKey)
                 if GetKeyState("LWin") = 0 {
                     ;IfWinExist ahk_class #32771
                     ;Send, !{ %key% }
-                if GetKeyState("RAlt") = 0 {
-                    Send, {Alt down}{ %key% }
+                    if GetKeyState("RAlt") = 0 {
+                        Send, {Alt down}{ %key% }
+                    } else {
+                        Send, {Blind}!{ %originalKey% }
+                        ;Send, {Alt down} {%originalKey%}
+                    }
                 } else {
-                    Send, {Alt down} {%originalKey%}
-                }
-                }else {
                     if GetKeyState("RAlt") = 0 {
                         Send, !#{ %key% }
                     } else {
