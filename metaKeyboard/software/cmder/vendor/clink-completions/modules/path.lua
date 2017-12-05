@@ -1,9 +1,9 @@
-exports = {}
+local exports = {}
 
 local w = require('tables').wrap
 
-exports.list_files = function (base_path, mask, recursive, reverse_separator)
-    local mask = mask or '/*'
+exports.list_files = function (base_path, glob, recursive, reverse_separator)
+    local mask = glob or '/*'
 
     local entries = w(clink.find_files(base_path..mask))
     :filter(function(entry)
@@ -50,6 +50,11 @@ exports.pathname = function (path)
         prefix = path:sub(1, i-1)
     end
     return prefix
+end
+
+exports.is_absolute = function (path)
+    local drive = path:find("^%s?[%l%a]:[\\/]")
+    if drive then return true else return false end
 end
 
 exports.is_metadir = function (dirname)

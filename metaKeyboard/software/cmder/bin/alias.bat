@@ -64,7 +64,7 @@ if "%aliases%" neq "%CMDER_ROOT%\config\user-aliases.cmd" (
 )
 
 :: validate alias
-for /f "delims== tokens=1,2 usebackq" %%G in (`echo "%_x%"`) do (
+for /f "delims== tokens=1,* usebackq" %%G in (`echo "%_x%"`) do (
   set alias_name=%%G
   set alias_value=%%H
 )
@@ -96,7 +96,7 @@ set del_alias=%~1
 findstr /b /v /i "%del_alias%=" "%ALIASES%" >> "%ALIASES%.tmp"
 type "%ALIASES%".tmp > "%ALIASES%" & @del /f /q "%ALIASES%.tmp"
 doskey %del_alias%=
-doskey /macrofile=%ALIASES%
+doskey /macrofile="%ALIASES%"
 goto:eof
 
 :p_reload

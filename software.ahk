@@ -25,7 +25,8 @@ if WinActive("ahk_class CabinetWClass") {
     if GetKeyState("shift") != 0 { 
         run "%cmd%" /start %folder%
     } else {
-        run "%cmd%" /single %folder% -cur_console:d:%folder%
+        ; not work run "%cmd%" /single "%folder%" -cur_console:d:%folder%
+        run "%cmd%" /start %folder%
     }
 } else {
     if GetKeyState("shift") != 0 {   ;Search

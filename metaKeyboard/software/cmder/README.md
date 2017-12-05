@@ -1,6 +1,6 @@
 # Cmder
 
-[![Join the chat at https://gitter.im/cmderdev/cmder](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/cmderdev/cmder?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva/branch/master?svg=true)](https://ci.appveyor.com/project/MartiUK/cmder)
+[![Join the chat at https://gitter.im/cmderdev/cmder](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/cmderdev/cmder?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://ci.appveyor.com/api/projects/status/github/cmderdev/cmder?branch=master&svg=true)](https://ci.appveyor.com/project/MartiUK/cmder)
 
 Cmder is a **software package** created out of pure frustration over absence of usable console emulator on Windows. It is based on [ConEmu](https://conemu.github.io/) with *major* config overhaul, comes with a Monokai color scheme, amazing [clink](https://github.com/mridgers/clink) (further enhanced by [clink-completions](https://github.com/vladimir-kotikov/clink-completions)) and a custom prompt layout.
 
@@ -14,7 +14,7 @@ The main advantage of Cmder is portability. It is designed to be totally self-co
 
 1. Download the [latest release](https://github.com/cmderdev/cmder/releases/)
 2. Extract the archive
-3. (optional) Place your own executable files into the `bin` folder to be injected into your PATH
+3. (optional) Place your own executable files into the `bin` folder to be injected into your PATH. (nb: This path should not be `C:\Program Files` or anywhere else that would require Administrator access for modifying configuration files)
 4. Run Cmder.exe
 
 ## Integration
@@ -38,6 +38,9 @@ In a file explorer window right click in or on a directory to see "Cmder Here" i
 * <kbd>Ctrl</kbd> + <kbd>W</kbd> : Close tab
 * <kbd>Ctrl</kbd> + <kbd>D</kbd> : Close tab (if pressed on empty command)
 * <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>#Number</kbd> : Fast new tab: <kbd>1</kbd> - CMD, <kbd>2</kbd> - PowerShell
+* <kbd>Ctrl</kbd> + <kbd>Tab</kbd> : Switch to next tab
+* <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> : Switch to previous tab
+* <kbd>Ctrl</kbd> + <kbd>#Number</kbd> : Switch to tab #Number
 * <kbd>Alt</kbd> + <kbd>Enter</kbd>: Fullscreen
 
 ### Shell
@@ -109,15 +112,38 @@ You can define simple aliases for `cmd.exe` sessions with a command like `alias 
 
 Cmd.exe aliases can also be more complex. See: [DOSKEY.EXE documentation](http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/doskey.mspx?mfr=true) for additional details on complex aliases/macros for 'cmd.exe'
 
-Aliases defined using the `alias.bat` command will automatically be saved in the `%CMDER_ROOT%\config\aliases` file
+Aliases defined using the `alias.bat` command will automatically be saved in the `%CMDER_ROOT%\config\user-aliases.cmd` file
+
+To make an alias and/or any other profile settings permanent add it to one of the following:
+
+Note: These are loaded in this order by '$CMDER_ROOT/vendor/init.bat'.  Anyhing stored in '%CMDER_ROOT%' will be a portable setting and will follow cmder to another machine.
+
+* '%CMDER_ROOT%\\config\\profile.d\\\*.cmd and \*.bat'
+* '%CMDER_ROOT%\\config\\user-aliases.cmd'
+* '%CMDER_ROOT%\\config\\user-profile.cmd'
 
 #### Bash.exe|Mintty.exe Aliases
-Bash shells support simple and complex aliases with optional parameters natively so they work a little different.  Typing `alias name=command` will create an alias only for the current running session.  To make an alias permanent add it to either your `$CMDER_ROOT/config/user-profile.sh` or your `$HOME/.bashrc`.
+Bash shells support simple and complex aliases with optional parameters natively so they work a little different.  Typing `alias name=command` will create an alias only for the current running session.
+
+To make an alias and/or any other profile settings permanent add it to one of the following:
+
+Note: These are loaded in this order by '$CMDER_ROOT/vendor/git-for-windows/etc/profile.d/cmder.sh'.  Anyhing stored in '$CMDER_ROOT' will be a portable setting and will follow cmder to another machine.
+
+* '$CMDER_ROOT/config/profile.d/*.sh'
+* '$CMDER_ROOT/config/user-profile.sh'
+* '$HOME/.bashrc'
 
 If you add bash aliases to `$CMDER_ROOT/config/user-profile.sh` they will be portable and follow your Cmder folder if you copy it to another machine.  `$HOME/.bashrc` defined aliases are not portable.
 
 #### PowerShell.exe Aliases
 PowerShell has native simple alias support, for example `[new-alias | set-alias] alias command`, so complex aliases with optional parameters are not supported in PowerShell sessions.  Type `get-help [new-alias|set-alias] -full` for help on PowerShell aliases.
+
+To make an alias and/or any other profile settings permanent add it to one of the following:
+
+Note: These are loaded in this order by '$ENV:CMDER_ROOT\\vendor\\user-profile.ps1'.  Anyhing stored in '$ENV:CMDER_ROOT' will be a portable setting and will follow cmder to another machine.
+
+* '$ENV:CMDER_ROOT\\config\\profile.d\\\*.ps1'
+* '$ENV:CMDER_ROOT\\config\\user-profile.ps1'
 
 ### SSH Agent
 
@@ -131,7 +157,7 @@ If you want to run SSH agent on startup, include the line `@call "%GIT_INSTALL_R
 1. Click the '+' button to add a task.
 1. Name the new task in the top text box.
 1. Provide task parameters, this is optional.
-1. Add ```cmd /c "[path_to_external_env]\bin\bash --login -i" -new_console:d:%USERPROFILE%``` to the `Commands` text box.
+1. Add ```cmd /c "[path_to_external_env]\bin\bash --login -i" -new_console``` to the `Commands` text box.
 
 Recommended Optional Steps:
 
@@ -150,11 +176,11 @@ Uncomment and edit the below line in the script to use Cmder config even when la
 # CMDER_ROOT=${USERPROFILE}/cmder  # This is not required if launched from Cmder.
 ```
 
-## Current development branch
+## Current development builds
 
 You can download builds of the current development branch by going to AppVeyor via the following link:
 
-[![AppVeyor](https://ci.appveyor.com/api/projects/status/github/cmderdev/cmder?svg=True)](https://ci.appveyor.com/project/MartiUK/cmder/branch/development/artifacts)
+[![AppVeyor](https://ci.appveyor.com/api/projects/status/github/cmderdev/cmder?svg=True)](https://ci.appveyor.com/project/MartiUK/cmder/branch/master/artifacts)
 
 ## License
 
