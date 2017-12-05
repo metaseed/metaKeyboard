@@ -23,7 +23,7 @@ CapsLock & t::                                ; terminal
 if WinActive("ahk_class CabinetWClass") {
     folder := GetFolder()
     if GetKeyState("shift") != 0 { 
-        run "%cmd%" /start "%folder%"
+        run "%cmd%" /start %folder%
     } else {
         run "%cmd%" /single %folder% -cur_console:d:%folder%
     }

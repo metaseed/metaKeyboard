@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2017-10-11 15:15:04" build="170819">
+		<key name=".Vanilla" modified="2017-12-05 14:30:30" build="170819">
 			<value name="ColorTable00" type="dword" data="00362b00"/>
 			<value name="ColorTable01" type="dword" data="00423607"/>
 			<value name="ColorTable02" type="dword" data="00808000"/>
@@ -124,11 +124,11 @@
 			<value name="ColorKeyValue" type="dword" data="00010101"/>
 			<value name="UseCurrentSizePos" type="hex" data="01"/>
 			<value name="WindowMode" type="dword" data="0000051f"/>
-			<value name="ConWnd Width" type="dword" data="0000009c"/>
-			<value name="ConWnd Height" type="dword" data="00000029"/>
+			<value name="ConWnd Width" type="dword" data="0000007d"/>
+			<value name="ConWnd Height" type="dword" data="00000025"/>
 			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="long" data="-606"/>
-			<value name="ConWnd Y" type="long" data="-1007"/>
+			<value name="ConWnd X" type="long" data="1098"/>
+			<value name="ConWnd Y" type="long" data="-840"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
@@ -561,17 +561,17 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd2" type="string" data="&quot;%ProgramFiles%\Git\bin\bash --login -i&quot; -new_console:d:%USERPROFILE%"/>
 				</key>
-				<key name="Task9" modified="2017-09-27 09:41:34" build="170819">
+				<key name="Task9" modified="2017-12-05 14:48:54" build="170819">
 					<value name="Name" type="string" data="{cmd}"/>
 					<value name="Flags" type="dword" data="00000007"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=" /icon &quot;%CMDER_ROOT%\icons\cmder.ico&quot;"/>
-					<value name="Cmd1" type="string" data="cmd /k &quot;%ConEmuDir%\..\init.bat&quot;  -new_console"/>
+					<value name="Cmd1" type="string" data="*cmd /k &quot;%ConEmuDir%\..\init.bat&quot; &quot;%V&quot;"/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd2" type="string" data="&quot;%ProgramFiles%\Git\bin\bash --login -i&quot; -new_console:d:%USERPROFILE%"/>
+					<value name="Cmd2" type="string" data="cmd"/>
 				</key>
-				<key name="Task10" modified="2017-09-27 09:41:34" build="170819">
+				<key name="Task10" modified="2017-12-05 14:48:54" build="170819">
 					<value name="Name" type="string" data="{Shells::cmd-32}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -580,7 +580,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task11" modified="2017-09-27 09:41:34" build="170819">
+				<key name="Task11" modified="2017-12-05 14:48:54" build="170819">
 					<value name="Name" type="string" data="{Shells::cmd 64/32}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -590,7 +590,7 @@
 					<value name="Count" type="long" data="2"/>
 					<value name="Cmd2" type="string" data="&quot;%windir%\syswow64\cmd.exe&quot; /k &quot;&quot;%ConEmuBaseDir%\CmdInit.cmd&quot; &amp; echo This is 32 bit cmd.exe -new_console:s50V&quot;"/>
 				</key>
-				<key name="Task12" modified="2017-09-27 09:41:34" build="170819">
+				<key name="Task12" modified="2017-12-05 14:48:54" build="170819">
 					<value name="Name" type="string" data="{Shells::cmd (Admin)}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -600,7 +600,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task13" modified="2017-09-27 09:41:34" build="170819">
+				<key name="Task13" modified="2017-12-05 14:48:54" build="170819">
 					<value name="Name" type="string" data="{SDK::VS 14.0 x86 tools prompt}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -610,7 +610,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd2" type="string" data="&quot;%windir%\syswow64\cmd.exe&quot; /k &quot;&quot;%ConEmuBaseDir%\CmdInit.cmd&quot; &amp; echo This is 32 bit cmd.exe -new_console:s50V&quot;"/>
 				</key>
-				<key name="Task14" modified="2017-09-27 09:41:34" build="170819">
+				<key name="Task14" modified="2017-12-05 14:48:54" build="170819">
 					<value name="Name" type="string" data="{SDK::VS 15.0 x86 tools prompt}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -619,7 +619,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task15" modified="2017-09-27 09:41:34" build="170819">
+				<key name="Task15" modified="2017-12-05 14:48:54" build="170819">
 					<value name="Name" type="string" data="{Helper::Show ANSI colors}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -628,7 +628,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task16" modified="2017-09-27 09:41:34" build="170819">
+				<key name="Task16" modified="2017-12-05 14:48:54" build="170819">
 					<value name="Name" type="string" data="{Tools::Chocolatey (Admin)}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -711,11 +711,11 @@
 				</key>
 			</key>
 
-			<key name="Apps" modified="2017-09-27 09:41:34" build="170819">
+			<key name="Apps" modified="2017-12-05 14:48:54" build="170819">
 				<value name="Count" type="long" data="0"/>
 			</key>
-			<key name="Colors" modified="2017-09-27 09:41:34" build="170819">
-				<key name="Palette1" modified="2017-09-27 09:41:34" build="170819">
+			<key name="Colors" modified="2017-12-05 14:48:54" build="170819">
+				<key name="Palette1" modified="2017-12-05 14:48:54" build="170819">
 					<value name="Name" type="string" data="Monokai"/>
 					<value name="ExtendColors" type="hex" data="00"/>
 					<value name="ExtendColorIdx" type="hex" data="0e"/>
@@ -1012,7 +1012,7 @@
 			</key>
 			<value name="StartCreateDelay" type="ulong" data="100"/>
 			<value name="DefaultTerminalDebugLog" type="hex" data="00"/>
-			<value name="LastMonitor" type="string" data="-931,-1200,989,0"/>
+			<value name="LastMonitor" type="string" data="890,-1200,2810,0"/>
 			<value name="Restore2ActiveMon" type="hex" data="00"/>
 			<value name="DownShowExOnTopMessage" type="hex" data="00"/>
 			<value name="EnvironmentSet" type="multi">
