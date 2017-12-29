@@ -6,12 +6,13 @@ The `goal` of MetaKB is described by the below gif:
 
 # Quick start
 
-1. clone this repository: 
+* clone this repository: 
 ```bash
 git clone https://github.com/metaseed/metaKeyboard.git
 ```
-1. go to folder metaKeyboard and run metaKeyboard.exe
+* go to folder metaKeyboard and run metaKeyboard.exe
 
+## Description
 MetaKB redefined the CapsLock key as a function key:
 * If you press it, it act like the ESC key;
 * If you hold it and press another key, it acts like another Ctrl key for you.
