@@ -72,7 +72,7 @@ If Key = r
 else if Key= s
 {
     if GetKeyState("alt") = 0
-        Run SnippingTool.exe                    ;Sniping
+        Run "%snippingTool%"                    ;Sniping
     else
         Run "%gifTool%"                         ;screen to gif
     return

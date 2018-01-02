@@ -3,6 +3,7 @@ IniRead, everythingPath, .\config.ini, tools, everythingPath
 IniRead, virtualMachineManager, .\config.ini, tools, virtualMachineManager
 IniRead, processExplorer, .\config.ini, tools, processExplorer
 IniRead, gifTool, .\config.ini, tools, gifTool
+IniRead, snippingTool, .\config.ini, tools, snippingTool
 IniRead, searchEngine, .\config.ini, tools, searchEngine
 IniRead, searchEngineSecondary, .\config.ini, tools, searchEngineSecondary
 IniRead, editor, .\config.ini, tools, editor
