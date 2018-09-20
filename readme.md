@@ -120,8 +120,8 @@ mklink software .\metaKeyboard\software /J
 1. VisualStudio: the shortcut keys are reconfigured, configuratin is VSCode.vsk in the ./software/VisualStudioShortcut foler. Copy the VSCode.vsk into the folder: C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE or create a symble link point to to the VSCode.vsk pointing to it. and select the VSCode keyboard mapping scheme in your VS options: Environment/Keyboard config page. VS Extensions used: AceJump, Hide Main Menu Hot Commands for Visual Studio, Hot Keys - Keyboard Shortcuts, MixEdit, Resharper Ultimate,Visual Commander, VsVim
 1. [ClipJump](https://github.com/aviaryan/Clipjump)
 1. [Git for Windows](https://git-scm.com/download/win), except git tools, it provides a lot useful tools
-   Appendix: Windows Useful Shortcuts
-   =========
+
+# Appendix: Windows Useful Shortcuts
 
 ## Common
 
@@ -137,6 +137,7 @@ mklink software .\metaKeyboard\software /J
 | `Win+B`                | Show hiden icons                                                               |
 | `Win+Number`           | Start the program pinned to the Taskbar.                                       |
 | `Win+Shift+Left/Right` | move window to another screen                                                  |
+| `Win+Up/Down`          | max/restore/minimize window                                                    |
 
 ## File Explorer
 
