@@ -19,7 +19,7 @@ git clone https://github.com/metaseed/metaKeyboard.git
 MetaKB redefined the CapsLock key as a function key:
 
 - If you press it, it act like the ESC key;
-- If you hold it and press another key, it acts like another `FUNCTION` key (like: <kbd>ctrl<kbd/>, <kbd>alt</kbd>) for you.
+- If you hold it and press another key, it acts like another `FUNCTION` key (like: <kbd>ctrl</kbd>, <kbd>alt</kbd>) for you.
 
 > you can press CapsLock+` to toggle between normal CapsLock function and the new _function key_ function.
 
@@ -137,7 +137,7 @@ mklink software .\metaKeyboard\software /J
 | `Win+B`                | Show hiden icons                                                               |
 | `Win+Number`           | Start the program pinned to the Taskbar.                                       |
 | `Win+Shift+Left/Right` | move window to another screen                                                  |
-| `Win+Up/Down`          | max/restore/minimize window                                                    |
+| `Win+Up/Down`          | maximize/restore/minimize window                                               |
 
 ## File Explorer
 
@@ -161,7 +161,7 @@ mklink software .\metaKeyboard\software /J
 | `Alt+Enter`                   | Show properties of the selected file.                                                                              |
 | `Shift+F10(Shift+CL+0)(CL+;)` | Open the shortcut menu for the current selection (which is the same as a right-click).                             |
 | `Ctrl+Shift+1/2/.../8`        | View modes                                                                                                         | `Ctrl+Shift+3`: icons; `Ctrl+Shift+6`: details;                        |
-| `Ctrl+F/F3(CL+3)`             | go to search box, your could then press Tab go to navigation pane, then press Tab go to file list.                 | Note: replaced by everything                                           |
+| `Ctrl+F3(CL+3)`               | go to search box, your could then press Tab go to navigation pane, then press Tab go to file list.                 | Note: replaced by everything                                           |
 | `F11(CL+-)`                   | Toggle full-screen mode.                                                                                           |
 
 ## Virtual desktops
