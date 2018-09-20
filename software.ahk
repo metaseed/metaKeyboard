@@ -5,8 +5,8 @@
 CapsLock & c::                                ;VSCode
 {
     if WinActive("ahk_class CabinetWClass") {
-        folder := GetFolder()
-        ShellRun(code,folder,A_WorkingDir)
+        selectedFilePath := Explorer_GetSelection()
+        ShellRun(code,selectedFilePath,A_WorkingDir)
     } 
     else {
         ShellRun(code,,A_WorkingDir)
