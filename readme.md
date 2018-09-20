@@ -81,20 +81,20 @@ MetaKB redefined the CapsLock key as a function key:
 
 ## Frequently Used Software
 
-| Key          | Map                                                            | Note                                                                                                                                                                |
-| ------------ | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CL+c`       | open the folder with _code_ editor                             | configuralbe, default is `VSCode`                                                                                                                                   |
-| `CL+d`       | show/hide your word dictionary software                        | in your favorite `dictionary` software config the hotkey `shift+alt+d` to toggle the software, make sure your dictionary software auto start when windows starting. |
-| `CL+e`       | edit file with configured editor                               | configurable, default is `gvim`                                                                                                                                     |
-| `CL+f`       | search in folder                                               | configurable, default is `everything` in the _software_ folder                                                                                                      |
-| `CL+t`       | open terminal                                                  | configurable, default is `Cmder` in the _software_ folder                                                                                                           |
-| `CL+w`       | open web explorer and navigate to your _searchEngine_          | configurable, default is `Google`                                                                                                                                   |
-| `CL+shift+w` | open web explorer and navigate to your _searchEngineSecondary_ | configurable, default is `Bing`                                                                                                                                     |
+| Key          | Map                                                            | Note                                                                                                                                                                              |
+| ------------ | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CL+c`       | open the folder with _code_ editor                             | configuralbe, default is `VSCode`                                                                                                                                                 |
+| `CL+d`       | show/hide your word dictionary software                        | in your favorite `dictionary` software config the hotkey `shift+alt+d` to toggle the software, and make sure to config your dictionary software auto start when windows starting. |
+| `CL+e`       | edit file with configured editor                               | configurable, default is `gvim`                                                                                                                                                   |
+| `CL+f`       | search in folder                                               | configurable, default is `everything` in the _software_ folder                                                                                                                    |
+| `CL+t`       | open terminal                                                  | configurable, default is `Cmder` in the _software_ folder                                                                                                                         |
+| `CL+w`       | open web explorer and navigate to your _searchEngine_          | configurable, default is `Google`                                                                                                                                                 |
+| `CL+shift+w` | open web explorer and navigate to your _searchEngineSecondary_ | configurable, default is `Bing`                                                                                                                                                   |
 | `CL+m s`     | screen capture tool                                            |
-| `CL+m Alt+s` | screen gif recorder                                            | configurable, default is `ScreenToGif` in the _software_ folder                                                                                                     |
-| `CL+m t`     | open task manager                                              | configurable, default is `ProcessExplorer` in the _software_ folder                                                                                                 |
-| `CL+m r`     | screen ruler                                                   | configurable, default is `aruler` in the _software_ folder                                                                                                          |
-| `CL+m v`     | open all \*.sln files in the folder with visualStudion         | configurable, default is `VS2015`                                                                                                                                   |
+| `CL+m Alt+s` | screen gif recorder                                            | configurable, default is `ScreenToGif` in the _software_ folder                                                                                                                   |
+| `CL+m t`     | open task manager                                              | configurable, default is `ProcessExplorer` in the _software_ folder                                                                                                               |
+| `CL+m r`     | screen ruler                                                   | configurable, default is `aruler` in the _software_ folder                                                                                                                        |
+| `CL+m v`     | open all \*.sln files in the folder with visualStudion         | configurable, default is `VS2015`                                                                                                                                                 |
 
 > configurable means could be configured in config.ini file
 
@@ -141,28 +141,28 @@ mklink software .\metaKeyboard\software /J
 
 ## File Explorer
 
-| Key                           | Function                                                                                                           | Note                                                                   |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
-| `F2(CL+2)`                    | Rename.                                                                                                            |
-| `Ctrl+Shift+E`                | Expand navigation pane to the current folder.                                                                      |
-| `Ctrl+N`                      | Open a new window of the same folder.                                                                              |
-| `Ctrl+Shift+N`                | Create a new subfolder in the current folder.                                                                      | _use `Ctrl+Alt+n` to create new file_                                  |
-| `Ctrl+W`                      | Close the current window.                                                                                          |
-| `Alt+Up`                      | Arrow Go up one level.                                                                                             |
-| `Alt+Right`                   | Arrow Go forward.                                                                                                  |
-| `Alt+Left`                    | Arrow Go back.                                                                                                     |
-| `Alt+d`                       | Move the focus to the address bar, and select the current path. (press `Ctrl+c` to copy)                           |
-| `Alt+p`                       | Preview panel                                                                                                      | \* `alt+1` to show navigation pane (should add it to quick access bar) |
-| `Ctrl+arrow key` + `Spacebar` | to move to an item and press Spacebar to select/unselect multiple individual items in window                       |
-| `Shift+arrow(Caps+ikjl)`      | Select more than one item in a window or on the desktop, or select text in a document                              |
-| `Alt+Spacebar`                | Show shortcut menu of the active window.                                                                           |
-| `F4(CL+4)`                    | Move the insertion point to the address bar, and display the contents of the drop-down list of previous addresses. |
-| `F5(CL+5)`                    | Refresh.                                                                                                           |
-| `Alt+Enter`                   | Show properties of the selected file.                                                                              |
-| `Shift+F10(Shift+CL+0)(CL+;)` | Open the shortcut menu for the current selection (which is the same as a right-click).                             |
-| `Ctrl+Shift+1/2/.../8`        | View modes                                                                                                         | `Ctrl+Shift+3`: icons; `Ctrl+Shift+6`: details;                        |
-| `Ctrl+F3(CL+3)`               | go to search box, your could then press Tab go to navigation pane, then press Tab go to file list.                 | Note: replaced by everything                                           |
-| `F11(CL+-)`                   | Toggle full-screen mode.                                                                                           |
+| Key                                   | Function                                                                                                           | Note                                                              |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------- |
+| `F2(CL+2)`                            | Rename.                                                                                                            |
+| `Ctrl+Shift+E`                        | Expand navigation pane to the current folder.                                                                      |
+| `Ctrl+N`                              | Open a new window of the same folder.                                                                              |
+| `Ctrl+Shift+N`                        | Create a new subfolder in the current folder.                                                                      | _use `Ctrl+Alt+n` to create new file_                             |
+| `Ctrl+W`                              | Close the current window.                                                                                          |
+| `Alt+Up`                              | Arrow Go up one level.                                                                                             |
+| `Alt+Right`                           | Arrow Go forward.                                                                                                  |
+| `Alt+Left`                            | Arrow Go back.                                                                                                     |
+| `Alt+d`                               | Move the focus to the address bar, and select the current path. (press `Ctrl+c` to copy)                           |
+| `Alt+p`                               | Preview panel                                                                                                      | `alt+1` to show navigation pane (when add it to quick access bar) |
+| `Ctrl+arrow key` and `Ctrl+ Spacebar` | to move to an item and press Spacebar to select/unselect multiple individual items in window                       | `ctrl+arrow`: move while select; `ctrl+space`: toggle selection   |
+| `Shift+arrow(Caps+ikjl)`              | continously Select more than one item in a window or on the desktop, or select text in a document                  |
+| `Alt+Spacebar`                        | Show context menu of the active window.                                                                            |
+| `F4(CL+4)`                            | Move the insertion point to the address bar, and display the contents of the drop-down list of previous addresses. |
+| `F5(CL+5)`                            | Refresh.                                                                                                           |
+| `Alt+Enter`                           | Show properties of the selected file.                                                                              |
+| `Shift+F10(Shift+CL+0)(CL+;)`         | Open the shortcut menu for the current selection (which is the same as a right-click).                             |
+| `Ctrl+Shift+1/2/.../8`                | View modes                                                                                                         | `Ctrl+Shift+3`: icons; `Ctrl+Shift+6`: details;                   |
+| `Ctrl+F3(CL+3)`                       | go to search box, your could then press Tab go to navigation pane, then press Tab go to file list.                 | Note: replaced by everything                                      |
+| `F11(CL+-)`                           | Toggle full-screen mode.                                                                                           |
 
 ## Virtual desktops
 
