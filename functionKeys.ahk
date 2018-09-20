@@ -45,7 +45,7 @@ return
 #d::
 Run, %A_Desktop%
 return
-;----------------------------------o        Copy and search with google
+;----------------------------------o        ctl+alt+c: Copy and search with google
 ^!c::
 {
  Send, ^c
