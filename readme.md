@@ -31,16 +31,16 @@ MetaKB redefined the CapsLock key as a function key:
 
 ## Direction Keys Mapping Table
 
-| Key        | Map  | Note |
-| ---------- | ---- | ---- |
-| `Left`     | CL+h |
-| `Down`     | CL+j |
-| `Up`       | CL+k |
-| `Right`    | CL+l |
-| `Home`     | CL+i |
-| `End`      | CL+o |
-| `PageUp`   | CL+u |
-| `PageDown` | CL+n |
+| Key  | Map        | Note |
+| ---- | ---------- | ---- |
+| CL+h | `Left`     |
+| CL+j | `Down`     |
+| CL+k | `Up`       |
+| CL+l | `Right`    |
+| CL+i | `Home`     |
+| CL+o | `End`      |
+| CL+u | `PageUp`   |
+| CL+n | `PageDown` |
 
 > The `LAlt(left Alt)` key combined with the keys in this table gives you a shortcut:
 > i.e. if you want to press `Alt+Up` you could just press `LAlt+k`, no need to press `Alt+CL+k` together.
@@ -49,15 +49,15 @@ MetaKB redefined the CapsLock key as a function key:
 
 ## Other Remapped Keys
 
-| Key                        | Map            | Note                                                  |
-| -------------------------- | -------------- | ----------------------------------------------------- |
-| `F1..F12`                  | CL+1..=        | F1 -> CL+1 ... F10 -> CL+0, F11 -> CL+ -, F12 -> CL+= |
-| `Delete`                   | `CL+Backspace` |
-| `Context Menu`             | `CL+;`         | show context menu, like mouse right click             |
-| `pause/Break`              | `CL+b`         |
-| `PrintScreen`              | `CL+p`         |
-| mouse `left` button click  | `CL+[`         |
-| mouse `right` button click | `CL+]`         |
+| Key            | Map                        | Note                                                  |
+| -------------- | -------------------------- | ----------------------------------------------------- |
+| `CL+1..=`      | `F1..F12`                  | F1 -> CL+1 ... F10 -> CL+0, F11 -> CL+ -, F12 -> CL+= |
+| `CL+Backspace` | `Delete`                   |
+| `CL+;`         | `Context Menu`             | show context menu, like mouse right click             |
+| `CL+b`         | `pause/Break`              |
+| `CL+p`         | `PrintScreen`              |
+| `CL+[`         | mouse `left` button click  |
+| `CL+]`         | mouse `right` button click |
 
 # Function and Software
 
