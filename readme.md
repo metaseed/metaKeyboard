@@ -4,6 +4,8 @@ The `goal` of MetaKB is described by the below gif:
 
 ![keyboard](./keyboard.gif)
 
+MetaKeyboard is based on [AutoHostKey](https://autohotkey.com/).
+
 # Quick start
 
 - clone this repository:
