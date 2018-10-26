@@ -30,8 +30,10 @@
     ; Change working directory
     SetWorkingDir, %FullPath%
     ; An error occurred with the SetWorkingDir directive
-    If ErrorLevel
+    If ErrorLevel {
+        Send, ^!n
         Return
+    }
 
     ; Display input box for filename
     InputBox, UserInput, New File (example: foo.txt), , , 400, 100
