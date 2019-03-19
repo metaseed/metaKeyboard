@@ -165,6 +165,7 @@ mklink software .\metaKeyboard\software /J
 | `Ctrl+Shift+1/2/.../8`                | View modes                                                                                                         | `Ctrl+Shift+3`: icons; `Ctrl+Shift+6`: details;                   |
 | `Ctrl+F3(CL+3)`                       | go to search box, your could then press Tab go to navigation pane, then press Tab go to file list.                 | Note: replaced by everything                                      |
 | `F11(CL+-)`                           | Toggle full-screen mode.                                                                                           |
+| `Ctrl+E or Ctrl+F then Esc`           | select the file pane(works for file explorer and open/save dialog)                                                 |
 
 ## Virtual desktops
 
