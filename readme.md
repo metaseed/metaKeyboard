@@ -92,11 +92,11 @@ MetaKB redefined the CapsLock key as a function key:
 | `CL+t`       | open terminal                                                  | configurable, default is `Cmder` in the _software_ folder                                                                                                                         |
 | `CL+w`       | open web explorer and navigate to your _searchEngine_          | configurable, default is `Google`                                                                                                                                                 |
 | `CL+shift+w` | open web explorer and navigate to your _searchEngineSecondary_ | configurable, default is `Bing`                                                                                                                                                   |
-| `CL+m s`     | screen capture tool                                            |
-| `CL+m Alt+s` | screen gif recorder                                            | configurable, default is `ScreenToGif` in the _software_ folder                                                                                                                   |
+| `CL+m s`     | start screen capture tool                                      | after starting, use the shortcut key config in the software to trigger screen capture.                                                                                            |
+| `CL+m Alt+s` | start screen gif recorder                                      | configurable, default is `ScreenToGif` in the _software_ folder                                                                                                                   |
 | `CL+m t`     | open task manager                                              | configurable, default is `ProcessExplorer` in the _software_ folder                                                                                                               |
 | `CL+m r`     | screen ruler                                                   | configurable, default is `aruler` in the _software_ folder                                                                                                                        |
-| `CL+m v`     | open all \*.sln files in the folder with visualStudion         | configurable, default is `VS2015`                                                                                                                                                 |
+| `CL+m v`     | open all \*.sln files in the folder with visualStudio          | configurable                                                                                                                                                                      |
 
 > configurable means could be configured in config.ini file
 
