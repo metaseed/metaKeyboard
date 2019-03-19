@@ -20,6 +20,7 @@ if WinActive("ahk_class CabinetWClass") { ; Windows Explorer
     SendInput, {Space}
     return
 }
+return
 ;-----------------------------------o       Goto Navigation pane
 #n::
 if WinActive("ahk_class CabinetWClass") { ; Windows Explorer
@@ -27,6 +28,8 @@ if WinActive("ahk_class CabinetWClass") { ; Windows Explorer
     SendInput, {Space}
     return
 }
+return
+
 ;-----------------------------------o copy file full path to clipboard
 Capslock & \::
 if WinActive("ahk_class CabinetWClass") {
@@ -35,6 +38,7 @@ if WinActive("ahk_class CabinetWClass") {
     Clipboard := Clipboard
     return
 }
+return
 
 ;-----------------------------------o       Virtual machine
 #v::
