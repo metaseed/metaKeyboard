@@ -143,28 +143,28 @@ mklink software .\metaKeyboard\software /J
 
 ## File Explorer
 
-| Key                                   | Function                                                                                                           | Note                                                              |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------- |
+| Key                                   | Function                                                                                                           | Note                                                                                                                                        |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | `F2(CL+2)`                            | Rename.                                                                                                            |
 | `Ctrl+Shift+E`                        | Expand navigation pane to the current folder.                                                                      |
 | `Ctrl+N`                              | Open a new window of the same folder.                                                                              |
-| `Ctrl+Shift+N`                        | Create a new subfolder in the current folder.                                                                      | _use `Ctrl+Alt+n` to create new file_                             |
+| `Ctrl+Shift+N`                        | Create a new subfolder in the current folder.                                                                      | _use `Ctrl+Alt+n` to create new file_                                                                                                       |
 | `Ctrl+W`                              | Close the current window.                                                                                          |
 | `Alt+Up`                              | Arrow Go up one level.                                                                                             |
 | `Alt+Right`                           | Arrow Go forward.                                                                                                  |
 | `Alt+Left`                            | Arrow Go back.                                                                                                     |
 | `Alt+d`                               | Move the focus to the address bar, and select the current path. (press `Ctrl+c` to copy)                           |
-| `Alt+p`                               | Preview panel                                                                                                      | `alt+1` to show navigation pane (when add it to quick access bar) |
-| `Ctrl+arrow key` and `Ctrl+ Spacebar` | to move to an item and press Spacebar to select/unselect multiple individual items in window                       | `ctrl+arrow`: move while select; `ctrl+space`: toggle selection   |
+| `Alt+p`                               | Preview panel                                                                                                      | `alt+1` to show navigation pane (when add it to quick access bar)                                                                           |
+| `Ctrl+arrow key` and `Ctrl+ Spacebar` | to move to an item and press Spacebar to select/unselect multiple individual items in window                       | `ctrl+arrow`: move while select; `ctrl+space`: toggle selection                                                                             |
 | `Shift+arrow(Caps+ikjl)`              | continously Select more than one item in a window or on the desktop, or select text in a document                  |
 | `Alt+Spacebar`                        | Show context menu of the active window.                                                                            |
 | `F4(CL+4)`                            | Move the insertion point to the address bar, and display the contents of the drop-down list of previous addresses. |
 | `F5(CL+5)`                            | Refresh.                                                                                                           |
 | `Alt+Enter`                           | Show properties of the selected file.                                                                              |
 | `Shift+F10(Shift+CL+0)(CL+;)`         | Open the shortcut menu for the current selection (which is the same as a right-click).                             |
-| `Ctrl+Shift+1/2/.../8`                | View modes                                                                                                         | `Ctrl+Shift+3`: icons; `Ctrl+Shift+6`: details;                   |
-| `Ctrl+F3(CL+3)`                       | go to search box, your could then press Tab go to navigation pane, then press Tab go to file list.                 | Note: replaced by everything                                      |
+| `Ctrl+Shift+1/2/.../8`                | View modes                                                                                                         | `Ctrl+Shift+3`: icons; `Ctrl+Shift+6`: details;                                                                                             |
 | `F11(CL+-)`                           | Toggle full-screen mode.                                                                                           |
+| `Ctrl+F3(CL+3) or Ctrl+F`             | go to search box, your could then press Tab go to navigation pane, then press Tab go to file list.                 | Note: replaced by everything, but we could use Ctrl+E to use it. note: after press `Ctrl+e` then press `Esc` would go to file list directly |
 | `Ctrl+E or Ctrl+F then Esc`           | select the file pane(works for file explorer and open/save dialog)                                                 |
 
 ## Virtual desktops
