@@ -20,6 +20,113 @@ https://conemu.github.io/en/Whats_New.html
 -------------------------------------------
 
 
+2019.3.31
+* gh-1877: Option 'Snap to desktop edges' was broken (regression 663a216).
+* gh-1878: Enable log in `ConEmuC /c` when started from Far.exe.
+* gh-1838: Log start/stop command from Far.exe.
+* gh-1871: Add some logs to WindowPosChaning.
+* gh-1870: Add switch `/t:<temp dir>` to Setupper.
+  Ability to specify temparary directory for msi files.
+  So, you may specify on the ‘Update’ settings page special
+  installer command, e.g.: `"%1" /t:"C:\Temp\ConEmuFiles"` /p:%3,adm /qn`.
+  If the switch `/t:...` is not specified, Setupper uses:
+  * `TEMP` environment variable;
+  * `GetTempPath` API function if variable is not defined.
+* gh-1851: Restore contents after return from Alternative screen was broken.
+
+
+2019.3.26
+* gh-1849: SystemMenu does not appear if ConEmu is maximized.
+* gh-1838: Log times in CmdOutputStore/CmdOutputRestore.
+
+
+2019.3.24
+* gh-1857: Fix regression in `-cur_console` processing.
+* gh-1860: Support new clink dll names.
+* ANSI: Mouse mode for URXVT was not working.
+* ANSI: Implement `ESC [ ! p` sequence to reset terminal.
+* gh-1852, gh-1855: Fix 'Show last command output' in Far Manager (regression).
+* gh-1851: Fix alternative buffer for OpenSSH.
+* gh-1866: l10n: Add Japanese translation.
+* gh-622: Unexpected left/right margins in quake mode with `100%` width.
+* gh-622: Fix window size on minimize/restore.
+* ANSI: Use \x7 as our specials terminator in logs.
+* gh-1492: AnsiLog-s location may be specified as a folder or file with `-new_console:L:"Path"`.
+  Write all ANSI logs to specified file:
+  `cmd.exe -new_console:L:"C:\Logs\cmd.log"`.
+  Create log files by format `ConEmu-<YYYY-MM-DD>-p<SrvPid>.log`:
+  `cmd.exe -new_console:L:"C:\Logs\"`.
+* AnsiLogs: log current system time each 500ms.
+* Hooks: Support FillConsoleOutputCharacter and FillConsoleOutputAttribute.
+* gh-1825: Add option to enable/disable ANSI calls to WinApi functions.
+
+
+2019.3.10
+* Update ChocolateyAbout.cmd to latest installation cmd.
+* gh-1323, gh-1385, gh-1841: Speed up alternative buffer operations (connector).
+* gh-1323, gh-1385, gh-1841: Let ‘Alternative mode’ toolbar button works with console buffers.
+* Connector: When `--log` is used, log current system time each 500ms.
+* gh-463: ConEmu.exe switch `-NoHooksWarn` disabled external hooks checks.
+* Log duration of external hooks checks.
+* gh-1733: Enable dark theme scrollbars with `ConEmu.exe -Theme DarkMode_Explorer`.
+* ANSI: Visual Bell for `ESC g`.
+
+
+2019.3.3
+* gh-1840: Fix hung during startup if Environment contains `echo -x ...`.
+* The `-FontSize` is better name to change font size switch.
+* Allow to do `Copy all` from load dump screen.
+* gh-1833: Fix border rendering issues (bar placement).
+* Icon was not autoloaded for some tabs (e.g. `pwsh.exe`).
+* Add default tasks for ‘PowerShell Core’.
+* Some internal changes in default tasks generation.
+
+
+2019.3.1
+* gh-1795: Unexpected ConEmu activation on monitor change.
+* Paste hotkeys `Ctrl+V`/`Shift+Ins` didn't work in Far Manager if selection was present.
+* Eliminate copying delay on Paste if mouse selection is present.
+
+
+2019.2.25
+* gh-1835: Connector failed to start (regression).
+
+
+2019.2.24
+* gh-1159, gh-1775: ANSI, tmux, compatibility issues.
+* Connector v1.2.6: Pass ConEmuServerPID environment variable to wslbridge.
+* Add to log start/end time of default tasks populating.
+* Preliminary implementation of PTY in Connector.
+* AnsiDbg: better switch checking.
+
+
+2019.2.17
+* gh-1795: Unexpected ConEmu activation on monitor change.
+* gh-1159, gh-1775: ANSI, tmux, compatibility issues.
+
+
+2019.1.8
+* Start word selection with Ctrl+Shift+Left/Right.
+* Settings/Size & Pos: Apply button ignored invisible part of Win10 frame while setting coordinates.
+* gh-861: Support RAlt the same way as Alt+Numbers (keypad).
+* Predefined palettes were not initialized in some cases.
+* gh-1620: Fade colors were wrong if ConEmu was started with `-Palette` switch.
+* gh-1623: Let `Ctrl+0` and GuiMacro `Tab(7,-1)` activate *last* tab.
+* gh-1637: Show message about absent DosBox required files.
+* Fix unexpected pane-1 activation on mouse hover when pane-2 ChildGui popup dialog is over pane-1.
+* gh-1662: Escape Char not working for passwords with trailing quote.
+* gh-1573: Interface language setting was not saved.
+* Add a new option to auto-trim single lines.
+  When pasting a single line ending in newline, the user is presented with a
+  warning about pasting multi-line strings. This enables a new option to
+  automatically strip trailing newlines whenever we detect that a single line
+  string has been pasted. This prevents the warning and allows the user to more
+  conveniently edit single lines pasted into the console.
+* Add German translation to ConEmu.l10n.
+* Add icon ID number for VS2019 in CreateVCTask.
+* GitShowBranch: Case insensitive check for no branch.
+
+
 2018.6.26
 * gh-1606: Don't show assertion on start if we can't determine HKL name, just write info to log.
 * gh-1613: In some cases first four CJK cells were displayed using wrong attributes (inverse, underline).

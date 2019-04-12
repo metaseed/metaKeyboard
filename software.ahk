@@ -7,7 +7,7 @@ CapsLock & c::                                ;VSCode
     if WinActive("ahk_class CabinetWClass") {
         selectedFilePath := Explorer_GetSelection()
         ShellRun(code,selectedFilePath,A_WorkingDir)
-    } 
+    }
     else {
         ShellRun(code,,A_WorkingDir)
     }
@@ -22,8 +22,9 @@ return
 CapsLock & t::                                ; terminal
 if WinActive("ahk_class CabinetWClass") {
     folder := GetFolder()
-    if GetKeyState("shift") != 0 { 
+    if GetKeyState("shift") != 0 {
         run "%cmd%" /start %folder%
+        ; run "%cmd%" -dir %folder%
     } else {
         ; not work run "%cmd%" /single "%folder%" -cur_console:d:%folder%
         run "%cmd%" /start %folder%
@@ -53,16 +54,16 @@ CapsLock & r:: Run Powershell                ;Run Shell
 #include %A_LineFile%\..\search-with-everything.ahk.
 ;-----------------------------------o
 CapsLock & q::                              ; quick note
-IfWinExist Untitled - Notepad 
+IfWinExist Untitled - Notepad
     IfWinActive Untitled - Notepad
         WinMinimize
     else
         WinActivate
-else 
+else
     Run Notepad
 return
 
-CapsLock & m:: 
+CapsLock & m::
 Input Key, L1 M
 If Key = r
 {
@@ -81,7 +82,7 @@ else if Key = v                                  ;visualStudio
 {
     if WinActive("ahk_class CabinetWClass")
         folder := GetFolder()
-        Loop Files, %folder%\*.sln 
+        Loop Files, %folder%\*.sln
             Run,"%visualStudio%" %A_LoopFileFullPath%, %folder%
     return
 }
